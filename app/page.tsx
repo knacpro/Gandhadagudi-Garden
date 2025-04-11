@@ -7,6 +7,7 @@ import { useState } from "react"
 import HeroSectionComponent from "@/components/home/HeroSection"
 import WelcomeSectionComponent from "@/components/home/WelcomeSection"
 import ResortFacilitiesComponent from "@/components/home/ResortFacilities"
+import ResortActivitiesComponent from "@/components/home/ResortActivities"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -27,6 +28,7 @@ export default function Home() {
           <HeroSectionComponent />
           <WelcomeSectionComponent />
           <ResortFacilitiesComponent />
+          <ResortActivitiesComponent />
         </>
       )}
       <SocialMediaFloatingIcons />

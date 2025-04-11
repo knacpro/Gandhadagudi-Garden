@@ -62,6 +62,10 @@ const config: Config = {
           ring: "hsl(var(--sidebar-ring))",
         },
         "wildernest-green": "#b3c423",
+        dandeli: {
+          green: "#8BAD2B",
+          dark: "#333333",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

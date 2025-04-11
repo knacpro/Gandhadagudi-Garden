@@ -23,7 +23,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
     const linkClass = (href: string) =>
         pathname === href
             ? "text-white border-b-2 border-yellow-400" // <-- Active link style
-            : "text-white hover:text-gray-200";
+            : "text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400";
 
     return (
         <>
