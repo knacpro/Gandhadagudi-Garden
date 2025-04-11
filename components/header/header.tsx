@@ -16,7 +16,7 @@ export default function HeaderComponent() {
                 <div className="flex items-center">
                     <Image
                         src="/images/logo.png"
-                        alt="Wildernest Logo"
+                        alt="GandhadaGudi Garden Logo"
                         width={240}
                         height={80}
                         className="h-12 sm:h-16 w-auto rounded-xl"
@@ -41,9 +41,27 @@ export default function HeaderComponent() {
                         <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
                             ABOUT
                         </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            ACTIVITIES
-                        </Link>
+                   <div className="relative group">
+    <Link
+        href="/activities"
+        className="text-white flex items-center gap-1 hover:underline hover:text-yellow-300 transition duration-200"
+        onClick={() => setMobileMenuOpen(false)}
+    >
+        ACTIVITIES ▼
+    </Link>
+    <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200">
+        <div className="px-4 py-2 font-bold text-indigo-700 bg-gray-100 border-b">Indoor Activities</div>
+        <Link href="/activities/gym" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Gym</Link>
+        <Link href="/activities/garadi-mane" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Garadi Mane</Link>
+
+        <div className="px-4 py-2 font-bold text-green-700 bg-gray-100 border-b mt-2">Outdoor Activities</div>
+        <Link href="/activities/boat-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Boat Riding</Link>
+        <Link href="/activities/adventure-kayaking" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Adventure Kayaking</Link>
+        <Link href="/activities/bird-watching" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Bird Watching</Link>
+        <Link href="/activities/horse-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Horse Riding</Link>
+        <Link href="/activities/cow-farming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Cow Farming</Link>
+    </div>
+</div>
                         <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
                             ATTRACTIONS
                         </Link>
@@ -77,9 +95,32 @@ export default function HeaderComponent() {
                     <Link href="#" className="text-white hover:text-gray-200">
                         ABOUT
                     </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        ACTIVITIES
-                    </Link>
+                    
+<div className="relative group">
+    <Link
+        href="/activities"
+        className="text-white flex items-center gap-1 hover:underline hover:text-yellow-300 transition duration-200"
+        onClick={() => setMobileMenuOpen(false)}
+    >
+        ACTIVITIES ▼
+    </Link>
+    <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200">
+        <div className="px-4 py-2 font-bold text-indigo-700 bg-gray-100 border-b">Indoor Activities</div>
+        <Link href="/activities/gym" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Gym</Link>
+        <Link href="/activities/garadi-mane" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Garadi Mane</Link>
+
+        <div className="px-4 py-2 font-bold text-green-700 bg-gray-100 border-b mt-2">Outdoor Activities</div>
+        <Link href="/activities/boat-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Boat Riding</Link>
+        <Link href="/activities/adventure-kayaking" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Adventure Kayaking</Link>
+        <Link href="/activities/bird-watching" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Bird Watching</Link>
+        <Link href="/activities/horse-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Horse Riding</Link>
+        <Link href="/activities/cow-farming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Cow Farming</Link>
+    </div>
+</div>
+
+
+   
+
                     <Link href="#" className="text-white hover:text-gray-200">
                         ATTRACTIONS
                     </Link>
@@ -104,3 +145,8 @@ export default function HeaderComponent() {
 
     );
 }
+
+
+
+
+

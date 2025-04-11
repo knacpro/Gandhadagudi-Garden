@@ -61,7 +61,7 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        "wildernest-green": "#b3c423",
+        "Byahatti-green": "#b3c423",
       },
       borderRadius: {
         lg: "var(--radius)",
