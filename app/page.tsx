@@ -8,6 +8,8 @@ import HeroSectionComponent from "@/components/home/HeroSection"
 import WelcomeSectionComponent from "@/components/home/WelcomeSection"
 import ResortFacilitiesComponent from "@/components/home/ResortFacilities"
 import ResortActivitiesComponent from "@/components/home/ResortActivities"
+import GallerySectionComponent from "@/components/home/GallerySection"
+import ResortPackagesComponent from "@/components/home/ResortPackages"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -29,6 +31,8 @@ export default function Home() {
           <WelcomeSectionComponent />
           <ResortFacilitiesComponent />
           <ResortActivitiesComponent />
+          <GallerySectionComponent />
+          <ResortPackagesComponent />
         </>
       )}
       <SocialMediaFloatingIcons />
