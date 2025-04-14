@@ -306,7 +306,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Activities in GandhadaGudi Garden */}
+      Activities in GandhadaGudi Garden
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">ENJOY ULTIMATE ALPINE EXPERIENCES</h5>

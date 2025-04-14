@@ -1,87 +1,73 @@
-"use client"
+'use client';
 
 import { Menu, X } from "lucide-react";
-import Image from "next/image"
-import { useState } from "react";
+import Image from "next/image";
 import TopBarComponent from "./TopBar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export default function HeaderComponent() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: any) {
+    const pathname = usePathname();
+
+    const navLinks = [
+        { href: "/", label: "HOME" },
+        { href: "/about", label: "ABOUT" },
+        { href: "/activities", label: "ACTIVITIES" },
+        { href: "/attractions", label: "ATTRACTIONS" },
+        { href: "/packages", label: "PACKAGES" },
+        { href: "/gallery", label: "GALLERY" },
+        { href: "/blog", label: "BLOG" },
+        { href: "/contact", label: "CONTACT" },
+    ];
+
+    const linkClass = (href: string) =>
+        pathname === href
+            ? "text-white border-b-2 border-yellow-400"
+            : "text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400";
 
     return (
         <>
-           
-            <TopBarComponent />
-          
-            <header className="relative z-10 px-4 py-6 flex justify-between items-center">
+            {/* Fixed TopBar */}
+            <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-black/90">
+                <TopBarComponent />
+            </div>
+
+            {/* Fixed NavBar - placed below TopBar */}
+            <header className="fixed top-[40px] md:top-[48px] z-20 w-full px-4 py-1 md:bg-black/50 flex justify-between items-center">
                 <div className="flex items-center">
+                    <button
+                        className="md:hidden text-white z-20 mr-10"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
+
                     <Image
                         src="/images/logo.png"
                         alt="GandhadaGudi Garden Logo"
                         width={240}
                         height={80}
-                        className="h-12 sm:h-16 w-auto rounded-xl"
+                        className="h-20 sm:h-24 sm:w-auto rounded-xl"
                     />
                 </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white z-20"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
-
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
-                    <div className="fixed inset-0 bg-black/90 z-10 flex flex-col items-center justify-center space-y-6 md:hidden">
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            HOME
-                        </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            ABOUT
-                        </Link>
-                   <div className="relative group">
-    <Link
-        href="/activities"
-        className="text-white flex items-center gap-1 hover:underline hover:text-yellow-300 transition duration-200"
-        onClick={() => setMobileMenuOpen(false)}
-    >
-        ACTIVITIES ▼
-    </Link>
-    <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200">
-        <div className="px-4 py-2 font-bold text-indigo-700 bg-gray-100 border-b">Indoor Activities</div>
-        <Link href="/activities/gym" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Gym</Link>
-        <Link href="/activities/garadi-mane" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Garadi Mane</Link>
-
-        <div className="px-4 py-2 font-bold text-green-700 bg-gray-100 border-b mt-2">Outdoor Activities</div>
-        <Link href="/activities/boat-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Boat Riding</Link>
-        <Link href="/activities/adventure-kayaking" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Adventure Kayaking</Link>
-        <Link href="/activities/bird-watching" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Bird Watching</Link>
-        <Link href="/activities/horse-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Horse Riding</Link>
-        <Link href="/activities/cow-farming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Cow Farming</Link>
-    </div>
-</div>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            ATTRACTIONS
-                        </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            PACKAGES
-                        </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            GALLERY
-                        </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            BLOG
-                        </Link>
-                        <Link href="#" className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>
-                            CONTACT
-                        </Link>
+                    <div className="fixed inset-x-0 top-0 bottom-0 bg-black/90 z-10 flex flex-col items-start justify-start pt-24 pl-6 md:hidden space-y-6">
+                        {navLinks.map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className={linkClass(href)}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        ))}
                         <Link
-                            href="#"
-                            className="text-white border border-white px-6 py-2 hover:bg-white/10"
+                            href="/reserve-now"
+                            className={`border px-6 py-2 ${pathname === "/reserve-now" ? "text-yellow-400 border-yellow-400" : "text-white border-white hover:bg-white/10"}`}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Reserve Now
@@ -90,64 +76,22 @@ export default function HeaderComponent() {
                 )}
 
                 <nav className="hidden md:flex items-center space-x-6">
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        HOME
-                    </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        ABOUT
-                    </Link>
-                    
-<div className="relative group">
-    <Link
-        href="/activities"
-        className="text-white flex items-center gap-1 hover:underline hover:text-yellow-300 transition duration-200"
-        onClick={() => setMobileMenuOpen(false)}
-    >
-        ACTIVITIES ▼
-    </Link>
-    <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200">
-        <div className="px-4 py-2 font-bold text-indigo-700 bg-gray-100 border-b">Indoor Activities</div>
-        <Link href="/activities/gym" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Gym</Link>
-        <Link href="/activities/garadi-mane" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700 transition">Garadi Mane</Link>
-
-        <div className="px-4 py-2 font-bold text-green-700 bg-gray-100 border-b mt-2">Outdoor Activities</div>
-        <Link href="/activities/boat-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Boat Riding</Link>
-        <Link href="/activities/adventure-kayaking" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Adventure Kayaking</Link>
-        <Link href="/activities/bird-watching" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Bird Watching</Link>
-        <Link href="/activities/horse-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Horse Riding</Link>
-        <Link href="/activities/cow-farming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700 transition">Cow Farming</Link>
-    </div>
-</div>
-
-
-   
-
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        ATTRACTIONS
-                    </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        PACKAGES
-                    </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        GALLERY
-                    </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        BLOG
-                    </Link>
-                    <Link href="#" className="text-white hover:text-gray-200">
-                        CONTACT
-                    </Link>
-                    <Link href="#" className="text-white border border-white px-6 py-2 hover:bg-white/10">
+                    {navLinks.map(({ href, label }) => (
+                        <Link key={href} href={href} className={linkClass(href)}>
+                            {label}
+                        </Link>
+                    ))}
+                    <Link
+                        href="/reserve-now"
+                        className={`border px-6 py-2 ${pathname === "/reserve-now" ? "text-yellow-400 border-yellow-400" : "text-white border-white hover:bg-white/10"}`}
+                    >
                         Reserve Now
                     </Link>
                 </nav>
             </header>
-        </>
 
+            {/* Add spacer to push down the rest of the page content */}
+            <div className="h-[160px] md:h-[170px]" />
+        </>
     );
 }
-
-
-
-
-
