@@ -1,13 +1,13 @@
-'use client'; // Important for using hooks like usePathname in client components
+'use client';
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import TopBarComponent from "./TopBar";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // <-- Import this
+import { usePathname } from "next/navigation";
 
 export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: any) {
-    const pathname = usePathname(); // <-- Get current path
+    const pathname = usePathname();
 
     const navLinks = [
         { href: "/", label: "HOME" },
@@ -22,16 +22,18 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
 
     const linkClass = (href: string) =>
         pathname === href
-            ? "text-white border-b-2 border-yellow-400" // <-- Active link style
+            ? "text-white border-b-2 border-yellow-400"
             : "text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400";
 
     return (
         <>
-            <div className="hidden md:block">
+            {/* Fixed TopBar */}
+            <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-black/90">
                 <TopBarComponent />
             </div>
 
-            <header className="relative z-10 px-4 py-6 flex justify-between items-center">
+            {/* Fixed NavBar - placed below TopBar */}
+            <header className="fixed top-[40px] md:top-[48px] z-20 w-full px-4 py-1 md:bg-black/50 flex justify-between items-center">
                 <div className="flex items-center">
                     <button
                         className="md:hidden text-white z-20 mr-10"
@@ -88,6 +90,9 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
                     </Link>
                 </nav>
             </header>
+
+            {/* Add spacer to push down the rest of the page content */}
+            <div className="h-[160px] md:h-[170px]" />
         </>
     );
 }
