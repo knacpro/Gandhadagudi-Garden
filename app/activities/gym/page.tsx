@@ -1,13 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
+import HeaderComponent from "@/components/header/header"
 
 
 export default function Page() {
   return (
 
     <div>
-
+ 
+             <HeaderComponent/>
     <div className="font-sans">
       {/* Hero Section */}
       <section

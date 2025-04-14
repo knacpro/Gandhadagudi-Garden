@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
+import HeaderComponent from "@/components/header/header"
 
 export default function GaradiManePage() {
   return (
+     <div>
+             <HeaderComponent/>
     <div className="font-sans">
       {/* Hero Section */}
       <section
@@ -123,6 +126,7 @@ export default function GaradiManePage() {
 
       {/* Booking Section */}
       <BookResort />
+    </div>
     </div>
   );
 }

@@ -112,7 +112,7 @@ export default function Page() {
               GandhadaGudi Garden GandhadaGudi Garden provides an exhilarating river rafting experience, letting you conquer the rapids
               while surrounded by stunning natural landscapes - offering the perfect blend of thrill and adventure.
             </p>
-            <Link href="/gym">
+            <Link href="/activities/boat-riding">
   <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
     View Details
   </button>
@@ -138,9 +138,12 @@ export default function Page() {
             <p className="mt-4 text-gray-700">
               GandhadaGudi Garden GandhadaGudi Garden offers adventure Kayaking involves using a kayak, a narrow boat propelled by a double-bladed paddle, to travel on water. It's a popular water sport enjoyed in various environments like rivers, lakes, and oceans
             </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
-              View Details
-            </button>
+            <Link href="/activities/adventure-kayaking">
+  <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
+    View Details
+  </button>
+</Link>
+
           </div>
         </div>
       </section>
@@ -163,9 +166,11 @@ export default function Page() {
               GandhadaGudi Garden ,Byahatti offers a serene bird watching experience, where nature enthusiasts can spot a variety
               of exotic birds in their natural habitat, surrounded by tranquil forest beauty.
             </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
-              View Details
-            </button>
+            <Link href="/activities/bird-watching">
+  <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
+    View Details
+  </button>
+</Link>
           </div>
         </div>
       </section>
@@ -187,9 +192,11 @@ export default function Page() {
               GandhadaGudi Garden GandhadaGudi Garden offers adventure trekking through lush forests and scenic trails. Embark on memorable
               hikes through pristine nature, discover hidden trails, and embrace the GandhadaGudi Garden s.
             </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
-              View Details
-            </button>
+            <Link href="">
+  <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
+    View Details
+  </button>
+</Link>
           </div>
         </div>
       </section>
@@ -210,9 +217,11 @@ export default function Page() {
               GandhadaGudi Garden ,Byahatti offers a serene bird watching experience, where nature enthusiasts can spot a variety
               of exotic birds in their natural habitat, surrounded by tranquil forest beauty.
             </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
-              View Details
-            </button>
+            <Link href="/activities/horse-riding">
+  <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
+    View Details
+  </button>
+</Link>
           </div>
         </div>
       </section>
