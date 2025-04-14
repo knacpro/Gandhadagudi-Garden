@@ -11,6 +11,8 @@ import ResortActivitiesComponent from "@/components/home/ResortActivities"
 import GallerySectionComponent from "@/components/home/GallerySection"
 import ResortPackagesComponent from "@/components/home/ResortPackages"
 import NearByAttractionsComponent from "@/components/home/NearByAttractions"
+import TestimonialsComponent from "@/components/home/Testimonials"
+import BookResort from "@/components/BookResort"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -35,6 +37,8 @@ export default function Home() {
           <GallerySectionComponent />
           <ResortPackagesComponent />
           <NearByAttractionsComponent />
+          <TestimonialsComponent />
+          <BookResort />
         </>
       )}
       <SocialMediaFloatingIcons />
