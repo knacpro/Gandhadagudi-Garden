@@ -9,9 +9,9 @@ export default function HeaderComponent() {
 
     return (
         <>
-            {/* Top Bar */}
+           
             <TopBarComponent />
-            {/* Header with Logo and Navigation */}
+          
             <header className="relative z-10 px-4 py-6 flex justify-between items-center">
                 <div className="flex items-center">
                     <Image
@@ -87,7 +87,6 @@ export default function HeaderComponent() {
                     </div>
                 )}
 
-                {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-6">
                     <Link href="#" className="text-white hover:text-gray-200">
                         HOME
