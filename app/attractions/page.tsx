@@ -220,9 +220,7 @@ export default function Attractions() {
               by devotees from all over, it offers a serene space for
               meditation, prayer, and quiet reflection.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
+           
           </div>
         </div>
 
@@ -237,9 +235,6 @@ export default function Attractions() {
               greenery and known for its beautiful sunset views, it’s an ideal
               place to relax, unwind, and connect with nature.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
           </div>
 
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg order-1 lg:order-2 group">
@@ -274,9 +269,7 @@ export default function Attractions() {
               fresh air, and a peaceful atmosphere, it's a favorite spot for
               morning walks, light trekking, and sunset watching.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
+    
           </div>
         </div>
 
@@ -292,9 +285,7 @@ export default function Attractions() {
               offers a serene atmosphere for spiritual reflection and cultural
               exploration.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
+           
           </div>
 
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg order-1 lg:order-2 group">
@@ -330,9 +321,7 @@ export default function Attractions() {
               hidden gem for those looking to connect with nature away from the
               city’s rush.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
+           
           </div>
         </div>
 
@@ -348,9 +337,7 @@ export default function Attractions() {
               it offers visitors a place for devotion, learning, and quiet
               contemplation.
             </p>
-            <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 font-medium transition-colors">
-              View Details
-            </button>
+        
           </div>
 
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg order-1 lg:order-2 group">
