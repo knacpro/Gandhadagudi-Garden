@@ -6,6 +6,7 @@ import Link from 'next/link';
 import BookResort from "@/components/BookResort"
 import HeaderComponent from "@/components/header/header"
 import Image from "next/image"
+import ResortActivitiesComponent from '@/components/home/ResortActivities';
 
 export default function Page() {
 
@@ -306,71 +307,23 @@ export default function Page() {
         </div>
       </section>
 
-      Activities in GandhadaGudi Garden
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">ENJOY ULTIMATE ALPINE EXPERIENCES</h5>
-          <h2 className="text-3xl font-bold mt-2">ACTIVITIES IN Byahatti</h2>
+       <ResortActivitiesComponent/>
+   
+
+     
+          
+           
+
+         
+       
+
+        
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Activity Card 1 */}
-          <div className="border border-gray-200 rounded-lg p-4 flex flex-col">
-            <div className="relative h-48 mb-4">
-              <Image
-                src="/images/tree.png"
-                alt="Adventure Trekking"
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
-            <h3 className="text-xl font-bold">Tree House</h3>
-            <p className="text-sm mt-2 flex-grow">
-              Embark on a thrilling adventure through the GandhadaGudi Garden s of Byahatti. Our expert guides will take you through
-              the most scenic routes.
-            </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors self-center">
-              View Details
-            </button>
-          </div>
-
-          {/* Activity Card 2 */}
-          <div className="border border-gray-200 rounded-lg p-4 flex flex-col">
-            <div className="relative h-48 mb-4">
-              <Image src="/images/cowframing.png" alt="Holi Rain Dance" fill className="object-cover rounded-lg" />
-            </div>
-            <h3 className="text-xl font-bold">Cow Framing</h3>
-            <p className="text-sm mt-2 flex-grow">
-              At the GandhadaGudi Garden Jungle Camp, we offer a unique Holi rain dance experience where visitors can enjoy a
-              colorful celebration.
-            </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors self-center">
-              View Details
-            </button>
-          </div>
-
-          {/* Activity Card 3 */}
-          <div className="border border-gray-200 rounded-lg p-4 flex flex-col">
-            <div className="relative h-48 mb-4">
-              <Image src="/images/firecamp.jpg" alt="Adventure Canyoning" fill className="object-cover rounded-lg" />
-            </div>
-            <h3 className="text-xl font-bold">Fire Camp</h3>
-            <p className="text-sm mt-2 flex-grow">
-              The GandhadaGudi Garden Jungle Camp offers canyoning, where you can rappel down waterfalls, jump into pools, and swim
-              through gorges.
-            </p>
-            <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors self-center">
-              View Details
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Book Resort Now */}
+      
+   
       
 <BookResort/>
-      
-    </div>
-    </div>
+ </div>
+
   )
 }
