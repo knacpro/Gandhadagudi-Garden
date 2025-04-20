@@ -45,7 +45,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
 
                     <Image
                         src="/images/logo.png"
-                        alt="Wildernest Logo"
+                        alt="GandhadaGudi Garden Logo"
                         width={240}
                         height={80}
                         className="h-20 sm:h-24 sm:w-auto rounded-xl"
