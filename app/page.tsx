@@ -19,7 +19,7 @@ export default function Home() {
     <div className="relative h-full">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 h-[850px]">
-        <Image src="/images/background.png" alt="Forest road background" fill className="object-cover" priority />
+        <Image src="/images/backgourd.png" alt="Forest road background" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
