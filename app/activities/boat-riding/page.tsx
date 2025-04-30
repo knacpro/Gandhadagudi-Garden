@@ -38,7 +38,7 @@ export default function BoatRidingPage() {
           <div className="md:w-1/2 flex gap-4">
             <div className="w-1/2">
               <Image
-                src="/images/boat.png"
+                src="/images/boat1.png"
                 alt="Boat View 1"
                 width={300}
                 height={400}
@@ -63,7 +63,7 @@ export default function BoatRidingPage() {
         {/* 1. Scenic Boat Rides */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="/images/boat3.png"
+            src="/images/boat1.png"
             alt="Scenic Boat Ride"
             width={600}
             height={400}
@@ -76,7 +76,7 @@ export default function BoatRidingPage() {
               Float across calm waters surrounded by lush greenery. Ideal for all age groups, our boat rides are perfect for sightseeing, photography, or simply enjoying the moment.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function BoatRidingPage() {
               Enjoy a fun-filled paddle boat ride with your loved ones. Easy to navigate and completely safe, paddle boating is perfect for couples, kids, and families looking for a joyful time.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+           
             </a>
           </div>
           <Image
@@ -118,7 +118,7 @@ export default function BoatRidingPage() {
               Witness the mesmerizing sunset while cruising on still waters. Perfect for romantic evenings or peaceful solo reflections, our sunset cruises are a must-experience.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+            
             </a>
           </div>
         </div>

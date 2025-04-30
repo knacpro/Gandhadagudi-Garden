@@ -38,7 +38,7 @@ export default function SwimmingPage() {
             <div className="md:w-1/2 flex gap-4">
               <div className="w-1/2">
                 <Image
-                  src="/images/swimming1.jpg"
+                  src="/images/swing1.png"
                   alt="Swimming Pool 1"
                   width={300}
                   height={400}

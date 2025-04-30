@@ -39,7 +39,7 @@ export default function IndoorOutdoorGamesPage() {
             <div className="md:w-1/2 flex gap-4">
               <div className="w-1/2">
                 <Image
-                  src="/images/carrom.png"
+                  src="/images/carrom1.png"
                   alt="Carrom"
                   width={300}
                   height={400}
@@ -64,7 +64,7 @@ export default function IndoorOutdoorGamesPage() {
           {/* Carrom */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/images/carrom.png"
+              src="/images/carrom1.png"
               alt="Carrom Game"
               width={600}
               height={400}
@@ -77,7 +77,7 @@ export default function IndoorOutdoorGamesPage() {
                 A classic game of precision and planning, Carrom is loved by all ages. Join friends or challenge others in this engaging tabletop game.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-                Request Information
+               
               </a>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function IndoorOutdoorGamesPage() {
                 Sharpen your strategy and decision-making skills. Whether you're learning or mastering the game, chess offers timeless intellectual excitement.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-                Request Information
+          
               </a>
             </div>
             <Image
@@ -106,7 +106,7 @@ export default function IndoorOutdoorGamesPage() {
           {/* Archery */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image
-              src="/images/archery.png"
+              src="/images/arachery1.png"
               alt="Archery"
               width={600}
               height={400}
@@ -119,7 +119,7 @@ export default function IndoorOutdoorGamesPage() {
                 Feel the thrill of hitting the target! Our archery setup is great for beginners and enthusiasts to explore focus and coordination outdoors.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-                Request Information
+                
               </a>
             </div>
           </div>

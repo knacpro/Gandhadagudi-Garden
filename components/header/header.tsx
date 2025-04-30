@@ -87,6 +87,8 @@ export default function HeaderComponent() {
                             Rain Dance</Link>
                             <Link href="/activities/zip-line" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
                             Zip Line</Link>
+                            <Link href="/activities/zip-line" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
+                            Zip Line</Link>
                         </div>
                     </div>
 

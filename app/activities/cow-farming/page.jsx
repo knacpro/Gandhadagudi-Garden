@@ -62,7 +62,7 @@ export default function page() {
         {/* 1. Milking Demonstration */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="/images/cow4.png"
+            src="/images/cow9.png"
             alt="Milking Demo"
             width={600}
             height={400}
@@ -75,7 +75,7 @@ export default function page() {
               Learn the traditional and modern ways of cow milking. This session offers a unique chance to understand dairy processes from farm to table.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>
@@ -89,11 +89,11 @@ export default function page() {
               Engage in feeding the cows and learn about their daily nutrition. This is a great opportunity for kids and families to interact with the animals.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
           <Image
-            src="/images/cow8.png"
+            src="/images/cow6.png"
             alt="Cow Feeding"
             width={600}
             height={400}
@@ -104,7 +104,7 @@ export default function page() {
         {/* 3. Organic Manure Making */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="/images/cowframing.png"
+            src="/images/cow1-.png"
             alt="Organic Manure"
             width={600}
             height={400}
@@ -117,7 +117,7 @@ export default function page() {
               Discover how cow waste is converted into valuable organic manure and used in farming. Learn sustainable farming techniques and eco-friendly practices.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>

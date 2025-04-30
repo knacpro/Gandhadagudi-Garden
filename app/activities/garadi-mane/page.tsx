@@ -8,15 +8,14 @@ export default function GaradiManePage() {
      <div>
              <HeaderComponent/>
     <div className="font-sans">
-      {/* Hero Section */}
+      
       <section
         className="text-center bg-cover bg-center text-white py-24 px-5"
-        style={{ backgroundImage: "url(/images/kusti1.png)" }}
+        style={{ backgroundImage: "url(/images/garadi.png)" }}
       >
         <h1 className="text-5xl font-bold">Garadi Mane</h1>
       </section>
 
-      {/* Introduction Section */}
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-1/2">
@@ -58,12 +57,12 @@ export default function GaradiManePage() {
         </div>
       </section>
 
-      {/* Garadi Mane Activities */}
+    
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-16">
         {/* 1. Traditional Wrestling */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="/images/kusti.png"
+            src="/images/garadimane1.png"
             alt="Traditional Wrestling"
             width={600}
             height={400}
@@ -76,7 +75,7 @@ export default function GaradiManePage() {
               Learn the ancient art of Kusti – Indian wrestling – from seasoned Gurus in a traditional mud akhada. Strength, agility, and discipline are the pillars of this practice.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+            
             </a>
           </div>
         </div>
@@ -90,7 +89,7 @@ export default function GaradiManePage() {
               Aerial strength and balance come together in the traditional sport of Malkhamb. Train your body using ropes and poles to master control and flexibility.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+           
             </a>
           </div>
           <Image
@@ -105,7 +104,7 @@ export default function GaradiManePage() {
         {/* 3. Warrior Conditioning */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
-            src="/images/kusti4.png"
+            src="/images/garadimane-2.png"
             alt="Warrior Training"
             width={600}
             height={400}
@@ -118,7 +117,7 @@ export default function GaradiManePage() {
               Push your limits with traditional conditioning using gada (mace), danda (clubs), and other ancient equipment designed for full-body strength and endurance.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>

@@ -76,7 +76,7 @@ export default function page() {
               Join experienced guides to spot local and migratory birds in their natural habitats. Learn interesting facts and enjoy the peaceful trails.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+            
             </a>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function page() {
               Learn how to capture stunning bird shots with expert tips on angles, lighting, and patience. Suitable for all camera types.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+            
             </a>
           </div>
           <Image
@@ -118,7 +118,7 @@ export default function page() {
               Start your morning with the sweet melodies of birds and beautiful views of sunrise over lush landscapes.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>
