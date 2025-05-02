@@ -48,27 +48,32 @@ export default function FooterComponent() {
             <h3 className="text-xl font-medium mb-6">About Us</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/about" className="text-white hover:text-green-400 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities" className="text-white hover:text-green-400 transition-colors">
                   Activities
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/attractions" className="text-white hover:text-green-400 transition-colors">
+                  Attractions
+                </Link>
+              </li>
+              <li>
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
                   Packages
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/gallery" className="text-white hover:text-green-400 transition-colors">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white hover:text-green-400 transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -81,27 +86,32 @@ export default function FooterComponent() {
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Jungle Safari
+                  Garadi Mane
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Bird Watching
+                  Boat Riding
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  River Rafting
+                  Kayaking
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Trekking
+                  Zip line
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Zorbing Ball
+                  Swimming
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                  Rain Dance
                 </Link>
               </li>
             </ul>
@@ -129,11 +139,6 @@ export default function FooterComponent() {
               <li>
                 <Link href="#" className="text-white hover:text-green-400 transition-colors">
                   Weekend Packages
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
-                  Resort Rooms
                 </Link>
               </li>
             </ul>
@@ -179,7 +184,7 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">info@wildernestdandeli.com</span>
+                <span className="text-white">info@gandhadagudigarden.com</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">
@@ -204,7 +209,7 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">Hassanmad, Ambewadi Gram Dandeli, Karnataka</span>
+                <span className="text-white">Hebsur Road, Byahatti Hubballi, Karnataka</span>
               </li>
             </ul>
             <Link
@@ -220,7 +225,7 @@ export default function FooterComponent() {
       {/* Bottom Copyright Section */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white">© 2025 Wildernest Dandeli. All Rights Reserved.</p>
+          <p className="text-sm text-white">© 2025 Gandhadagudi Garden, Byahatti. All Rights Reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-white hover:text-green-400 transition-colors">
               BLOG

@@ -36,7 +36,7 @@ const activities = [
   {
     id: 5,
     title: "Swimming",
-    image: "/images/swimming.png?height=400&width=500",
+    image: "/images/swimming-pool.png?height=400&width=500",
     description:
       "Swimming is a full-body workout that refreshes the mind while building strength, endurance, and coordination.",
   },
