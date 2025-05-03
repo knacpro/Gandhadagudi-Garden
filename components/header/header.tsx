@@ -28,6 +28,32 @@ export default function HeaderComponent() {
             ? "text-white border-b-2 border-yellow-400"
             : "text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400";
 
+    const activities = {
+        indoor: [
+            { href: "/activities/gym", label: "Gym" },
+            { href: "/activities/garadi-mane", label: "Garadi Mane" },
+            { href: "/activities/carrom", label: "Carrom, Chess, and Archery" },
+        ],
+        outdoor: [
+            { href: "/activities/boat-riding", label: "Boat Riding" },
+            { href: "/activities/adventure-kayaking", label: "Adventure Kayaking" },
+            { href: "/activities/bird-watching", label: "Bird Watching" },
+            { href: "/activities/horse-riding", label: "Horse Riding" },
+            { href: "/activities/cow-farming", label: "Cow Farming" },
+            { href: "/activities/swimming", label: "Swimming" },
+            { href: "/activities/rain-dance", label: "Rain Dance" },
+            { href: "/activities/zip-line", label: "Zip Line" },
+            { href: "/activities/goat-farm", label: "Goat Farm" },
+            { href: "/activities/poultry", label: "Poultry" },
+            { href: "/activities/rabbit", label: "Rabbit" },
+            { href: "/activities/event-booking", label: "Event Booking" },
+            { href: "/activities/lawn-garden", label: "Lawn Garden" },
+            { href: "/activities/small-tractor-riding", label: "Small Tractor Riding" },
+            { href: "/activities/kids-play-zone", label: "Kids Play Zone" },
+            { href: "/activities/deer-park", label: "Deer Park" },
+        ],
+    };
+
     return (
         <>
             {/* TopBar */}
@@ -69,26 +95,16 @@ export default function HeaderComponent() {
                         >
                             ACTIVITIES <ChevronDown size={14} />
                         </Link>
-                        <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200">
+                        <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded-xl shadow-2xl z-10 w-64 border border-gray-200 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300">
                             <div className="px-4 py-2 font-bold text-indigo-700 bg-gray-100 border-b">Indoor Activities</div>
-                            <Link href="/activities/gym" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700">Gym</Link>
-                            <Link href="/activities/garadi-mane" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700">Garadi Mane</Link>
-                            <Link href="/activities/carrom" className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700">Carrom, Chess, and Archery</Link>
+                            {activities.indoor.map(({ href, label }) => (
+                                <Link key={href} href={href} className="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-700">{label}</Link>
+                            ))}
 
                             <div className="px-4 py-2 font-bold text-green-700 bg-gray-100 border-b mt-2">Outdoor Activities</div>
-                            <Link href="/activities/boat-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">Boat Riding</Link>
-                            <Link href="/activities/adventure-kayaking" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">Adventure Kayaking</Link>
-                            <Link href="/activities/bird-watching" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">Bird Watching</Link>
-                            <Link href="/activities/horse-riding" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">Horse Riding</Link>
-                            <Link href="/activities/cow-farming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">Cow Farming</Link>
-                            <Link href="/activities/swimming" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
-                            Swimming</Link>
-                            <Link href="/activities/rain-dance" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
-                            Rain Dance</Link>
-                            <Link href="/activities/zip-line" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
-                            Zip Line</Link>
-                            <Link href="/activities/zip-line" className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">
-                            Zip Line</Link>
+                            {activities.outdoor.map(({ href, label }) => (
+                                <Link key={href} href={href} className="block px-4 py-2 hover:bg-green-50 hover:text-green-700">{label}</Link>
+                            ))}
                         </div>
                     </div>
 
@@ -110,7 +126,7 @@ export default function HeaderComponent() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="fixed inset-0 bg-black/90 z-10 flex flex-col items-start justify-start pt-24 pl-6 space-y-4 md:hidden">
+                <div className="fixed inset-0 bg-black/90 z-10 flex flex-col items-start justify-start pt-24 pl-6 space-y-4 md:hidden overflow-y-auto max-h-screen">
                     {navLinks.slice(0, 2).map(({ href, label }) => (
                         <Link key={href} href={href} className="text-white hover:text-gray-200" onClick={() => setMobileMenuOpen(false)}>{label}</Link>
                     ))}
@@ -124,22 +140,16 @@ export default function HeaderComponent() {
                     </button>
 
                     {mobileActivitiesOpen && (
-                        <div className="ml-4 space-y-2">
+                        <div className="ml-4 space-y-2 max-h-[400px] overflow-y-auto">
                             <p className="text-yellow-300 font-bold">Indoor Activities</p>
-                            <Link href="/activities/gym" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Gym</Link>
-                            <Link href="/activities/garadi-mane" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Garadi Mane</Link>
-                            <Link href="/activities/carrom" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Carrom, Chess, and Archery</Link>
-                           
+                            {activities.indoor.map(({ href, label }) => (
+                                <Link key={href} href={href} className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>{label}</Link>
+                            ))}
+
                             <p className="text-yellow-300 font-bold mt-2">Outdoor Activities</p>
-                            <Link href="/activities/boat-riding" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Boat Riding</Link>
-                            <Link href="/activities/adventure-kayaking" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Adventure Kayaking</Link>
-                            <Link href="/activities/bird-watching" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Bird Watching</Link>
-                            <Link href="/activities/horse-riding" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Horse Riding</Link>
-                            <Link href="/activities/cow-farming" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Cow Farming</Link>
-                            <Link href="/activities/swimming" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Swimming</Link>
-                            <Link href="/activities/rain-dance" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Rain Dance</Link>
-                            <Link href="/activities/zip-line" className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>Zip Line</Link>
-                                                
+                            {activities.outdoor.map(({ href, label }) => (
+                                <Link key={href} href={href} className="block text-white hover:text-yellow-300" onClick={() => setMobileMenuOpen(false)}>{label}</Link>
+                            ))}
                         </div>
                     )}
 
@@ -159,9 +169,6 @@ export default function HeaderComponent() {
                     </Link>
                 </div>
             )}
-
-            {/* Spacer */}
-            <div className="h-[160px] md:h-[170px]" />
         </>
     );
 }

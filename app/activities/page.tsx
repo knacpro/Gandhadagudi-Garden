@@ -81,48 +81,43 @@ export default function Page() {
       title: "Event Booking",
       description:
         "Host birthdays, family functions, or gatherings at our event space surrounded by lush gardens and nature.",
-      image: "/images/eventbooking.jpg",
+      image: "/images/eventbooking.png",
       link: "/activities/event-booking",
     },
     {
       title: "Lawn Garden",
       description:
         "Relax and unwind in our beautifully maintained lawn gardens, ideal for picnics, photography, or peaceful walks.",
-      image: "/images/lawn.jpg",
+      image: "/images/lawn.png",
       link: "/activities/lawn-garden",
     },
     {
       title: "Small Tractor Riding",
       description:
         "Kids and adults alike enjoy our fun and safe tractor ride experiences across scenic farm trails.",
-      image: "/images/tractor.jpg",
+      image: "/images/traker.png",
       link: "/activities/small-tractor-riding",
     },
     {
-      title: "Outdoor Games",
+      title: "kids play zone",
       description:
         "Join in friendly matches of cricket, badminton, or basketball in our outdoor play areas with natural surroundings.",
-      image: "/images/outdoor-games.jpg",
+      image: "/images/kids.png",
       link: "/activities/outdoor-games",
     },
-    {
-      title: "Indoor Games",
-      description:
-        "Enjoy classic games like chess and carrom indoors – perfect for relaxing during the evenings or rainy days.",
-      image: "/images/indoor-games.jpg",
-      link: "/activities/indoor-games",
-    },
+   
     {
       title: "Deer Farm",
       description:
         "Get close to nature and see our gentle deer in their peaceful environment, perfect for wildlife enthusiasts and photographers.",
-      image: "/images/deerfarm.jpg",
+      image: "/images/deer.png",
       link: "/activities/deer-farm",
     },
   ];
 
   return (
     <div>
+      <div>
       <HeaderComponent />
 
       <div className="font-sans">
@@ -212,6 +207,8 @@ export default function Page() {
           </section>
         ))}
       </div>
+    </div>
+    <BookResort/>
     </div>
   );
 }
