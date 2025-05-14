@@ -22,8 +22,15 @@ export default function Home() {
     <div className="relative h-full">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 h-[850px]">
-        <Image src="/images/background.png" alt="Forest road background" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/LufF96pUkeI?autoplay=1&mute=1&controls=0&loop=1&playlist=LufF96pUkeI"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        ></iframe>
+
       </div>
 
       <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />

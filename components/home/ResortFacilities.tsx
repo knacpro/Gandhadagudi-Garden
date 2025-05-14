@@ -85,7 +85,7 @@ export default function ResortFacilitiesComponent() {
 
         {/* Column 4: Image 2 */}
         <div className="flex items-center justify-center">
-          <Image src="/images/swimming-pool.png" alt="Resort Facility 1" width={300} height={300} className="rounded-xl shadow-lg object-cover" />
+          <Image src="/images/duck-boat.png" alt="Resort Facility 1" width={300} height={300} className="rounded-xl shadow-lg object-cover h-[430px] w-[450px]" />
         </div>
       </div>
     </div>
