@@ -22,7 +22,7 @@ Wander through vibrant flower trails, relax under ancient banyan trees, or simpl
 But it’s not just about the greenery—our garden is a celebration of life. From morning yoga sessions and birdwatching zones to cozy cottages nestled in nature’s lap, every element is crafted to help you slow down, reconnect, and recharge.
 
 🌿 Come, experience Gandhagudi—where every path leads to peace."
-            image="/images/background.png"
+            image="/images/Blog1.png"
             alt="Gandhagudi Garden"
           />
 
@@ -37,7 +37,7 @@ But it’s not just about the greenery—our garden is a celebration of life. Fr
 3-Riverside Picnic & Kayaking – Take a slow float along our calm river bend or enjoy a peaceful riverside picnic with birdsong as your soundtrack.
 
 4-Ready for adventure? Gandhagudi isn’t just a place—it’s an experience."
-            image="/images/background.png"
+            image="/images/Blog2.png"
             alt="Outdoor Activities"
           />
 
@@ -58,7 +58,7 @@ Here’s how we’re making a difference:
 5- Wildlife-Friendly Zones – Our garden is a safe haven for birds, butterflies, and small wildlife, helping biodiversity thrive naturally.
 
 6- At Gandhagudi, sustainability isn’t a trend — it’s a way of life. Come live it with us."
-            image="/images/background.png"
+            image="/images/Blog3.png"
             alt="Sustainable Practices"
           />
         </div>

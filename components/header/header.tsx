@@ -1,214 +1,109 @@
-"use client";
+'use client';
 
-import Link from 'next/link';
-import BookResort from "@/components/BookResort";
-import HeaderComponent from "@/components/header/header";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import TopBarComponent from "./TopBar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export default function Page() {
-  const activities = [
-    {
-      title: "Gym",
-      description:
-        "Our fully-equipped gym provides guests with the opportunity to stay active even during their retreat. Enjoy cardio, strength training, and relaxation in a serene setting.",
-      image: "/images/Gym1.png",
-      link: "/activities/gym",
-    },
-    {
-      title: "Boat Riding",
-      description:
-        "Experience the calmness of water with our boat riding adventure. Whether you're looking for a peaceful ride or a splash of fun, this activity is a must-do!",
-      image: "/images/duckboat.jpg",
-      link: "/activities/boat-riding",
-    },
-    {
-      title: "Adventure Kayaking",
-      description:
-        "Paddle your way through nature’s beauty with our kayaking sessions. Perfect for beginners and pros alike, enjoy the thrill and serenity of water adventures.",
-      image: "/images/kayaking1.png",
-      link: "/activities/adventure-kayaking",
-    },
-    {
-      title: "Bird Watching",
-      description:
-        "Delight in spotting rare and exotic birds in their natural habitat. Our lush gardens offer the perfect peaceful environment for bird lovers.",
-      image: "/images/birds2.png",
-      link: "/activities/bird-watching",
-    },
-    {
-      title: "Swimming",
-      description:
-        "Take a dip in our clean, spacious swimming area perfect for families, friends, or solo relaxation under the sun.",
-      image: "/images/swing.png",
-      link: "/activities/swimming",
-    },
-    {
-      title: "Horse Riding",
-      description:
-        "Ride across green fields and scenic trails with our trained horses. A perfect blend of nature and traditional adventure.",
-      image: "/images/horse.png",
-      link: "/activities/horse-riding",
-    },
-    {
-      title: "Rain Dance",
-      description:
-        "Feel the beat and dance under artificial rain with music and lighting for a party-like outdoor vibe.",
-      image: "/images/raindance.png",
-      link: "/activities/rain-dance",
-    },
-    {
-      title: "Goat Farm",
-      description:
-        "Visit our friendly goats at the farm – a great experience for kids and families to interact with nature and animals up close.",
-      image: "/images/goat.png",
-      link: "/activities/goat-farm",
-    },
-    {
-      title: "Poultry",
-      description:
-        "Learn about and explore the poultry section where you can see hens, ducks, and more in a farm-like environment.",
-      image: "/images/hen.png",
-      link: "/activities/poultry",
-    },
-    {
-      title: "Rabbit",
-      description:
-        "Meet our adorable rabbits in the garden! Perfect for children and animal lovers to interact in a gentle and playful way.",
-      image: "/images/raddit.png",
-      link: "/activities/rabbit",
-    },
-    {
-      title: "Event Booking",
-      description:
-        "Host birthdays, family functions, or gatherings at our event space surrounded by lush gardens and nature.",
-      image: "/images/eventbooking.png",
-      link: "/activities/event-booking",
-    },
-    {
-      title: "Lawn Garden",
-      description:
-        "Relax and unwind in our beautifully maintained lawn gardens, ideal for picnics, photography, or peaceful walks.",
-      image: "/images/lawn.png",
-      link: "/activities/lawn-garden",
-    },
-    {
-      title: "Small Tractor Riding",
-      description:
-        "Kids and adults alike enjoy our fun and safe tractor ride experiences across scenic farm trails.",
-      image: "/images/traker.png",
-      link: "/activities/small-tractor-riding",
-    },
-    {
-      title: "kids play zone",
-      description:
-        "Join in friendly matches of cricket, badminton, or basketball in our outdoor play areas with natural surroundings.",
-      image: "/images/kids.png",
-      link: "/activities/outdoor-games",
-    },
-   
-    {
-      title: "Deer Farm",
-      description:
-        "Get close to nature and see our gentle deer in their peaceful environment, perfect for wildlife enthusiasts and photographers.",
-      image: "/images/deer.png",
-      link: "/activities/deer-farm",
-    },
-  ];
+export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: any) {
+    const pathname = usePathname();
 
-  return (
-    <div>
-      <div>
-      <HeaderComponent />
+    const navLinks = [
+        { href: "/", label: "HOME" },
+        { href: "/about", label: "ABOUT" },
+        { href: "/activities", label: "ACTIVITIES" },
+        { href: "/attractions", label: "ATTRACTIONS" },
+        { href: "/packages", label: "PACKAGES" },
+        { href: "/gallery", label: "GALLERY" },
+        { href: "/blog", label: "BLOG" },
+        { href: "/contact", label: "CONTACT" },
+    ];
 
-      <div className="font-sans">
-        {/* Hero Section */}
-        <section
-          className="text-center bg-cover bg-center text-white py-24 px-5"
-          style={{ backgroundImage: "url(/images/nature1.png)" }}
-        >
-          <h1 className="text-5xl font-bold">Activities</h1>
-        </section>
+    const linkClass = (href: string) =>
+        pathname === href
+            ? "text-white border-b-2 border-yellow-400"
+            : "text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400";
 
-        {/* Introduction */}
-        <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="md:w-1/2">
-              <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">Activities</h5>
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mt-2">
-                EXPERIENCE NATURE'S FINEST
-                <br />
-                WITH GandhadaGudi Garden ACTIVITIES
-              </h2>
-              <p className="mt-4 text-gray-700">
-                GandhadaGudi Garden, Byahatti offers an exciting range of outdoor and indoor activities perfect for nature
-                lovers, families, and adventure seekers. Dive into unforgettable experiences surrounded by serene landscapes,
-                animals, games, and much more.
-              </p>
-              <div className="mt-6 flex items-center">
-                <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">
-                  <Image src="/images/phone.png" alt="Phone" width={24} height={24} />
+    return (
+        <>
+            {/* Fixed TopBar */}
+            <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-black/90">
+                <TopBarComponent />
+            </div>
+
+            {/* Fixed NavBar - placed below TopBar */}
+            <header className="fixed top-[40px] md:top-[48px] z-20 w-full px-4 py-1 md:bg-black/50 flex justify-between items-center">
+                <div className="flex items-center">
+                    <button
+                        className="md:hidden text-white z-20 mr-10"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
+
+                    <Image
+                        src="/images/logo.png"
+                        alt="GandhadaGudi Garden Logo"
+                        width={240}
+                        height={80}
+                        className="h-20 sm:h-24 sm:w-auto rounded-xl"
+                    />
                 </div>
-                <span className="font-bold text-lg">+91 96204 65007</span>
-              </div>
-            </div>
-            <div className="md:w-1/2 flex gap-4">
-              <div className="w-1/2">
-                <Image
-                  src="/images/deer1.png"
-                  alt="Deer"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-              <div className="w-1/2">
-                <Image
-                  src="/images/birds.png"
-                  alt="Birds"
-                  width={300}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* All Activity Cards */}
-        {activities.map((activity, idx) => (
-          <section
-            key={idx}
-            className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"
-          >
-            <div
-              className={`flex flex-col md:flex-row ${
-                idx % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } gap-8 items-center`}
-            >
-              <div className="md:w-1/2">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-              <div className="md:w-1/2">
-                <h3 className="text-2xl font-bold">{activity.title}</h3>
-                <p className="mt-4 text-gray-700">{activity.description}</p>
-                <Link href={activity.link}>
-                  <button className="mt-4 bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors">
-                    View Details
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
-    </div>
-    <BookResort/>
-    </div>
-  );
+                {/* Mobile Menu */}
+                {mobileMenuOpen && (
+                    <div className="fixed inset-x-0 top-0 bottom-0 bg-black/90 z-10 flex flex-col items-start justify-start pt-24 pl-6 md:hidden space-y-6">
+                        {navLinks.map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className={linkClass(href)}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        ))}
+                        <Link
+                            href="/reserve-now"
+                            className={`border px-6 py-2 ${pathname === "/reserve-now" ? "text-yellow-400 border-yellow-400" : "text-white border-white hover:bg-white/10"}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Reserve Now
+                        </Link>
+                    </div>
+                )}
+
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center space-x-6">
+                    {navLinks.map(({ href, label }) => (
+                        <Link key={href} href={href} className={linkClass(href)}>
+                            {label}
+                        </Link>
+                    ))}
+                    <Link
+                        href="/reserve-now"
+                        className={`border px-6 py-2 ${pathname === "/reserve-now" ? "text-yellow-400 border-yellow-400" : "text-white border-white hover:bg-white/10"}`}
+                    >
+                        Reserve Now
+                    </Link>
+                </nav>
+            </header>
+
+            {/* Add spacer to push down the rest of the page content */}
+            <div className="h-[160px] md:h-[170px]" />
+        </>
+    );
 }
+
+
+
+
+
+
+
+
+
+
+
