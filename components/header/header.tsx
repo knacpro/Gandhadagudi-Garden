@@ -92,7 +92,10 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
             </header>
 
             {/* Add spacer to push down the rest of the page content */}
-            <div className="h-[160px] md:h-[170px]" />
+            {pathname === "/" && (
+                <div className="h-[160px] md:h-[170px]" />
+            )}
+
         </>
     );
 }
