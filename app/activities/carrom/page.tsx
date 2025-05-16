@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-<<<<<<< HEAD
 import ResortActivitiesComponent from '@/components/home/ResortActivities';
-=======
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
 
 export default function IndoorOutdoorGamesPage() {
   return (
@@ -18,7 +11,6 @@ export default function IndoorOutdoorGamesPage() {
       <div className="font-sans">
         {/* Hero Section */}
         <section
-<<<<<<< HEAD
           className="text-center bg-cover bg-center text-white py-40 px-5"
           style={{ backgroundImage: "url(/images/flower.png)" }}
         >
@@ -26,12 +18,6 @@ export default function IndoorOutdoorGamesPage() {
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
             Dive into exciting activities that challenge the mind and energize the body!
           </p>
-=======
-          className="text-center bg-cover bg-center text-white py-24 px-5"
-          style={{ backgroundImage: "url(/images/back.png)" }} // Replace with appropriate image
-        >
-          <h1 className="text-5xl font-bold">Carrom | Chess | Archery</h1>
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
         </section>
 
         {/* Introduction Section */}
@@ -44,12 +30,8 @@ export default function IndoorOutdoorGamesPage() {
                 Pure Enjoyment.
               </h2>
               <p className="mt-4 text-gray-700">
-<<<<<<< HEAD
                 Engage your mind with indoor classics like Carrom and Chess, or test your aim and focus with Archery.
                 Whether you're a seasoned player or a curious beginner, these games bring people together in fun and challenge.
-=======
-                Engage your mind with indoor classics like Carrom and Chess, or test your aim and focus with Archery. Whether you're a seasoned player or a curious beginner, these games bring people together in fun and challenge.
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
               </p>
               <div className="mt-6 flex items-center">
                 <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">
@@ -99,11 +81,7 @@ export default function IndoorOutdoorGamesPage() {
                 A classic game of precision and planning, Carrom is loved by all ages. Join friends or challenge others in this engaging tabletop game.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-<<<<<<< HEAD
                 Learn More
-=======
-               
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
               </a>
             </div>
           </div>
@@ -117,19 +95,11 @@ export default function IndoorOutdoorGamesPage() {
                 Sharpen your strategy and decision-making skills. Whether you're learning or mastering the game, chess offers timeless intellectual excitement.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-<<<<<<< HEAD
                 Learn More
               </a>
             </div>
             <Image
               src="/images/chess1.png"
-=======
-          
-              </a>
-            </div>
-            <Image
-              src="/images/chess.png"
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
               alt="Chess Game"
               width={600}
               height={400}
@@ -153,16 +123,11 @@ export default function IndoorOutdoorGamesPage() {
                 Feel the thrill of hitting the target! Our archery setup is great for beginners and enthusiasts to explore focus and coordination outdoors.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-<<<<<<< HEAD
                 Learn More
-=======
-                
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
               </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <h2 className="text-3xl font-bold text-center mb-8">
     Watch Our Traditional Training in Action
@@ -184,10 +149,6 @@ export default function IndoorOutdoorGamesPage() {
 
         {/* Resort Activities and Booking */}
         <ResortActivitiesComponent />
-=======
-
-        {/* Booking Section */}
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
         <BookResort />
       </div>
     </div>
