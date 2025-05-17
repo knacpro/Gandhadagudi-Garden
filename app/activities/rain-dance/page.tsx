@@ -99,7 +99,24 @@ export default function page() {
             />
           </div>
         </section>
-
+         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl font-bold text-center mb-8">
+    Watch Our Traditional Training in Action
+  </h2>
+  <div className="flex justify-center">
+    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/9i-wNKvecus?si=n2mz8VyTj2eRnpAK"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</section>
         {/* Booking Section */}
         <BookResort />
       </div>

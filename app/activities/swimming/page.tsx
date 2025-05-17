@@ -106,21 +106,21 @@ export default function SwimmingPage() {
       
          
         </section>
-<section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-3xl font-bold text-center mb-8">Watch The Action</h2>
+         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl font-bold text-center mb-8">
+    Watch Our Traditional Training in Action
+  </h2>
   <div className="flex justify-center">
-    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-5xl"> {/* Increased max width */}
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/swing.mp4
-        "
-      >
-        Your browser does not support the video tag.
-      </video>
+    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/unAmLA7GliQ?si=vIUa_pb6aCK7JHx0"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
     </div>
   </div>
 </section>

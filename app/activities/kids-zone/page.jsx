@@ -96,61 +96,41 @@ export default function KidsZonePage() {
       </section>
 
      {/* Videos Section */}
-<section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-3xl font-bold text-center mb-8"> Videos</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div className="rounded-lg overflow-hidden shadow-md">
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/kids-2.mp4"
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div className="rounded-lg overflow-hidden shadow-md">
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/kids1.mp4"
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div className="rounded-lg overflow-hidden shadow-md">
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/kids-fun3.mp4"
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div className="rounded-lg overflow-hidden shadow-md">
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/kids-fun4.mp4"
-        poster="/images/kids-video-thumb2.jpg"
-      >
-        Your browser does not support the video tag.
-      </video>
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl font-bold text-center mb-8">
+    Watch Our Traditional Training in Action
+  </h2>
+  <div className="flex justify-center">
+    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/p9afwKh1v8o?si=qxRwToOmXSPPqzGQ"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
     </div>
   </div>
-
-  
+</section>
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl font-bold text-center mb-8">
+    Watch Our Traditional Training in Action
+  </h2>
+  <div className="flex justify-center">
+    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/yYUUObZilvA?si=f4YklYD0i7Djzz9m"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
 </section>
 
       <ResortActivitiesComponent/>

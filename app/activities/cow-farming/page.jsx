@@ -10,11 +10,7 @@ export default function page() {
     <div className="font-sans">
       {/* Hero Section */}
       <section
-<<<<<<< HEAD
         className="text-center bg-cover bg-center text-white py-40 px-5"
-=======
-        className="text-center bg-cover bg-center text-white py-24 px-5"
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
         style={{ backgroundImage: "url(/images/cow1.png)" }}
       >
         <h1 className="text-5xl font-bold">Cow Farming</h1>
@@ -126,7 +122,6 @@ export default function page() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <h2 className="text-3xl font-bold text-center mb-8">
     Watch Our Traditional Training in Action
@@ -145,9 +140,6 @@ export default function page() {
     </div>
   </div>
 </section>
-=======
-
->>>>>>> cec5fa0006b8f09a8656ef4dc40d2d2acae4bf84
       {/* Booking Section */}
       <BookResort />
     </div>
