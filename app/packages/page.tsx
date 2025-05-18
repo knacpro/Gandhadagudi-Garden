@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Phone } from "lucide-react";
 import BookResort from "@/components/BookResort";
+import FooterComponent from "@/components/footer/footer";
 
 export default function AdventurePackages() {
   return (
@@ -35,12 +36,14 @@ export default function AdventurePackages() {
               adventures like trekking, river rafting, and eco-learning
               experiences.
             </p>
-            <Link
-              href="/enquiry"
+            <a
+              href="https://wa.me/919740806599?text=Hi%2C%20I'm%20interested%20in%20your%20Student%20Package!"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-[#a4b617] hover:bg-[#8a9a13] text-white py-2 px-4 w-34 text-center transition-colors"
             >
               Enquiry Now
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -55,12 +58,14 @@ export default function AdventurePackages() {
               natural environment.
             </p>
             <div>
-              <Link
-                href="/enquiry"
+              <a
+                href="https://wa.me/919740806599?text=Hi%2C%20I'm%20interested%20in%20your%20Corporate%20Package!"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#a4b617] hover:bg-[#8a9a13] text-white py-2 px-6 transition-colors"
               >
                 Enquiry Now
-              </Link>
+              </a>
             </div>
           </div>
           <div className="relative h-[300px] md:h-auto md:w-1/2 order-1 md:order-2 group overflow-hidden">
@@ -92,12 +97,14 @@ export default function AdventurePackages() {
               outdoor activities while connecting with nature.
             </p>
             <div>
-              <Link
-                href="/enquiry"
+              <a
+                href="https://wa.me/919740806599?text=Hi%2C%20I'm%20interested%20in%20your%20Family%20Package!"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#a4b617] hover:bg-[#8a9a13] text-white py-2 px-6 transition-colors"
               >
                 Enquiry Now
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -112,12 +119,14 @@ export default function AdventurePackages() {
               and beautiful surroundings to recharge your mind and body.
             </p>
             <div>
-              <Link
-                href="/enquiry"
+              <a
+                href="https://wa.me/919740806599?text=Hi%2C%20I'm%20interested%20in%20your%20Weekend%20Package!"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-[#a4b617] hover:bg-[#8a9a13] text-white py-2 px-6 transition-colors"
               >
                 Enquiry Now
-              </Link>
+              </a>
             </div>
           </div>
           <div className="relative h-[300px] md:h-auto md:w-1/2 order-1 md:order-2 group overflow-hidden">
@@ -134,8 +143,7 @@ export default function AdventurePackages() {
       <br />
 
       <BookResort />
-
-      
+      <FooterComponent />
     </main>
   );
 }
