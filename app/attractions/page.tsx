@@ -1,10 +1,17 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Phone, MessageCircle } from "lucide-react";
-import Link from "next/link";
-import BookResort from "@/components/BookResort";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Link,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 import HeaderComponent from "@/components/header/header";
+import BookResort from "@/components/BookResort";
+import FooterComponent from "@/components/footer/footer";
 
 interface Attraction {
   id: number;
@@ -13,63 +20,117 @@ interface Attraction {
   image: string;
 }
 
-function AttractionsCarousel() {
-  const attractions: Attraction[] = [
-    {
-      id: 1,
-      title: "Sathodi Falls",
-      description:
-        "Sathodi Falls is a serene and picturesque waterfall nestled in the forests near Yellapur in Uttara Kannada. Surrounded by lush greenery, it's a perfect spot for nature lovers and those seeking tranquility.",
-      image: "/images/SathodiFalls1.jpg",
-    },
-    {
-      id: 2,
-      title: "Nuggikeri Hanuman Temple",
-      description:
-        "Temple, located near Dharwad, is a sacred site dedicated to Lord Hanuman. Known for its spiritual ambiance and historical significance, the temple attracts devotees seeking peace, blessings, and fulfillment of wishes.",
-      image: "/images/nuggikeri.jpg",
-    },
-    {
-      id: 3,
-      title: "Madod Falls",
-      description:
-        "Magod Falls is a stunning two-tiered waterfall near Yellapur, where the Bedti River cascades down rugged cliffs into a deep rocky valley. Surrounded by dense forests, it's a perfect escape for nature lovers and photographers.",
-      image: "/images/magod.jpg",
-    },
-    {
-      id: 4,
-      title: "Shri Shivashakti Dhama",
-      description: "Shri Shivashakti Dhama, situated in Hubballi, Karnataka, is a spiritual complex encompassing temples dedicated to Lord Shiva, Ganesha, Chandikeshwari Mata, and Shaneshwar, spread across 6.5 acres. ",
-      image: "/images/shiv.jpg",
-    },
-  ];
+const attractions: Attraction[] = [
+  {
+    id: 1,
+    title: "Sathodi Falls",
+    description:
+      "Sathodi Falls is a serene and picturesque waterfall nestled in the forests near Yellapur in Uttara Kannada. Surrounded by lush greenery, it's a perfect spot for nature lovers and those seeking tranquility.",
+    image: "/images/SathodiFalls1.jpg",
+  },
+  {
+    id: 2,
+    title: "Nuggikeri Hanuman Temple",
+    description:
+      "Temple, located near Dharwad, is a sacred site dedicated to Lord Hanuman. Known for its spiritual ambiance and historical significance, the temple attracts devotees seeking peace, blessings, and fulfillment of wishes.",
+    image: "/images/nuggikeri.jpg",
+  },
+  {
+    id: 3,
+    title: "Madod Falls",
+    description:
+      "Magod Falls is a stunning two-tiered waterfall near Yellapur, where the Bedti River cascades down rugged cliffs into a deep rocky valley. Surrounded by dense forests, it's a perfect escape for nature lovers and photographers.",
+    image: "/images/magod.jpg",
+  },
+  {
+    id: 4,
+    title: "Shri Shivashakti Dhama",
+    description:
+      "Shri Shivashakti Dhama, situated in Hubballi, Karnataka, is a spiritual complex encompassing temples dedicated to Lord Shiva, Ganesha, Chandikeshwari Mata, and Shaneshwar, spread across 6.5 acres. ",
+    image: "/images/shiv.jpg",
+  },
+];
 
-  const [startIndex, setStartIndex] = useState(0);
-  const itemsToShow = 3;
+export function AttractionsCarousel() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const handlePrev = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex === 0 ? attractions.length - itemsToShow : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex >= attractions.length - itemsToShow ? 0 : prevIndex + 1
-    );
-  };
-
-  const visibleAttractions = () => {
-    const result = [];
-    for (let i = 0; i < itemsToShow; i++) {
-      const index = (startIndex + i) % attractions.length;
-      result.push(attractions[index]);
+  const checkScrollButtons = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft <
+          container.scrollWidth - container.clientWidth - 10
+      );
     }
-    return result;
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    let autoScrollInterval: NodeJS.Timeout;
+    let pauseTimeout: NodeJS.Timeout;
+
+    const startAutoScroll = () => {
+      autoScrollInterval = setInterval(() => {
+        if (container) {
+          if (
+            container.scrollLeft >=
+            container.scrollWidth - container.clientWidth - 10
+          ) {
+            container.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            container.scrollBy({ left: 300, behavior: "smooth" });
+          }
+        }
+      }, 20);
+    };
+
+    const pauseAutoScroll = () => {
+      clearInterval(autoScrollInterval);
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(() => {
+        startAutoScroll();
+      }, 5000);
+    };
+
+    if (container) {
+      container.addEventListener("scroll", () => {
+        checkScrollButtons();
+        pauseAutoScroll();
+      });
+      container.addEventListener("mouseenter", pauseAutoScroll);
+      container.addEventListener("mouseleave", startAutoScroll);
+      window.addEventListener("resize", checkScrollButtons);
+
+      checkScrollButtons();
+      startAutoScroll();
+    }
+
+    return () => {
+      clearInterval(autoScrollInterval);
+      clearTimeout(pauseTimeout);
+      if (container) {
+        container.removeEventListener("scroll", pauseAutoScroll);
+        container.removeEventListener("mouseenter", pauseAutoScroll);
+        container.removeEventListener("mouseleave", startAutoScroll);
+      }
+      window.removeEventListener("resize", checkScrollButtons);
+    };
+  }, []);
+
+  const scroll = (direction: "left" | "right") => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const cardWidth = container.querySelector("div")?.offsetWidth || 0;
+      const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h3 className="text-[#a4b743] uppercase tracking-wide font-medium mb-4">
           LOCAL ACTIVITIES & EVENTS
@@ -81,17 +142,27 @@ function AttractionsCarousel() {
 
       <div className="relative">
         <button
-          onClick={handlePrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#a4b743] text-white p-4"
-          aria-label="Previous attraction"
+          onClick={() => scroll("left")}
+          className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#a4b743] text-white p-3 rounded-r-md ${
+            !canScrollLeft ? "opacity-50 cursor-not-allowed" : "opacity-100"
+          }`}
+          disabled={!canScrollLeft}
+          aria-label="Scroll left"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-12">
-          {visibleAttractions().map((attraction) => (
-            <div key={attraction.id} className="border border-gray-200">
-              <div className="relative h-64 w-full">
+        <div
+          ref={scrollContainerRef}
+          className="flex overflow-x-auto gap-6 pb-6 scrollbar-hide snap-x"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {attractions.map((attraction) => (
+            <div
+              key={attraction.id}
+              className="flex-none w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] border border-[#a4b743] snap-start"
+            >
+              <div className="h-[300px] relative">
                 <Image
                   src={attraction.image}
                   alt={attraction.title}
@@ -103,21 +174,24 @@ function AttractionsCarousel() {
                 <h3 className="text-2xl font-medium text-[#2d4a3e] mb-4">
                   {attraction.title}
                 </h3>
-                <p className="text-gray-700">{attraction.description}</p>
+                <p className="text-gray-700 mb-6">{attraction.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         <button
-          onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#a4b743] text-white p-4"
-          aria-label="Next attraction"
+          onClick={() => scroll("right")}
+          className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#a4b743] text-white p-3 rounded-l-md ${
+            !canScrollRight ? "opacity-50 cursor-not-allowed" : "opacity-100"
+          }`}
+          disabled={!canScrollRight}
+          aria-label="Scroll right"
         >
           <ChevronRight className="h-6 w-6" />
         </button>
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -220,7 +294,6 @@ export default function Attractions() {
               by devotees from all over, it offers a serene space for
               meditation, prayer, and quiet reflection.
             </p>
-           
           </div>
         </div>
 
@@ -269,7 +342,6 @@ export default function Attractions() {
               fresh air, and a peaceful atmosphere, it's a favorite spot for
               morning walks, light trekking, and sunset watching.
             </p>
-    
           </div>
         </div>
 
@@ -285,7 +357,6 @@ export default function Attractions() {
               offers a serene atmosphere for spiritual reflection and cultural
               exploration.
             </p>
-           
           </div>
 
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg order-1 lg:order-2 group">
@@ -321,7 +392,6 @@ export default function Attractions() {
               hidden gem for those looking to connect with nature away from the
               city’s rush.
             </p>
-           
           </div>
         </div>
 
@@ -337,7 +407,6 @@ export default function Attractions() {
               it offers visitors a place for devotion, learning, and quiet
               contemplation.
             </p>
-        
           </div>
 
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg order-1 lg:order-2 group">
@@ -354,26 +423,7 @@ export default function Attractions() {
 
       <AttractionsCarousel />
       <BookResort />
-
-      {/* Floating Contact Buttons */}
-      <div className="fixed right-4 bottom-4 flex flex-col gap-2 z-50">
-        <Link
-          href="#"
-          className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors"
-          aria-label="WhatsApp"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Link>
-        <Link
-          href="#"
-          className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
-          aria-label="Call"
-        >
-          <Phone className="h-6 w-6" />
-        </Link>
-      </div>
+      <FooterComponent />
     </main>
   );
 }
-
-
