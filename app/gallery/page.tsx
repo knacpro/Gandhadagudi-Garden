@@ -3,12 +3,13 @@ import Link from "next/link";
 import { MessageCircle, Phone } from "lucide-react";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
+import FooterComponent from "@/components/footer/footer";
 
 export default function GalleryPage() {
   const adventures = [
-    { id: 1, src: "/images/garden1.jpeg", alt: "Garden View 1" },
+    { id: 1, src: "/images/bird.jpg", alt: "Garden View 1" },
     { id: 2, src: "/images/garden2.jpeg", alt: "Garden View 2" },
-    { id: 3, src: "/images/garden3.jpeg", alt: "Garden View 3" },
+    { id: 3, src: "/images/bird1.jpg", alt: "Garden View 3" },
     { id: 4, src: "/images/garden4.jpeg", alt: "Garden View 4" },
     { id: 5, src: "/images/garden5.jpeg", alt: "Garden View 5" },
     { id: 6, src: "/images/garden6.jpeg", alt: "Garden View 6" },
@@ -85,6 +86,7 @@ export default function GalleryPage() {
           <Phone className="h-6 w-6" />
         </Link>
       </div>
+      <FooterComponent />
     </main>
   );
 }
