@@ -1,10 +1,11 @@
 import { Phone } from "lucide-react";
 import Image from "next/image"
+import Link from "next/link";
 
 
 export default function WelcomeSectionComponent() {
     return (
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 md:mt-72 mt-[450px]">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
             {/* Left Content Section */}
             <div className="flex-1 flex flex-col justify-center">
               <p className="text-[#a4b95b] text-sm font-medium tracking-wide mb-2">WELCOME TO</p>
@@ -19,12 +20,12 @@ export default function WelcomeSectionComponent() {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border-2 border-[#a4b95b] flex items-center justify-center">
+                <Link href={'tel:+919740806599'} className="w-16 h-16 rounded-full border-2 border-[#a4b95b] flex items-center justify-center">
                   <Phone className="w-6 h-6 text-[#a4b95b]" />
-                </div>
+                </Link>
                 <div>
                   <p className="text-[#a4b95b] text-sm font-medium mb-1">CALL US FOR MORE INFORMATION</p>
-                  <p className="text-2xl text-[#333333] font-medium">+91 96204 65007</p>
+                  <p className="text-2xl text-[#333333] font-medium">+91 9740806599</p>
                 </div>
               </div>
             </div>

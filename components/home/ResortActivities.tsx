@@ -124,6 +124,13 @@ const activities = [
     description:
       "Tractor riding is the experience of operating or traveling on a powerful farm vehicle used for agricultural tasks like plowing and hauling.",
   },
+  {
+    id: 18,
+    title: "Bullock kart riding",
+    image: "/images/bullock-kart.png?height=400&width=500",
+    description:
+      "Bullock cart riding is a traditional and eco-friendly mode of transport that offers a glimpse into rural life and heritage.",
+  },
 ]
 
 export default function ResortActivitiesComponent() {

@@ -19,8 +19,20 @@ export default function GallerySectionComponent() {
       alt: "Colorful bird on a branch",
     },
     {
-      src: "/images/fire-camp.png",
-      alt: "Fire camp",
+      src: "/images/pigeon.png",
+      alt: "Colorful bird on a branch",
+    },
+    {
+      src: "/images/peacock.png",
+      alt: "Colorful bird on a branch",
+    },
+    {
+      src: "/images/children-package.png",
+      alt: "Colorful bird on a branch",
+    },
+    {
+      src: "/images/swimming-pool.png",
+      alt: "Colorful bird on a branch",
     },
     {
       src: "/images/zip-line.png",

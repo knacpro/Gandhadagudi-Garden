@@ -52,8 +52,8 @@ export default function HeaderComponent() {
 
   const linkClass = (href: string) =>
     pathname === href
-      ? 'text-white border-b-2 border-yellow-400'
-      : 'text-white hover:text-gray-200 hover:border-b-2 hover:border-yellow-400';
+      ? 'text-black font-bold border-b-2 border-yellow-400'
+      : 'text-black font-bold hover:text-gray-900 hover:border-b-2 hover:border-yellow-400';
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -70,24 +70,23 @@ export default function HeaderComponent() {
     };
   }, []);
 
-  return (
-    <>
-    
-      <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-black/90">
-        <TopBarComponent />
-      </div>
+    return (
+        <>
+            {/* Fixed TopBar */}
+            <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-green-400">
+                <TopBarComponent />
+            </div>
 
-      
-      <header className="fixed top-[40px] md:top-[48px] z-50 w-full px-4 py-2 bg-black/80 flex justify-between items-center">
-        <div className="flex items-center">
-          
-          <button
-            className="md:hidden text-white z-50 mr-4"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+            {/* Fixed NavBar - placed below TopBar */}
+            <header className="fixed top-[40px] md:top-[48px] z-20 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
+                <div className="flex items-center">
+                    <button
+                        className="md:hidden z-20 mr-10"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
 
           
           <Link href="/">

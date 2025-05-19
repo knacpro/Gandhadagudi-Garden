@@ -32,38 +32,44 @@ export default function BookResort() {
               </div>
             </div>
 
-            <div className="md:w-1/2 bg-[#2A3A2A] p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Send A Message</h3>
-              <form>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-2 bg-transparent border border-gray-600 rounded text-white"
-                  />
-                </div>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    placeholder="Phone"
-                    className="w-full p-2 bg-transparent border border-gray-600 rounded text-white"
-                  />
-                </div>
-                <div className="mb-4">
-                  <textarea
-                    placeholder="Message"
-                    rows={4}
-                    className="w-full p-2 bg-transparent border border-gray-600 rounded text-white"
-                  ></textarea>
-                </div>
+            <div className="md:w-[500px] bg-[#2A3A2A] p-6 rounded-lg">
+              <div className="ml-7 w-[400px] bg-white p-8 text-[#2A3A2A] h-[400px]">
+                <div className="flex flex-col items-center">
+                  <h1 className="text-4xl md:text-2xl font-serif italic tracking-wide mb-6">OPEN HOURS</h1>
 
-                <button
-                  type="submit"
-                  className="w-full bg-[#8CBF1E] text-white py-2 px-6 rounded-md hover:bg-[#7aa919] transition-colors"
-                >
-                  SUBMIT
-                </button>
-              </form>
+                  <div className="w-32 h-0.5 bg-white mb-8"></div>
+
+                  <div className="w-full grid grid-cols-2 gap-y-2 text-xl md:text-lg mb-8">
+                    <div>Monday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Tuesday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Wednesday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Thursday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Friday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Saturday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+
+                    <div>Sunday</div>
+                    <div className="text-right">10.30 AM - 6 PM</div>
+                  </div>
+
+                  {/* <div className="w-full h-0.5 bg-white mb-8"></div>
+
+                  <h2 className="text-2xl md:text-lg font-serif italic tracking-wide mb-6">Reservations by phone</h2>
+
+                  <div className="text-xl md:text-lg mb-2">+91-8880092222 Museum</div>
+                  <div className="text-xl md:text-lg">+91-8527028800 Resort</div> */}
+                </div>
+              </div>
             </div>
           </div>
         </div>
