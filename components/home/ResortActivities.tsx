@@ -36,7 +36,7 @@ const activities = [
   {
     id: 5,
     title: "Swimming",
-    image: "/images/swimming.png?height=400&width=500",
+    image: "/images/swimming-pool.png?height=400&width=500",
     description:
       "Swimming is a full-body workout that refreshes the mind while building strength, endurance, and coordination.",
   },
@@ -50,14 +50,14 @@ const activities = [
   {
     id: 7,
     title: "Boat Riding",
-    image: "/images/boat-riding.png?height=400&width=500",
+    image: "/images/duck-boat.png?height=400&width=500",
     description:
       "Boat riding is a serene and adventurous way to explore water bodies, blending relaxation with a touch of thrill.",
   },
   {
     id: 8,
     title: "Adventure Kayaking",
-    image: "/images/kayaking-1.png?height=400&width=500",
+    image: "/images/kayaking.png?height=400&width=500",
     description:
       "Kayaking is an exhilarating water sport that combines adventure, skill, and a close connection with nature.",
   },
@@ -78,14 +78,14 @@ const activities = [
   {
     id: 11,
     title: "Tree House",
-    image: "/images/tree-house1.png?height=400&width=500",
+    image: "/images/tree-house.png?height=400&width=500",
     description:
       "A tree house is a magical retreat nestled among branches, offering adventure, serenity, and a childhood dream come true.",
   },
   {
     id: 12,
     title: "Zip Line",
-    image: "/images/zip-line1.png?height=400&width=500",
+    image: "/images/zip-line.png?height=400&width=500",
     description:
       "Zip lining is a thrilling adventure that lets you soar through the air, gliding high above the ground with a rush of adrenaline.",
   },
@@ -95,6 +95,34 @@ const activities = [
     image: "/images/archery.png?height=400&width=500",
     description:
       "Archery is a focused sport of precision and control, where each arrow reflects the archer’s skill and concentration.",
+  },
+  {
+    id: 14,
+    title: "Carrom",
+    image: "/images/carrom.png?height=400&width=500",
+    description:
+      "Carrom is a popular tabletop game where players flick discs into pockets using a striker, combining skill, precision, and strategy.",
+  },
+  {
+    id: 15,
+    title: "Goat farming",
+    image: "/images/goat-farming.png?height=400&width=500",
+    description:
+      "Goat farming is the practice of raising goats for milk, meat, fiber, or manure, offering a sustainable source of income and nutrition.",
+  },
+  {
+    id: 16,
+    title: "Chess",
+    image: "/images/chess.png?height=400&width=500",
+    description:
+      "Chess is a strategic board game where two players compete to checkmate each other's king using skillful moves and tactics.",
+  },
+  {
+    id: 17,
+    title: "Tractor riding",
+    image: "/images/tractor-riding.png?height=400&width=500",
+    description:
+      "Tractor riding is the experience of operating or traveling on a powerful farm vehicle used for agricultural tasks like plowing and hauling.",
   },
 ]
 

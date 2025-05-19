@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+>>>>>>>>> Temporary merge branch 2
 export default function BookResort() {
   return (
     <div>

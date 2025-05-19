@@ -11,7 +11,7 @@ export default function ResortPackagesComponent() {
     },
     {
       title: "Corporate Packages",
-      image: "/images/corporate-package.png",
+      image: "/images/swimming-pool.png",
     },
     {
       title: "Family Packages",
@@ -19,7 +19,7 @@ export default function ResortPackagesComponent() {
     },
     {
       title: "Weekend Packages",
-      image: "/images/weekend-package.png",
+      image: "/images/group.png",
     },
   ]
 
