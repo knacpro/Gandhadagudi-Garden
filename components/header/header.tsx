@@ -72,15 +72,15 @@ export default function HeaderComponent() {
 
   return (
     <>
-      {/* Top Bar */}
+    
       <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-black/90">
         <TopBarComponent />
       </div>
 
-      {/* Header */}
+      
       <header className="fixed top-[40px] md:top-[48px] z-50 w-full px-4 py-2 bg-black/80 flex justify-between items-center">
         <div className="flex items-center">
-          {/* Mobile Menu Toggle */}
+          
           <button
             className="md:hidden text-white z-50 mr-4"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -89,7 +89,7 @@ export default function HeaderComponent() {
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          {/* Logo */}
+          
           <Link href="/">
             <Image
               src="/images/logo.png"
@@ -101,7 +101,7 @@ export default function HeaderComponent() {
           </Link>
         </div>
 
-        {/* Desktop Menu */}
+        
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.slice(0, 2).map(({ href, label }) => (
             <Link key={href} href={href} className={linkClass(href)}>
@@ -109,7 +109,7 @@ export default function HeaderComponent() {
             </Link>
           ))}
 
-          {/* Activities Dropdown */}
+          
           <div className="relative" ref={activitiesRef}>
             <button
   onClick={() => setDesktopActivitiesOpen(!desktopActivitiesOpen)}
@@ -168,12 +168,12 @@ export default function HeaderComponent() {
           >
             Reserve Now
           </Link>
-        </nav>
-      </header>
+          </nav>
+         </header>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-black/90 z-40 flex flex-col items-start justify-start pt-24 pl-6 pr-4 space-y-4 md:hidden overflow-y-auto max-h-screen">
+      
+         {mobileMenuOpen && (
+         <div className="fixed inset-0 bg-black/90 z-40 flex flex-col items-start justify-start pt-24 pl-6 pr-4 space-y-4 md:hidden overflow-y-auto max-h-screen">
           {navLinks.slice(0, 2).map(({ href, label }) => (
             <Link
               key={href}
@@ -185,7 +185,7 @@ export default function HeaderComponent() {
             </Link>
           ))}
 
-          {/* Mobile Activities Collapsible */}
+          
           <button
             onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
             className="text-white font-semibold flex items-center gap-1"
@@ -236,15 +236,15 @@ export default function HeaderComponent() {
             </Link>
           ))}
 
-          <Link
+           <Link
             href="/reserve-now"
             className="text-yellow-400 border border-yellow-400 px-6 py-2 rounded"
             onClick={() => setMobileMenuOpen(false)}
-          >
+           >
             Reserve Now
-          </Link>
-        </div>
-      )}
-    </>
+           </Link>
+           </div>
+           )}
+            </>
   );
 }
