@@ -2,22 +2,27 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function ResortPackagesComponent() {
   const packages = [
     {
+      id: 1,
       title: "Students Packages",
       image: "/images/children-package.png",
     },
     {
+      id: 2,
       title: "Corporate Packages",
       image: "/images/swimming-pool.png",
     },
     {
+      id: 3,
       title: "Family Packages",
       image: "/images/family-package.png",
     },
     {
+      id: 4,
       title: "Weekend Packages",
       image: "/images/group.png",
     },
@@ -35,7 +40,9 @@ export default function ResortPackagesComponent() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {packages.map((pkg, index) => (
-          <PackageCard key={index} title={pkg.title} image={pkg.image} />
+          <div key={pkg.id}>
+            <PackageCard key={index} title={pkg.title} image={pkg.image} />
+          </div>
         ))}
       </div>
     </div>
@@ -61,7 +68,7 @@ function PackageCard({ title, image }: { title: string; image: string }) {
           />
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-end pb-12">
             <h3 className="text-white text-2xl font-medium mb-4">{title}</h3>
-            <button className="text-white uppercase text-sm tracking-wider font-medium">BOOK NOW</button>
+            <Link href={'https://wa.me/919740806599?text=Hi%2C%20I%20am%20interested%20in%20your%20services.'} target="_blank" className="text-white uppercase text-sm tracking-wider font-medium hover:border-b-2 hover:border-yellow-400">BOOK NOW</Link>
           </div>
         </div>
       </div>
