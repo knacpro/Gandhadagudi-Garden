@@ -112,10 +112,10 @@ export default function HeaderComponent() {
           <div className="relative" ref={activitiesRef}>
             <button
   onClick={() => setDesktopActivitiesOpen(!desktopActivitiesOpen)}
-  className="text-white flex items-center gap-1 hover:text-yellow-300 transition"
+  className="to-black flex items-center gap-1 hover:text-yellow-300 transition"
   aria-label="Toggle activities dropdown"
 >
-  <Link href="/activities" className="hover:text-yellow-300">
+  <Link href="/activities" className="hover:text-yellow-300"  >
     ACTIVITIES
   </Link>
   <ChevronDown size={14} />

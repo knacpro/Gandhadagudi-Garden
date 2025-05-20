@@ -12,7 +12,7 @@ export default function page() {
       <div className="font-sans">
        
         <section
-          className="text-center bg-cover bg-center text-white py-40 px-5"
+          className="text-center bg-cover bg-center text-white py-40 px-5 "
           style={{ backgroundImage: "url(/images/kayaing2.png)" }}
         >
           <h1 className="text-5xl font-bold">Adventure Kayaking</h1>

@@ -78,7 +78,6 @@ export default function Page() {
       image: "/images/rabbit7.png",
       link: "/activities/rabbit",
     },
-
     {
       title: "Lawn Garden",
       description:
@@ -86,7 +85,6 @@ export default function Page() {
       image: "/images/lawn4.png",
       link: "/activities/lawn-garden",
     },
-   
     {
       title: "Small Tractor Riding",
       description:
@@ -94,7 +92,6 @@ export default function Page() {
       image: "/images/trackor.png",
       link: "/activities/small-tractor-riding",
     },
-
     {
       title: "Deer Farm",
       description:
@@ -112,8 +109,7 @@ export default function Page() {
   ];
 
   return (
-    <div>
-      <div>
+    <div className="bg-green-100">
       <HeaderComponent />
 
       <div className="font-sans">
@@ -177,9 +173,8 @@ export default function Page() {
             className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"
           >
             <div
-              className={`flex flex-col md:flex-row ${
-                idx % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } gap-8 items-center`}
+              className={`flex flex-col md:flex-row ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""
+                } gap-8 items-center`}
             >
               <div className="md:w-1/2">
                 <Image
@@ -202,11 +197,11 @@ export default function Page() {
             </div>
           </section>
         ))}
-        <ResortActivitiesComponent/>
-        
+
+        <ResortActivitiesComponent />
       </div>
-    </div>
-    <BookResort/>
+
+      <BookResort />
     </div>
   );
 }
