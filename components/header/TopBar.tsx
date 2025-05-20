@@ -5,8 +5,8 @@ export default function TopBarComponent() {
   return (
     <div className="relative z-10 bg-black/50 text-white py-2 px-4 flex justify-between items-center">
       <div className="flex flex-col sm:flex-row sm:space-x-8">
-        <div className="text-sm">TEL: +919740806599</div>
-        <div className="text-sm">gandhadagudigardenbyahatti@gmail.com</div>
+        <Link href={'tel:+919740806599'} className="text-sm">TEL: +919740806599</Link>
+        <Link href={'mailto:gandhadagudigardenbyahatti@gmail.com?subject=Subject'} target="_blank" className="text-sm">gandhadagudigardenbyahatti@gmail.com</Link>
       </div>
       <div>
         <Link href="https://www.instagram.com/gandhadagudi_garden_byahatti?igsh=dGx1aXcyZHZpZTFl" target="_blank" aria-label="Instagram">

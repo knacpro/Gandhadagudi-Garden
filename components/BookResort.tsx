@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 export default function BookResort() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function BookResort() {
                 GandhadaGudi Garden can provide.
               </p>
               <div className="mt-6 flex items-center">
+                <Link href={'tel:+919740806599'}>
                 <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">
                   <Image
                     src="/images/phone.png"
@@ -27,18 +29,19 @@ export default function BookResort() {
                     className="w-6 h-6"
                   />
                 </div>
+                </Link>
                 <span className="font-bold text-lg">+91 96204 65007</span>
               </div>
             </div>
 
             <div className="md:w-[500px] bg-[#2A3A2A] p-6 rounded-lg">
-              <div className="ml-7 w-[400px] bg-white p-8 text-[#2A3A2A] h-[400px]">
+              <div className="ml-7 w-[400px] bg-white p-8 text-[#2A3A2A] h-[440px]">
                 <div className="flex flex-col items-center">
                   <h1 className="text-4xl md:text-2xl font-serif italic tracking-wide mb-6">OPEN HOURS</h1>
 
                   <div className="w-32 h-0.5 bg-white mb-8"></div>
 
-                  <div className="w-full grid grid-cols-2 gap-y-2 text-xl md:text-lg mb-8">
+                  <div className="w-full grid grid-cols-2 gap-y-2 text-xl md:text-lg mb-10">
                     <div>Monday</div>
                     <div className="text-right">10.30 AM - 6 PM</div>
 
@@ -60,13 +63,9 @@ export default function BookResort() {
                     <div>Sunday</div>
                     <div className="text-right">10.30 AM - 6 PM</div>
                   </div>
-
-                  {/* <div className="w-full h-0.5 bg-white mb-8"></div>
-
-                  <h2 className="text-2xl md:text-lg font-serif italic tracking-wide mb-6">Reservations by phone</h2>
-
-                  <div className="text-xl md:text-lg mb-2">+91-8880092222 Museum</div>
-                  <div className="text-xl md:text-lg">+91-8527028800 Resort</div> */}
+                  <Link href={'https://wa.me/919740806599?text=Hi%2C%20I%20am%20interested%20in%20your%20services.'} target="_blank" className="bg-[#8BAD2B] text-white py-2 px-8 hover:bg-[#7a9a25] transition-colors -mt-2">
+                  Enquire now
+                </Link>
                 </div>
               </div>
             </div>
