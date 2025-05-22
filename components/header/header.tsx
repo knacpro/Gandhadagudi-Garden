@@ -33,7 +33,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
             </div>
 
             {/* Fixed NavBar - placed below TopBar */}
-            <header className="fixed top-[40px] md:top-[48px] z-20 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
+            <header className="fixed top-0 md:top-[48px] z-20 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
                 <div className="flex items-center">
                     <button
                         className="md:hidden z-20 mr-10"
@@ -48,7 +48,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
                         alt="GandhadaGudi Garden Logo"
                         width={240}
                         height={80}
-                        className="h-14 sm:h-14 sm:w-auto rounded-xl"
+                        className="h-14 w-36 ml-8 sm:h-14 sm:w-auto rounded-xl"
                     />
                 </div>
 

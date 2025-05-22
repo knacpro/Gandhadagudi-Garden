@@ -39,16 +39,16 @@ export function BackgroundImagesComponent() {
         <>
             {loading ? (
                 <div className="flex justify-center items-center h-screen">
-                    <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+                    <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24 sm:h-32 sm:w-32"></div>
                 </div>
             ) : (
-                <main className="relative w-full h-screen">
-                    <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <main className="relative w-full h-[60dvh] sm:h-screen">
+                    <div className="sm:absolute inset-0 w-20 h-20 sm:w-full sm:h-full overflow-hidden">
                         <Image
                             src={images[currentImageIndex]}
                             alt="Hero Background"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            className="object-cover"
                             priority
                         />
                     </div>
