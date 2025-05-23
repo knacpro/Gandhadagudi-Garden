@@ -47,14 +47,14 @@ const activities = [
   {
     id: 7,
     title: "Boat Riding",
-    image: "/images/duck-boat.png?height=400&width=500",
+    image: "/images/kayaking.png?height=400&width=500",
     link: "/activities/boat-riding"
   },
   {
     id: 8,
-    title: "Adventure Kayaking",
-    image: "/images/kayaking.png?height=400&width=500",
-    link: "/activities/aventure-kayaking"
+    title: "Chess",
+    image: "/images/chess.png?height=400&width=500",
+    link: "/activities/carrom-chess-archery"
   },
   {
     id: 9,
@@ -101,7 +101,7 @@ const activities = [
   {
     id: 16,
     title: "Poultry",
-    image: "/images/chess.png?height=400&width=500",
+    image: "/images/poultry.png?height=400&width=500",
     link: "/activities/poultry"
   },
   {

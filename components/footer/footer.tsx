@@ -185,7 +185,7 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <Link href={'tel:+919740806599'} className="text-white">+91 9740806599</Link>
+                <Link href={'tel:+919740806599'} className="text-white hover:text-green-400">+91 9740806599</Link>
               </li>
               <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
@@ -207,7 +207,7 @@ export default function FooterComponent() {
                 <Link
                   href="mailto:gandhadagudigardenbyahatti@gmail.com?subject=Subject"
                   target="_blank"
-                  rel="noopener noreferrer" className="text-white">gandhadagudigardenbyahatti@gmail.com</Link>
+                  rel="noopener noreferrer" className="text-white hover:text-green-400">gandhadagudigardenbyahatti@gmail.com</Link>
               </li>
               <Link href={'https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw'} target="_blank" className="flex items-start">
                 <span className="text-green-500 mr-2">
@@ -238,7 +238,7 @@ export default function FooterComponent() {
             <Link
               href="https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw"
               target="_blank"
-              className="inline-block mt-4 text-green-500 border-b-2 border-green-500 hover:text-green-400 transition-colors"
+              className="inline-block mt-4 text-green-500 hover:border-b-2 hover:border-green-500 hover:text-green-400 transition-colors"
             >
               Get Directions
             </Link>

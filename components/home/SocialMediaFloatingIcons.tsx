@@ -1,13 +1,11 @@
-import { Phone } from "lucide-react";
 import Link from "next/link";
-import Message from "../icons/Message";
 import Image from "next/image";
 
 export default function SocialMediaFloatingIcons() {
     return (
         <>
         {/* Social Media Floating Buttons */}
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-20 flex flex-col">
+      <div className="hidden fixed right-0 top-1/2 transform -translate-y-1/2 z-20 sm:flex flex-col">
         <Link href="https://wa.me/919740806599?text=Hi%2C%20I%20am%20interested%20in%20your%20services." target="_blank" aria-label="Whatsapp">
           <Image
             src="/images/whatsapp.png"
