@@ -13,6 +13,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
         { href: "/", label: "HOME" },
         { href: "/about", label: "ABOUT" },
         { href: "/activities", label: "ACTIVITIES" },
+        {href: "/restuarant", label: "RESTUARANT"},
         { href: "/attractions", label: "ATTRACTIONS" },
         { href: "/packages", label: "PACKAGES" },
         { href: "/gallery", label: "GALLERY" },
