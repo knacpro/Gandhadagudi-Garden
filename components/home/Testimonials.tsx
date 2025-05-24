@@ -10,9 +10,9 @@ const reviews = [
       id: 1,
       rating: 5,
       text: '"The hotel is well located. Rooms are very clean. Great services. Very kind people from front desk and delicious breakfast. And I really love the spa!"',
-      author: "Ramesh Chavan",
+      author: "Abhishek Shiratti",
       source: "TRIPADVISOR",
-      image: "/images/ramesh.png?height=80&width=80",
+      image: "/images/abhishek-shiratti.png?height=80&width=80",
     },
     {
       id: 2,
