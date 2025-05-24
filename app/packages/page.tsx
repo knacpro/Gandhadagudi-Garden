@@ -1,13 +1,11 @@
 import HeaderComponent from "@/components/header/header";
 import Image from "next/image";
-import Link from "next/link";
-import { MessageCircle, Phone } from "lucide-react";
 import BookResort from "@/components/BookResort";
 import FooterComponent from "@/components/footer/footer";
 
 export default function AdventurePackages() {
   return (
-    <main className="w-full">
+    <main className="w-full bg-green-100">
       <HeaderComponent />
       <section
         className="text-center bg-cover bg-center text-white py-30 px-5"
