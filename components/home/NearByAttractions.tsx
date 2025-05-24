@@ -166,9 +166,6 @@ export default function NearByAttractionsComponent() {
               <div className="p-6 text-center">
                 <h3 className="text-2xl text-[#333333] font-medium mb-4">{activity.title}</h3>
                 <p className="text-[#333333] mb-6">{activity.description}</p>
-                <button className="bg-[#8BAD2B] text-white py-2 px-8 hover:bg-[#7a9a25] transition-colors">
-                  View Details
-                </button>
               </div>
             </div>
           ))}

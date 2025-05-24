@@ -4,7 +4,7 @@ import { Facebook, Instagram, Youtube, Twitter } from "lucide-react"
 
 export default function FooterComponent() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-green-950 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo and Description Section */}
@@ -23,22 +23,42 @@ export default function FooterComponent() {
               Gandhadagudi Garden Byahatti, your ultimate destination for a perfect getaway amidst nature.
             </p>
 
-            <div className="flex space-x-2">
-              <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                <Facebook className="h-5 w-5 text-black" />
-                <span className="sr-only">Facebook</span>
+            <div className="flex space-x-6">
+              <Link href="https://www.instagram.com/gandhadagudi_garden_byahatti?igsh=dGx1aXcyZHZpZTFl" target="_blank" aria-label="Instagram">
+                <Image
+                  src="/images/instagram.png"
+                  alt="Instagram logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                <Instagram className="h-5 w-5 text-black" />
-                <span className="sr-only">Instagram</span>
+              <Link href="https://www.instagram.com/gandhadagudi_garden_byahatti?igsh=dGx1aXcyZHZpZTFl" target="_blank" aria-label="Instagram">
+                <Image
+                  src="/images/facebook.png"
+                  alt="Facebook logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                <Youtube className="h-5 w-5 text-black" />
-                <span className="sr-only">YouTube</span>
+              <Link href="https://www.youtube.com/@gandhadagudi_garden_byahatti" target="_blank" aria-label="Whatsapp">
+                <Image
+                  src="/images/youtube.png"
+                  alt="Youtube logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                <Twitter className="h-5 w-5 text-black" />
-                <span className="sr-only">Twitter</span>
+              <Link href="https://wa.me/919740806599?text=Hi%2C%20I%20am%20interested%20in%20your%20services." target="_blank" aria-label="Whatsapp">
+                <Image
+                  src="/images/whatsapp.png"
+                  alt="Whatsapp logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
             </div>
           </div>
@@ -85,32 +105,32 @@ export default function FooterComponent() {
             <h3 className="text-xl font-medium mb-6">Activities</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/garadi-mane" className="text-white hover:text-green-400 transition-colors">
                   Garadi Mane
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/boat-riding" className="text-white hover:text-green-400 transition-colors">
                   Boat Riding
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/adventure-kayaking" className="text-white hover:text-green-400 transition-colors">
                   Kayaking
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/zip-line" className="text-white hover:text-green-400 transition-colors">
                   Zip line
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/swimming" className="text-white hover:text-green-400 transition-colors">
                   Swimming
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/rain-dance" className="text-white hover:text-green-400 transition-colors">
                   Rain Dance
                 </Link>
               </li>
@@ -122,22 +142,22 @@ export default function FooterComponent() {
             <h3 className="text-xl font-medium mb-6">Packages</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
                   Student Packages
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
                   Corporate Packages
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
                   Family Packages
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
                   Weekend Packages
                 </Link>
               </li>
@@ -148,7 +168,7 @@ export default function FooterComponent() {
           <div className="space-y-4 md:col-span-4 lg:col-span-1">
             <h3 className="text-xl font-medium mb-6">Reach Out</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
+              <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -165,9 +185,9 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">+91 9620465007</span>
+                <Link href={'tel:+919740806599'} className="text-white hover:text-green-400">+91 9740806599</Link>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,9 +204,12 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">info@gandhadagudigarden.com</span>
+                <Link
+                  href="mailto:gandhadagudigardenbyahatti@gmail.com?subject=Subject"
+                  target="_blank"
+                  rel="noopener noreferrer" className="text-white hover:text-green-400">gandhadagudigardenbyahatti@gmail.com</Link>
               </li>
-              <li className="flex items-start">
+              <Link href={'https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw'} target="_blank" className="flex items-start">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,12 +232,13 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">Hebsur Road, Byahatti Hubballi, Karnataka</span>
-              </li>
+                <span className="text-white">Hebsur Road, Byahatti Karnataka 580023</span>
+              </Link>
             </ul>
             <Link
-              href="#"
-              className="inline-block mt-4 text-green-500 border-b-2 border-green-500 hover:text-green-400 transition-colors"
+              href="https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw"
+              target="_blank"
+              className="inline-block mt-4 text-green-500 hover:border-b-2 hover:border-green-500 hover:text-green-400 transition-colors"
             >
               Get Directions
             </Link>
@@ -226,16 +250,15 @@ export default function FooterComponent() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white">© 2025 Gandhadagudi Garden, Byahatti. All Rights Reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm text-white hover:text-green-400 transition-colors">
-              BLOG
-            </Link>
-            <Link href="#" className="text-sm text-white hover:text-green-400 transition-colors">
-              PRIVACY POLICY
-            </Link>
-            <Link href="#" className="text-sm text-white hover:text-green-400 transition-colors">
-              TERMS & CONDITIONS
-            </Link>
+          <div className="flex space-x-1 mt-4 md:mt-0">
+            <Image
+              src="/images/knacpro-logo.png"
+              alt="Instagram logo"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
+            <p className="text-sm text-white">Designed and developed by <Link href={'https://www.knacprosolutions.in/'} target="_blank" className="hover:border-b-2 hover:border-yellow-400"> Knacpro Solutions</Link></p>
           </div>
         </div>
       </div>

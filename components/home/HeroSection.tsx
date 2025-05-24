@@ -1,13 +1,9 @@
 export default function HeroSectionComponent() {
     return (
-        <main className="relative z-10 flex flex-col items-center justify-center text-white text-center px-4 mt-16 sm:mt-32">
-            <h2 className="text-base sm:text-lg tracking-wider mb-4 font-semibold">WELCOME AND EXPERIENCE</h2>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight max-w-4xl">
-              GANDHADAGUDI GARDEN
+        <main className="-mt-[198px] sm:-mt-56 relative z-10 flex flex-col items-center justify-center text-center px-4 bg-green-400">
+            <h1 className="whitespace-nowrap animate-marquee text-3xl sm:text-5xl md:text-5xl font-extrabold leading-tight max-w-6xl font-serif">
+              GANDHADAGUDI GARDEN BYAHATTI
               <br />
-              HEBSUR ROAD
-              <br />
-              BYAHATTI, HUBBALLI
             </h1>
           </main>
     );
