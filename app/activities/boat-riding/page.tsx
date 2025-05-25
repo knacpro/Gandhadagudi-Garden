@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header"
 import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import FooterComponent from '@/components/footer/footer';
 
 export default function BoatRidingPage() {
   return (
@@ -147,6 +148,7 @@ export default function BoatRidingPage() {
         <ResortActivitiesComponent/>
       {/* Booking Section */}
       <BookResort />
+      <FooterComponent/>
     </div>
     </div>
   );

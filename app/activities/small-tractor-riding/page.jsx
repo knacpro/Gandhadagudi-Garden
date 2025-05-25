@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
+import FooterComponent from '../../../components/footer/footer';
 
 export default function SmallTractorRidingPage() {
   return (
@@ -68,6 +69,7 @@ export default function SmallTractorRidingPage() {
 
         {/* Booking Section */}
         <BookResort />
+        <FooterComponent/>
       </div>
     </div>
   );

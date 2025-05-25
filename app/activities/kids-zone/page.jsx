@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
 import ResortActivitiesComponent from './../../../components/home/ResortActivities';
+import FooterComponent from '../../../components/footer/footer';
 
 export default function KidsZonePage() {
   return (
@@ -134,8 +135,9 @@ export default function KidsZonePage() {
 </section>
 
       <ResortActivitiesComponent/>
-      {/* Booking Section */}
+    
       <BookResort />
+      <FooterComponent/>
     </div>
   );
 }

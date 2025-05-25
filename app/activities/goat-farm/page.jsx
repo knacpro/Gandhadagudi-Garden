@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
 import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import FooterComponent from '../../../components/footer/footer';
 
 export default function GoatFarmPage() {
   return (
@@ -117,6 +118,7 @@ export default function GoatFarmPage() {
         {/* Additional Components */}
         <ResortActivitiesComponent />
         <BookResort />
+        <FooterComponent/>
       </div>
     </div>
   );

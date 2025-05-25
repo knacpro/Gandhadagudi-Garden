@@ -17,7 +17,7 @@ export default function HeaderComponent() {
     const navLinks = [
         { href: "/", label: "HOME" },
         { href: "/about", label: "ABOUT" },
-        { href: "/activities", label: "ACTIVITIES" },
+        
         {href: "/restuarant", label: "RESTUARANT"},
         { href: "/attractions", label: "ATTRACTIONS" },
         { href: "/packages", label: "PACKAGES" },
@@ -25,17 +25,7 @@ export default function HeaderComponent() {
         { href: "/blog", label: "BLOG" },
         { href: "/contact", label: "CONTACT" },
     ];
-  const navLinks = [
-    { href: '/', label: 'HOME' },
-    { href: '/introduction', label: 'INTRODUCTION' },
-    { href: '/about', label: 'ABOUT' },
-    { href: '/attractions', label: 'ATTRACTIONS' },
-    { href: '/packages', label: 'PACKAGES' },
-    { href: '/gallery', label: 'GALLERY' },
-    { href: '/blog', label: 'BLOG' },
-    { href: '/contact', label: 'CONTACT' },
-  ];
-
+  
   const activities = {
     indoor: [
       { href: '/activities/gym', label: 'Gym' },

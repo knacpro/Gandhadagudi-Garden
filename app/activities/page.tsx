@@ -5,6 +5,7 @@ import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
 import Image from "next/image";
 import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import FooterComponent from '@/components/footer/footer';
 
 export default function Page() {
   const activities = [
@@ -202,6 +203,7 @@ export default function Page() {
       </div>
 
       <BookResort />
+      <FooterComponent/>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header"
+import FooterComponent from '@/components/footer/footer';
 
 
 export default function Page() {
@@ -132,8 +133,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Booking Section */}
+      
       <BookResort />
+      <FooterComponent/>
     </div>
     </div>
   );

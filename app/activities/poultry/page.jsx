@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeaderComponent from '@/components/header/header';
 import ResortActivitiesComponent from '@/components/home/ResortActivities';
 import BookResort from '@/components/BookResort';
+import FooterComponent from '../../../components/footer/footer';
 
 export default function PoultryPage() {
   return (
@@ -126,6 +127,7 @@ export default function PoultryPage() {
         {/* Activities and Booking */}
         <ResortActivitiesComponent />
         <BookResort />
+        <FooterComponent/>
       </div>
     </div>
   );
