@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { Star } from "lucide-react"
 
 // Array of activities that can be expanded
 const reviews = [
@@ -53,6 +53,14 @@ const reviews = [
         author: "Kaveri Hulkoti",
         source: "TRIPADVISOR",
         image: "/images/kaveri.png?height=80&width=80",
+      },
+      {
+        id: 7,
+        rating: 4,
+        text: '"Brilliant staff and exceptional customer service. The place is Awesome. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
+        author: "Mahesh Kumbar",
+        source: "GOIBIBO",
+        image: "/images/mahesh.png?height=80&width=80",
       },
     // You can add more reviews here following the same structure
   ]
@@ -135,22 +143,12 @@ export default function TestimonialsComponent() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Heading section with exact colors */}
       <div className="text-center mb-12">
-        <h3 className="text-[#a3b938] uppercase tracking-wide font-medium mb-2">FEEDBACK FROM OUR DEAR GUESTS</h3>
+        <h3 className="text-green-600 uppercase tracking-wide font-medium mb-2">FEEDBACK FROM OUR DEAR GUESTS</h3>
         <h2 className="text-5xl font-serif text-[#333] mt-4">What They Say About Us</h2>
       </div>
 
       {/* Activities carousel */}
       <div className="relative">
-        {/* Left scroll button */}
-        {/* <button
-          onClick={() => scroll("left")}
-          className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#8BAD2B] p-2 rounded-r-md ${!canScrollLeft ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-          disabled={!canScrollLeft}
-          aria-label="Scroll left"
-        >
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button> */}
-
         {/* Scrollable container */}
         <div
           ref={scrollContainerRef}
@@ -161,7 +159,7 @@ export default function TestimonialsComponent() {
             <div key={review.id} className="flex-none w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] snap-start items-center text-center">
               <div className="flex justify-center mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#ffc107] text-[#ffc107]" />
+                  <Star key={i} className="w-5 h-5 fill-green-500 text-green-500" />
                 ))}
               </div>
               <p className="text-[#333] mb-6 font-serif leading-relaxed">{review.text}</p>
@@ -181,16 +179,6 @@ export default function TestimonialsComponent() {
             </div>
           ))}
         </div>
-
-        {/* Right scroll button */}
-        {/* <button
-          onClick={() => scroll("right")}
-          className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#8BAD2B] p-2 rounded-l-md ${!canScrollRight ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-          disabled={!canScrollRight}
-          aria-label="Scroll right"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button> */}
       </div>
     </div>
   )

@@ -11,20 +11,20 @@ const attractions = [
     title: "Siddharoda Matha",
     image: "/images/siddharodha-matha.png?height=400&width=500",
     description:
-      "Siddharoodha Matha in Hubli is a revered spiritual center dedicated to the teachings of Shri Siddharoodha Swami, attracting devotees from across India.",
+      "Siddharoodha Matha in Hubli located just 20kms away is a revered spiritual center dedicated to the teachings of Shri Siddharoodha Swami, attracting devotees from across India.",
   },
   {
     id: 2,
     title: "Moor Savir Matha",
     image: "/images/moor-savir-matha.png?height=400&width=500",
-    description: "​Moorusavira Matha in Hubli is a historic 12th-century Lingayat monastery, named after the arrival of 3,000 Shivasharanas led by Channabasaveshwara, and is renowned for its spiritual heritage and community service.",
+    description: "​Moorusavira Matha in Hubli located just 18kms away is a historic 12th-century Lingayat monastery, named after the arrival of 3,000 Shivasharanas led by Channabasaveshwara, and is renowned for its spiritual heritage and community service.",
   },
   {
     id: 3,
     title: "ChandraMouleshwar Temple",
     image: "/images/chandra-mouleshwar-temple.png?height=400&width=500",
     description:
-      "The Chandramouleshwara Temple in Unkal, Hubli, is a 900-year-old Chalukyan-era shrine dedicated to Lord Shiva, renowned for its unique four-faced linga and exquisite carvings that reflect a blend of Shaivism, Vaishnavism, and Shaktism traditions.",
+      "The Chandramouleshwara Temple in Unkal, Hubli, located just 18kms away is a 900-year-old Chalukyan-era shrine dedicated to Lord Shiva, renowned for its unique four-faced linga and exquisite carvings that reflect a blend of Shaivism, Vaishnavism, and Shaktism traditions.",
   },
   {
     id: 4,
@@ -38,14 +38,14 @@ const attractions = [
     title: "Unakal Lake",
     image: "/images/unakal-lake.png?height=400&width=500",
     description:
-      "​Unkal Lake in Hubli is a 200-acre man-made reservoir built in the 11th century during the Chalukya dynasty, serving as a major water source and a scenic spot for recreation and boating.",
+      "​Unkal Lake in Hubli located just 21kms away is a 200-acre man-made reservoir built in the 11th century during the Chalukya dynasty, serving as a major water source and a scenic spot for recreation and boating.",
   },
   {
     id: 6,
     title: "Nrupatunga Hill",
     image: "/images/nrupatunga.png?height=400&width=500",
     description:
-      "​Nrupatunga Hill, also known as Nrupatunga Betta, is a serene hillock in Hubli offering panoramic views of the twin cities, a children's park, and a tranquil environment ideal for morning walks and picnics. ",
+      "​Nrupatunga Hill, also known as Nrupatunga Betta located just 13kms away, is a serene hillock in Hubli offering panoramic views of the twin cities, a children's park, and a tranquil environment ideal for morning walks and picnics. ",
   }
 ]
 
@@ -127,8 +127,8 @@ export default function NearByAttractionsComponent() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Heading section with exact colors */}
       <div className="text-center mb-12">
-          <h3 className="text-[#8aad2d] text-sm md:text-base font-medium tracking-wide uppercase">
-            LOCAL ACTIVITIES & EVENTS
+          <h3 className="text-green-600 text-sm md:text-base font-medium tracking-wide uppercase">
+            LOCAL ATTRACTIONS
           </h3>
           <h2 className="text-3xl md:text-5xl font-serif mt-4 text-[#333] leading-tight">
             NEARBY ATTRACTIONS AROUND

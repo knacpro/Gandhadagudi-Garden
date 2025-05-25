@@ -13,8 +13,7 @@ export default function BookResort() {
               </h5>
               <h2 className="text-3xl font-bold mt-2">BOOK RESORT NOW</h2>
               <p className="mt-4">
-                For those looking for value, we offer the cheapest GandhadaGudi
-                Garden Packages without compromising on quality. Immerse
+                For those looking for value, we offer the cheapest Packages without compromising on quality. Immerse
                 yourself in the natural beauty and comfort that only
                 GandhadaGudi Garden can provide.
               </p>

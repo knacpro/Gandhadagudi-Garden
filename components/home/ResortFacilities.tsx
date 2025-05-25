@@ -10,7 +10,7 @@ export default function ResortFacilitiesComponent() {
   return (
     <div className="relative z-10 container mx-auto px-4 py-12 max-w-7xl">
       <div className="text-center md:text-left mb-12">
-        <p className="text-[#a4b053] uppercase tracking-wide font-medium mb-4">
+        <p className="text-green-600 uppercase tracking-wide font-medium mb-4">
           DISCOVER THE SERVICES WE OFFERED
         </p>
         <h2 className="text-[#333] text-4xl font-serif">
@@ -52,8 +52,8 @@ export default function ResortFacilitiesComponent() {
         <div className="space-y-8">
           {/* Housekeeper Services */}
           <Facility
-            title="Housekeeper Services"
-            description="Daily housekeeping ensures a clean, comfortable stay."
+            title="Lawn Garden"
+            description="A lawn garden is a green space often used for relaxation."
             icon={(
               <Housekeeper />
             )}
@@ -61,8 +61,8 @@ export default function ResortFacilitiesComponent() {
 
           {/* Laundry Services */}
           <Facility
-            title="Laundry Services"
-            description="On-site laundry services for your convenience."
+            title="Party Hall"
+            description="A party hall is a spacious venue for celebrations."
             icon={(
               <LaundryServices />
             )}

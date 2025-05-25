@@ -134,7 +134,7 @@ export default function ResortActivitiesComponent() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Heading section with exact colors */}
-      <h3 className="text-[#8BAD2B] text-lg font-medium tracking-wide">ENJOY ULTIMATE ALPINE EXPERIENCES</h3>
+      <h3 className="text-green-600 text-lg font-medium tracking-wide">ENJOY ULTIMATE ALPINE EXPERIENCES</h3>
       <h2 className="text-[#333333] text-4xl font-medium mt-4 mb-10">
         GANDHADAGUDI GARDEN ACTIVITIES: ADVENTURE, RELAXATION & MORE
       </h2>

@@ -131,7 +131,7 @@ export default function GallerySectionComponent() {
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-[#9ab73c] font-medium tracking-wide">GALLERY</div>
+      <div className="text-green-600 font-medium tracking-wide">GALLERY</div>
       <h1 className="text-[#333333] text-4xl sm:text-5xl font-serif mb-8">GANDHADAGUDI GARDEN GALLERY</h1>
 
       <div className="relative">

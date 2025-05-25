@@ -31,7 +31,7 @@ export default function ResortPackagesComponent() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-4">
-        <h3 className="text-[#8ab73a] text-lg font-medium uppercase tracking-wide">OUR PACKAGES</h3>
+        <h3 className="text-green-600 text-lg font-medium uppercase tracking-wide">OUR PACKAGES</h3>
       </div>
 
       <h2 className="text-center text-[#333] text-3xl md:text-4xl font-medium mb-12">
