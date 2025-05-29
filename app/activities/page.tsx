@@ -20,14 +20,14 @@ export default function Page() {
       title: "Boat Riding",
       description:
         "Experience the calmness of water with our boat riding adventure. Whether you're looking for a peaceful ride or a splash of fun, this activity is a must-do!",
-      image: "/images/boat8.png",
+      image: "/images/boat10.png",
       link: "/activities/boat-riding",
     },
     {
       title: "Adventure Kayaking",
       description:
         "Paddle your way through nature’s beauty with our kayaking sessions. Perfect for beginners and pros alike, enjoy the thrill and serenity of water adventures.",
-      image: "/images/kaya1.png",
+      image: "/images/kaya2.png",
       link: "/activities/adventure-kayaking",
     },
     {
@@ -41,7 +41,7 @@ export default function Page() {
       title: "Swimming",
       description:
         "Take a dip in our clean, spacious swimming area perfect for families, friends, or solo relaxation under the sun.",
-      image: "/images/swing7.png",
+      image: "/images/swing9.png",
       link: "/activities/swimming",
     },
     {
@@ -76,14 +76,14 @@ export default function Page() {
       title: "Rabbit",
       description:
         "Meet our adorable rabbits in the garden! Perfect for children and animal lovers to interact in a gentle and playful way.",
-      image: "/images/rabbit7.png",
+      image: "/images/rabbit10.png",
       link: "/activities/rabbit",
     },
     {
       title: "Lawn Garden",
       description:
         "Relax and unwind in our beautifully maintained lawn gardens, ideal for picnics, photography, or peaceful walks.",
-      image: "/images/lawn4.png",
+      image: "/images/lawn5.png",
       link: "/activities/lawn-garden",
     },
     {
