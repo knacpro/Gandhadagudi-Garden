@@ -1,82 +1,83 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import Image from "next/image"
 import { Star } from "lucide-react"
-
+import { useTranslations } from "next-intl"
 // Array of activities that can be expanded
-const reviews = [
+
+
+export default function TestimonialsComponent() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  // const [canScrollLeft, setCanScrollLeft] = useState(false)
+  // const [canScrollRight, setCanScrollRight] = useState(true)
+  const t = useTranslations('HomePage');
+  const checkScrollButtons = () => {
+    const container = scrollContainerRef.current
+    if (container) {
+      // setCanScrollLeft(container.scrollLeft > 0)
+      // setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
+    }
+  }
+  const reviews = [
     {
       id: 1,
       rating: 5,
-      text: '"The hotel is well located. Rooms are very clean. Great services. Very kind people from front desk and delicious breakfast. And I really love the spa!"',
-      author: "Abhishek Shiratti",
+      text: t('abhishekShiratti'),
+      author: t('abhishekShirattiName'),
       source: "TRIPADVISOR",
       image: "/images/abhishek-shiratti.png?height=80&width=80",
     },
     {
       id: 2,
       rating: 5,
-      text: '"The rooms are all renovated and modern. And the staff are very willing to help you plan your day. Thanks for all the staff and this pleased trip!"',
-      author: "Shivaraj Patil",
+      text: t('shivarajPatil'),
+      author: t('shivarajPatilName'),
       source: "TRIPADVISOR",
       image: "/images/shivaraj.png?height=80&width=80",
     },
     {
       id: 3,
       rating: 4,
-      text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-      author: "Malathi P",
+      text: t('malathiP'),
+      author: t('malathiPName'),
       source: "TRIPADVISOR",
       image: "/images/malathi.png?height=80&width=80",
     },
     {
         id: 4,
         rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Praveen Kumar",
+        text: t('praveenKumar'),
+        author: t('praveenKumarName'),
         source: "TRIPADVISOR",
         image: "/images/praveen-kumar.png?height=80&width=80",
       },
       {
         id: 5,
         rating: 5,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Lalitha Pawar",
+        text: t('lalithaPawar'),
+        author: t('lalithaPawarName'),
         source: "TRIPADVISOR",
         image: "/images/lalitha.png?height=80&width=80",
       },
       {
         id: 6,
         rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Kaveri Hulkoti",
+        text: t('kaveriHulkoti'),
+        author: t('kaveriHulkotiName'),
         source: "TRIPADVISOR",
         image: "/images/kaveri.png?height=80&width=80",
       },
       {
         id: 7,
         rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is Awesome. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Mahesh Kumbar",
+        text: t('maheshKumbar'),
+        author: t('maheshKumbarName'),
         source: "GOIBIBO",
         image: "/images/mahesh.png?height=80&width=80",
       },
     // You can add more reviews here following the same structure
   ]
-
-export default function TestimonialsComponent() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-
-  const checkScrollButtons = () => {
-    const container = scrollContainerRef.current
-    if (container) {
-      setCanScrollLeft(container.scrollLeft > 0)
-      setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
-    }
-  }
 
   useEffect(() => {
     const container = scrollContainerRef.current
@@ -130,21 +131,21 @@ export default function TestimonialsComponent() {
   }, [])
   
 
-  const scroll = (direction: "left" | "right") => {
-    const container = scrollContainerRef.current
-    if (container) {
-      const cardWidth = container.querySelector("div")?.offsetWidth || 0
-      const scrollAmount = direction === "left" ? -cardWidth : cardWidth
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" })
-    }
-  }
+  // const scroll = (direction: "left" | "right") => {
+  //   const container = scrollContainerRef.current
+  //   if (container) {
+  //     const cardWidth = container.querySelector("div")?.offsetWidth || 0
+  //     const scrollAmount = direction === "left" ? -cardWidth : cardWidth
+  //     container.scrollBy({ left: scrollAmount, behavior: "smooth" })
+  //   }
+  // }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Heading section with exact colors */}
       <div className="text-center mb-12">
-        <h3 className="text-green-600 uppercase tracking-wide font-medium mb-2">FEEDBACK FROM OUR DEAR GUESTS</h3>
-        <h2 className="text-5xl font-serif text-[#333] mt-4">What They Say About Us</h2>
+        <h3 className="text-green-600 uppercase tracking-wide font-medium mb-2">{t('feedbackFromOurDearGuests')}</h3>
+        <h2 className="text-5xl font-serif text-[#333] mt-4">{t('whatTheySayAboutUs')}</h2>
       </div>
 
       {/* Activities carousel */}
