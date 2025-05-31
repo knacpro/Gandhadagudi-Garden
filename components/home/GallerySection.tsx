@@ -38,6 +38,76 @@ export default function GallerySectionComponent() {
       src: "/images/zip-line.png",
       alt: "Zipline",
     },
+    {
+      src: "/images/tree-home.png",
+      alt: "Tree Home",
+    },
+    {
+      src: "/images/punyakoti.png",
+      alt: "Punyakoti",
+    },
+    {
+      src: "/images/bird-santury.png",
+      alt: "Bird Santury",
+    },
+    {
+      src: "/images/bullocks.png",
+      alt: "Bullocks",
+    },
+    {
+      src: "/images/restuarant-grp.png",
+      alt: "Restuarant Group",
+    },
+    {
+      src: "/images/group-1.png",
+      alt: "Group 1",
+    },
+    {
+      src: "/images/tree-house-1.png",
+      alt: "Tree House 1",
+    },
+    {
+      src: "/images/rope-walk.png",
+      alt: "Rope Walk",
+    },
+    {
+      src: "/images/duck-boat.png",
+      alt: "Duck Boat",
+    },
+    {
+      src: "/images/man-pillar.png",
+      alt: "Man Pillar",
+    },
+    {
+      src: "/images/lawn-garden.png",
+      alt: "Lawn Garden",
+    },
+    {
+      src: "/images/small-rope-walk.png",
+      alt: "Small Rope Walk",
+    },
+    {
+      src: "/images/dining-table.png",
+      alt: "Dining Table",
+    },
+    {
+      src: "/images/gym.png",
+      alt: "Gym",
+    },
+    {
+      src: "/images/topu.png",
+      alt: "Topu",
+    },
+    {
+      src: "/images/deer-park-grp.png",
+      alt: "Deer Park Group",
+    },
+    {
+      src: "/images/artificial-peacock.png",
+      alt: "Artificial Peacock",
+    },
+    
+    
   ]
 
   const startAutoScroll = () => {

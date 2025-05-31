@@ -1,80 +1,101 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import Image from "next/image"
 import { Star } from "lucide-react"
 
-// Array of activities that can be expanded
 const reviews = [
-    {
-      id: 1,
-      rating: 5,
-      text: '"The hotel is well located. Rooms are very clean. Great services. Very kind people from front desk and delicious breakfast. And I really love the spa!"',
-      author: "Abhishek Shiratti",
-      source: "TRIPADVISOR",
-      image: "/images/abhishek-shiratti.png?height=80&width=80",
-    },
-    {
-      id: 2,
-      rating: 5,
-      text: '"The rooms are all renovated and modern. And the staff are very willing to help you plan your day. Thanks for all the staff and this pleased trip!"',
-      author: "Shivaraj Patil",
-      source: "TRIPADVISOR",
-      image: "/images/shivaraj.png?height=80&width=80",
-    },
-    {
-      id: 3,
-      rating: 4,
-      text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-      author: "Malathi P",
-      source: "TRIPADVISOR",
-      image: "/images/malathi.png?height=80&width=80",
-    },
-    {
-        id: 4,
-        rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Praveen Kumar",
-        source: "TRIPADVISOR",
-        image: "/images/praveen-kumar.png?height=80&width=80",
-      },
-      {
-        id: 5,
-        rating: 5,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Lalitha Pawar",
-        source: "TRIPADVISOR",
-        image: "/images/lalitha.png?height=80&width=80",
-      },
-      {
-        id: 6,
-        rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Kaveri Hulkoti",
-        source: "TRIPADVISOR",
-        image: "/images/kaveri.png?height=80&width=80",
-      },
-      {
-        id: 7,
-        rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is Awesome. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Mahesh Kumbar",
-        source: "GOIBIBO",
-        image: "/images/mahesh.png?height=80&width=80",
-      },
-    // You can add more reviews here following the same structure
-  ]
+  {
+    id: 1,
+    rating: 5,
+    text: "Had a relaxing time! The rooms were clean, and the garden views made it even better. Great hospitality throughout our stay.",
+    author: "Abhishek Shiratti",
+    source: "TRIPADVISOR",
+    image: "/images/abhishek-shiratti.png?height=80&width=80",
+  },
+  {
+    id: 2,
+    rating: 5,
+    text: "The staff were very friendly and helpful. The renovated rooms are stylish and comfortable. A peaceful and refreshing experience.",
+    author: "Shivaraj Patil",
+    source: "BOOKING.COM",
+    image: "/images/shivaraj.png?height=80&width=80",
+  },
+  {
+    id: 3,
+    rating: 4,
+    text: "Beautiful surroundings and fresh air. The walking trails and quiet ambiance made our weekend relaxing and memorable.",
+    author: "Malathi P",
+    source: "GOOGLE REVIEWS",
+    image: "/images/malathi.png?height=80&width=80",
+  },
+  {
+    id: 4,
+    rating: 4,
+    text: "A great escape from the city. The food was delicious, and the staff ensured everything was taken care of during our visit.",
+    author: "Praveen Kumar",
+    source: "YATRA",
+    image: "/images/praveen-kumar.png?height=80&width=80",
+  },
+  {
+    id: 5,
+    rating: 5,
+    text: "Highly recommend Gandhadagudi Garden! Clean facilities, peaceful vibe, and fun activities for both kids and adults.",
+    author: "Lalitha Pawar",
+    source: "MAKE MY TRIP",
+    image: "/images/lalitha.png?height=80&width=80",
+  },
+  {
+    id: 6,
+    rating: 4,
+    text: "Lovely stay surrounded by greenery. The staff were courteous and the amenities were top-notch for a weekend getaway.",
+    author: "Kaveri Hulkoti",
+    source: "CLEARTRIP",
+    image: "/images/kaveri.png?height=80&width=80",
+  },
+  {
+    id: 7,
+    rating: 4,
+    text: "Good place to unwind with friends. The garden is well maintained and the breakfast spread was impressive.",
+    author: "Mahesh Kumbar",
+    source: "EXPEDIA",
+    image: "/images/mahesh.png?height=80&width=80",
+  },
+  {
+    id: 8,
+    rating: 5,
+    text: "The kayaking experience was a highlight! Friendly staff and well-organized activities made it a memorable visit.",
+    author: "Sunil Talwar",
+    source: "GOIBIBO",
+    image: "/images/sunil.png?height=80&width=80"
+  },
+  {
+    id: 9,
+    rating: 4,
+    text: "We loved the rain dance and open play areas. A perfect combination of adventure and nature for family fun.",
+    author: "Uday Kodabali",
+    source: "TRAVEL TRIANGLE",
+    image: "/images/uday.png?height=80&width=80"
+  },
+  {
+    id: 10,
+    rating: 5,
+    text: "From paddle boating to rope climbing, the activities were thrilling! The entire place is serene and beautifully managed.",
+    author: "Ranjit Alagawadi",
+    source: "AGODA",
+    image: "/images/ranjit.png?height=80&width=80"
+  }
+]
+
+
+
 
 export default function TestimonialsComponent() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
 
   const checkScrollButtons = () => {
     const container = scrollContainerRef.current
     if (container) {
-      setCanScrollLeft(container.scrollLeft > 0)
-      setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
     }
   }
 
@@ -128,16 +149,6 @@ export default function TestimonialsComponent() {
       window.removeEventListener("resize", checkScrollButtons)
     }
   }, [])
-  
-
-  const scroll = (direction: "left" | "right") => {
-    const container = scrollContainerRef.current
-    if (container) {
-      const cardWidth = container.querySelector("div")?.offsetWidth || 0
-      const scrollAmount = direction === "left" ? -cardWidth : cardWidth
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" })
-    }
-  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -179,6 +190,17 @@ export default function TestimonialsComponent() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="w-full h-[60dvh]">
+      <iframe 
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/Xyrou0j1BJE?si=ttKyByZnwwmRR1MW&autoplay=1&mute=0" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen={true}
+                ></iframe>
       </div>
     </div>
   )
