@@ -1,12 +1,15 @@
 'use client';
+'use client';
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import TopBarComponent from "./TopBar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: any) {
+    const pathname = usePathname();
     const pathname = usePathname();
 
     const navLinks = [
@@ -46,6 +49,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: a
 
                     <Image
                         src="/images/logo.png"
+                        alt="GandhadaGudi Garden Logo"
                         alt="GandhadaGudi Garden Logo"
                         width={240}
                         height={80}

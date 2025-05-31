@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Wildernest - Best Dandeli Resort",
-  description: "Experience the best resort in Dandeli - Wildernest Dandeli Resorts",
+  title: "GandhadaGudi Garden - Best GandhadaGudi Garden Resort",
+  description: "Experience the best resort in GandhadaGudi Garden - GandhadaGudi Garden GandhadaGudi Garden Resorts",
 }
 
 export default function RootLayout({
