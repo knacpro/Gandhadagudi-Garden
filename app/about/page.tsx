@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
+import Footercomponentonent from "@/components/footer/footer";
 import {
   TreeDeciduous,
   Gamepad2,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { useState } from "react";
+import FooterComponent from "@/components/footer/footer";
 
 export default function Home() {
   const [openItem, setOpenItem] = useState<string | null>(null);
@@ -58,15 +60,15 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-green-100">
       <HeaderComponent />
 
       <section
         className="text-center bg-cover bg-center text-white py-30 px-5"
         style={{ backgroundImage: "url(/images/aboutus-background.png)" }}
       >
-        <h1 className="text-5xl font-bold">About Us</h1>
-        <h6 className="text-2xl font-bold mt-4">
+        <h1 className="text-5xl font-bold mt-8">About Us</h1>
+        <h6 className="text-2xl font-bold mt-2">
           Welcome to Gandhadagudi Garden
         </h6>
       </section>
@@ -95,7 +97,7 @@ export default function Home() {
         <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/MFLVmAE4cqg?autoplay=1&mute=1&controls=0&loop=1&playlist=MFLVmAE4cqg"
+            src="https://www.youtube.com/embed/yZ5nDoVQgcs?autoplay=1&mute=1&controls=0&loop=1&playlist=yZ5nDoVQgcs"
             title="YouTube video player"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -147,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Resort Facilities Section */}
-      <section className="w-full py-12 md:py-24 bg-white">
+      <section className="w-full py-12 md:py-24 bg-green-100 ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Images */}
@@ -172,7 +174,7 @@ export default function Home() {
             </div>
 
             {/* Services */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-8 ">
               <div>
                 <h3 className="text-green-600 font-medium uppercase tracking-wider text-sm md:text-base">
                   Discover the Services We Offer
@@ -300,6 +302,7 @@ export default function Home() {
           <Phone className="h-6 w-6" />
         </Link>
       </div>
+      <FooterComponent />
     </main>
   );
 }
