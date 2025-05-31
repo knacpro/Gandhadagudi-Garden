@@ -33,11 +33,11 @@ export default function page() {
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 relative z-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <Image
-               src="/images/breakfast.png"
-  alt="Breakfast"
-  width={500}
-  height={500}
-  className="animate-spin"
+                src="/images/breakfast.png"
+                alt="Breakfast"
+                width={500}
+                height={500}
+                className="animate-spin"
               />
             </div>
 
@@ -67,43 +67,43 @@ export default function page() {
 
             <div className="w-full md:w-1/2 flex justify-center">
               <Image
-                        
-  src="/images/image.png"
-  alt="Breakfast"
-  width={500}
-  height={500}
-  className="animate-spin"
-
+                src="/images/image.png"
+                alt="Lunch"
+                width={500}
+                height={500}
+                className="animate-spin"
               />
             </div>
-  
-  </div>
+          </div>
         </section>
-<section className="relative bg-green-300 py-20 px-10 overflow-hidden">
+
+        {/* SNACKS SECTION */}
+        <section className="relative bg-green-300 py-20 px-10 overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 relative z-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <Image
-               src="/images/snacks.png"
-  alt="Breakfast"
-  width={500}
-  height={500}
-  className="animate-out"
+                src="/images/snacks.png"
+                alt="Snacks"
+                width={500}
+                height={500}
+                className="animate-out"
               />
             </div>
 
             <div className="w-full md:w-1/2 text-black">
               <h2 className="text-3xl font-extrabold mb-4">Snacks</h2>
               <p className="text-lg leading-relaxed">
-As the evening sets in, we provide a flavorful snack to complete your day at Utsav Rock Garden. Enjoy the bold spice of Hot Mirchi and the crispy, tangy taste of Masala Churmuri, all paired with a refreshing cup of Tea.
+                As the evening sets in, we provide a flavorful snack to complete your day at Utsav Rock Garden. Enjoy the bold spice of Hot Mirchi and the crispy, tangy taste of Masala Churmuri, all paired with a refreshing cup of Tea.
               </p>
             </div>
           </div>
         </section>
- <section className="relative bg-green-400 py-20 px-10 overflow-hidden">
+
+        {/* JUICE SECTION */}
+        <section className="relative bg-green-400 py-20 px-10 overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 relative z-10">
             <div className="w-full md:w-1/2 text-black">
-              <h2 className="text-3xl font-extrabold mb-4">
-Juice</h2>
+              <h2 className="text-3xl font-extrabold mb-4">Juice</h2>
               <p className="text-lg leading-relaxed">
                 Quench your thirst with refreshing Kokum Juice, savor the sweetness of ripe Watermelon, and indulge in a flavorful Pan, offering a perfect burst of freshness!
               </p>
@@ -111,22 +111,66 @@ Juice</h2>
 
             <div className="w-full md:w-1/2 flex justify-center">
               <Image
-                        
-  src="/images/jucie.png"
-  alt="Breakfast"
-  width={500}
-  height={500}
-  className="animate-ping"
-
+                src="/images/jucie.png"
+                alt="Juice"
+                width={500}
+                height={500}
+                className="animate-ping"
               />
             </div>
-  
-  </div>
+          </div>
         </section>
 
-        <ResortActivitiesComponent/>
-        <BookResort/>
-        <FooterComponent/>
+        {/* RESTAURANT GALLERY SECTION */}
+        <div className="text-center py-10 bg-white">
+          <h1 className="text-4xl font-extrabold text-black">RESTAURANT GALLERY</h1>
+          <p className="text-xl text-black mt-2">Explore the flavors and ambiance of our restaurant.</p>
+        </div>
+
+        <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="overflow-hidden rounded-lg">
+              <Image
+                src="/images/garden1.png"
+                alt="Restaurant Photo 1"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg">
+              <Image
+                src="/images/garden2.png"
+                alt="Restaurant Photo 2"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg">
+              <Image
+                src="/images/gallery3.png"
+                alt="Restaurant Photo 3"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg">
+              <Image
+                src="/images/gallery4.png"
+                alt="Restaurant Photo 4"
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+        <ResortActivitiesComponent />
+        <BookResort />
+        <FooterComponent />
       </div>
     </div>
   )

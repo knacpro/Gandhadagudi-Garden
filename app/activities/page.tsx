@@ -13,7 +13,7 @@ export default function Page() {
       title: "Gym",
       description:
         "Our fully-equipped gym provides guests with the opportunity to stay active even during their retreat. Enjoy cardio, strength training, and relaxation in a serene setting.",
-      image: "/images/gym6.png",
+      image: "/images/gym2.png",
       link: "/activities/gym",
     },
     {
@@ -55,7 +55,7 @@ export default function Page() {
       title: "Rain Dance",
       description:
         "Feel the beat and dance under artificial rain with music and lighting for a party-like outdoor vibe.",
-      image: "/images/raindance7.png",
+      image: "/images/rain8.png",
       link: "/activities/rain-dance",
     },
     {
@@ -90,14 +90,14 @@ export default function Page() {
       title: "Small Tractor Riding",
       description:
         "Kids and adults alike enjoy our fun and safe tractor ride experiences across scenic farm trails.",
-      image: "/images/trackor.png",
+      image: "/images/tarotor4.png",
       link: "/activities/small-tractor-riding",
     },
     {
       title: "Deer Farm",
       description:
         "Get close to nature and see our gentle deer in their peaceful environment, perfect for wildlife enthusiasts and photographers.",
-      image: "/images/deer12.png",
+      image: "/images/deer13.png",
       link: "/activities/deer-park",
     },
     {
@@ -147,20 +147,20 @@ export default function Page() {
             <div className="md:w-1/2 flex gap-4">
               <div className="w-1/2">
                 <Image
-                  src="/images/pic1.png"
+                  src="/images/pic2.png"
                   alt="Deer"
-                  width={300}
+                  width={600}
                   height={400}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg object-cover"
                 />
               </div>
               <div className="w-1/2">
                 <Image
-                  src="/images/pecock.png"
+                  src="/images/peackcock.png"
                   alt="Birds"
-                  width={300}
+                  width={600}
                   height={400}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg object-cover"
                 />
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Page() {
                   alt={activity.title}
                   width={600}
                   height={400}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg object-cover"
                 />
               </div>
               <div className="md:w-1/2">
@@ -203,7 +203,7 @@ export default function Page() {
       </div>
 
       <BookResort />
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }

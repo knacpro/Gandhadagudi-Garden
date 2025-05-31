@@ -13,7 +13,7 @@ export default function KidsZonePage() {
       {/* Hero Section */}
       <section
         className="text-center bg-cover bg-center text-white py-40 px-5"
-        style={{ backgroundImage: "url(/images/kids3.png)" }}
+        style={{ backgroundImage: "url(/images/kids22.png)" }}
       >
         <h1 className="text-5xl font-bold">Kids Zone</h1>
       </section>
@@ -39,7 +39,7 @@ export default function KidsZonePage() {
           <div className="md:w-1/2 flex gap-4">
             <div className="w-1/2">
               <Image
-                src="/images/kids3.png"
+                src="/images/kids22.png"
                 alt="Kids Play Area 1"
                 width={400}
                 height={500}
@@ -48,7 +48,7 @@ export default function KidsZonePage() {
             </div>
             <div className="w-1/2">
               <Image
-                src="/images/kids4.png"
+                src="/images/kids23.png"
                 alt="Kids Play Area 2"
                 width={400}
                 height={500}
@@ -63,32 +63,18 @@ export default function KidsZonePage() {
       <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-8">Kids Zone Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {[
-            "/images/kids5.png",
-            "/images/kids6.png",
-            "/images/kids7.png",
-            "/images/kids8.png",
-            "/images/kids9.png",
-            "/images/kids10.png",
-            "/images/kids11.png",
-            "/images/kids12.png",
-            "/images/kids13.png",
-            "/images/kids14.png",
-            "/images/kids15.png",
-             "/images/kids16.png",
-              "/images/kids17.png",
-               "/images/kids18.png",
-                "/images/kids19.png",
-                 "/images/kids20.png",
-                
-                 
+          {[ 
+            "/images/kids24.png", "/images/kids25.png", "/images/kids26.png", "/images/kids27.png", 
+            "/images/kids28.png", "/images/kids29.png", "/images/kids30.png", "/images/kids35.png", 
+            "/images/kids32.png", "/images/kids33.png", "/images/kids36.png", "/images/kids37.png", 
+            "/images/kids39.png", "/images/kids18.png", "/images/kids22.png", "/images/kids38.png",
           ].map((src, idx) => (
             <div key={idx} className="overflow-hidden rounded-lg">
               <Image
                 src={src}
                 alt={`Kids Activity ${idx + 1}`}
-                width={500}
-                height={380}
+                width={320}
+                height={240}
                 className="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg"
               />
             </div>
@@ -96,48 +82,43 @@ export default function KidsZonePage() {
         </div>
       </section>
 
-     {/* Videos Section */}
-  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <h2 className="text-3xl font-bold text-center mb-8">
-    Watch Our Traditional Training in Action
-  </h2>
-  <div className="flex justify-center">
-    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/p9afwKh1v8o?si=qxRwToOmXSPPqzGQ"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </div>
-</section>
-  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <h2 className="text-3xl font-bold text-center mb-8">
-    Watch Our Traditional Training in Action
-  </h2>
-  <div className="flex justify-center">
-    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/yYUUObZilvA?si=f4YklYD0i7Djzz9m"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </div>
-</section>
+      {/* Videos Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Watch Our Traditional Training in Action
+        </h2>
+        <div className="flex flex-wrap gap-8 justify-center">
+          {/* First Video */}
+          <div className="rounded-lg overflow-hidden shadow-md w-full max-w-xl relative aspect-video">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/p9afwKh1v8o?si=qxRwToOmXSPPqzGQ"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
 
-      <ResortActivitiesComponent/>
-    
+          {/* Second Video */}
+          <div className="rounded-lg overflow-hidden shadow-md w-full max-w-xl relative aspect-video">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/yYUUObZilvA?si=f4YklYD0i7Djzz9m"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <ResortActivitiesComponent />
       <BookResort />
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }

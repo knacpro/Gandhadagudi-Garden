@@ -125,24 +125,7 @@ export default function SwimmingPage() {
     </div>
   </div>
 </section>
-<section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-  <h2 className="text-3xl font-bold text-center mb-8"></h2>
-  <div className="flex justify-center">
-    <div className="rounded-lg overflow-hidden shadow-md w-full max-w-5xl"> {/* Increased max width */}
-      <video
-        muted
-        autoPlay
-        loop
-        playsInline
-        className="w-full h-auto rounded-lg"
-        src="/videos/swuing3.mp4
-        "
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
+
         {/* Booking Section */}
         <ResortActivitiesComponent/>
         <BookResort />
