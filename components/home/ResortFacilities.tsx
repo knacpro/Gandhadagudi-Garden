@@ -5,16 +5,18 @@ import Restuarant from "../icons/Restuarant";
 import Housekeeper from "../icons/HouseKeeper";
 import LaundryServices from "../icons/LaundryServices";
 import SwimmingPool from "../icons/SwimmingPool";
+import { useTranslations } from "next-intl";
 
 export default function ResortFacilitiesComponent() {
+  const t = useTranslations('HomePage');
   return (
     <div className="relative z-10 container mx-auto px-4 py-12 max-w-7xl">
       <div className="text-center md:text-left mb-12">
         <p className="text-green-600 uppercase tracking-wide font-medium mb-4">
-          DISCOVER THE SERVICES WE OFFERED
+          {t('discover')}
         </p>
         <h2 className="text-[#333] text-4xl font-serif">
-          GANDHADAGUDI GARDEN FACILITIES
+          {t('facilities')}
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -22,8 +24,8 @@ export default function ResortFacilitiesComponent() {
         <div className="space-y-8">
           {/* Airport Pick-up Service */}
           <Facility
-            title="Tree House"
-            description="Can enjoy views at Tree houses."
+            title={t('treeHouse')}
+            description={t('treeHouseDescription')}
             icon={(
               <TreeHouse />
             )}
@@ -31,8 +33,8 @@ export default function ResortFacilitiesComponent() {
 
           {/* Wifi & Internet */}
           <Facility
-            title="Wifi & Internet"
-            description="Stay connected with complimentary high-speed internet."
+            title={t('wifi')}
+            description={t('wifiDescription')}
             icon={(
              <Wifi />
             )}
@@ -40,8 +42,8 @@ export default function ResortFacilitiesComponent() {
 
           {/* Restuarant */}
           <Facility
-            title="Restuarant"
-            description="Enjoy delicious meals at the restuarant."
+            title={t('restuarant')}
+            description={t('restuarantDescription')}
             icon={(
               <Restuarant />
             )}
@@ -52,8 +54,8 @@ export default function ResortFacilitiesComponent() {
         <div className="space-y-8">
           {/* Housekeeper Services */}
           <Facility
-            title="Lawn Garden"
-            description="A lawn garden is a green space often used for relaxation."
+            title={t('lawnGarden')}
+            description={t('lawnGardenDescription')}
             icon={(
               <Housekeeper />
             )}
@@ -61,8 +63,8 @@ export default function ResortFacilitiesComponent() {
 
           {/* Laundry Services */}
           <Facility
-            title="Party Hall"
-            description="A party hall is a spacious venue for celebrations."
+            title={t('partyHall')}
+            description={t('partyHallDescription')}
             icon={(
               <LaundryServices />
             )}
@@ -70,8 +72,8 @@ export default function ResortFacilitiesComponent() {
 
           {/* Swimming Pool */}
           <Facility
-            title="Swimming Pool"
-            description="Relax and rejuvenate in our serene swimming pool."
+            title={t('swimmingPool')}
+            description={t('swimmingPoolDescription')}
             icon={(
               <SwimmingPool />
             )}

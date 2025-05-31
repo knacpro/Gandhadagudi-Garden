@@ -3,51 +3,10 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 // Array of attractions that can be expanded
-const attractions = [
-  {
-    id: 1,
-    title: "Siddharoda Matha",
-    image: "/images/siddharodha-matha.png?height=400&width=500",
-    description:
-      "Siddharoodha Matha in Hubli located just 20kms away is a revered spiritual center dedicated to the teachings of Shri Siddharoodha Swami, attracting devotees from across India.",
-  },
-  {
-    id: 2,
-    title: "Moor Savir Matha",
-    image: "/images/moor-savir-matha.png?height=400&width=500",
-    description: "​Moorusavira Matha in Hubli located just 18kms away is a historic 12th-century Lingayat monastery, named after the arrival of 3,000 Shivasharanas led by Channabasaveshwara, and is renowned for its spiritual heritage and community service.",
-  },
-  {
-    id: 3,
-    title: "ChandraMouleshwar Temple",
-    image: "/images/chandra-mouleshwar-temple.png?height=400&width=500",
-    description:
-      "The Chandramouleshwara Temple in Unkal, Hubli, located just 18kms away is a 900-year-old Chalukyan-era shrine dedicated to Lord Shiva, renowned for its unique four-faced linga and exquisite carvings that reflect a blend of Shaivism, Vaishnavism, and Shaktism traditions.",
-  },
-  {
-    id: 4,
-    title: "Tolanakere Lake",
-    image: "/images/tolankere.png?height=400&width=500",
-    description:
-      "Tolankere Lake in Hubli is a rejuvenated urban oasis featuring walking paths, an open gym, children's play areas, and a serene lake, making it a popular spot for fitness enthusiasts and families alike.",
-  },
-  {
-    id: 5,
-    title: "Unakal Lake",
-    image: "/images/unakal-lake.png?height=400&width=500",
-    description:
-      "​Unkal Lake in Hubli located just 21kms away is a 200-acre man-made reservoir built in the 11th century during the Chalukya dynasty, serving as a major water source and a scenic spot for recreation and boating.",
-  },
-  {
-    id: 6,
-    title: "Nrupatunga Hill",
-    image: "/images/nrupatunga.png?height=400&width=500",
-    description:
-      "​Nrupatunga Hill, also known as Nrupatunga Betta located just 13kms away, is a serene hillock in Hubli offering panoramic views of the twin cities, a children's park, and a tranquil environment ideal for morning walks and picnics. ",
-  }
-]
+
 
 export default function NearByAttractionsComponent() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -61,6 +20,51 @@ export default function NearByAttractionsComponent() {
       setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
     }
   }
+
+  const t = useTranslations('HomePage');
+const attractions = [
+  {
+    id: 1,
+    title: t('siddharodaMatha'),
+    image: "/images/siddharodha-matha.png?height=400&width=500",
+    description:
+      t('siddharodaMathaDescription'),
+  },
+  {
+    id: 2,
+    title: t('moorSavirMatha'),
+    image: "/images/moor-savir-matha.png?height=400&width=500",
+    description: t('moorSavirMathaDescription'),
+  },
+  {
+    id: 3,
+    title: t('chandraMouleshwarTemple'),
+    image: "/images/chandra-mouleshwar-temple.png?height=400&width=500",
+    description:
+      t('chandraMouleshwarTempleDescription'),
+  },
+  {
+    id: 4,
+    title: t('tolanakereLake'),
+    image: "/images/tolankere.png?height=400&width=500",
+    description:
+      t('tolanakereLakeDescription'),
+  },
+  {
+    id: 5,
+    title: t('unakalLake'),
+    image: "/images/unakal-lake.png?height=400&width=500",
+    description:
+      t('unakalLakeDescription'),
+  },
+  {
+    id: 6,
+    title: t('nrupatungaHill'),
+    image: "/images/nrupatunga.png?height=400&width=500",
+    description:
+      t('nrupatungaHillDescription'),
+  }
+]
 
   useEffect(() => {
     const container = scrollContainerRef.current
@@ -128,12 +132,12 @@ export default function NearByAttractionsComponent() {
       {/* Heading section with exact colors */}
       <div className="text-center mb-12">
           <h3 className="text-green-600 text-sm md:text-base font-medium tracking-wide uppercase">
-            LOCAL ATTRACTIONS
+            {t('localAttractions')}
           </h3>
           <h2 className="text-3xl md:text-5xl font-serif mt-4 text-[#333] leading-tight">
-            NEARBY ATTRACTIONS AROUND
+            {t('nearbyAttractionsAround')}
             <br />
-            GANDHADAGUDI GARDEN
+            {t('gandhadagudiGarden')}
           </h2>
         </div>
 

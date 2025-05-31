@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export default function GallerySectionComponent() {
+  const t = useTranslations('HomePage');
   const [isAutoScrolling, setIsAutoScrolling] = useState(true)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const autoScrollTimerRef = useRef<NodeJS.Timeout | null>(null)
@@ -201,8 +203,8 @@ export default function GallerySectionComponent() {
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-green-600 font-medium tracking-wide">GALLERY</div>
-      <h1 className="text-[#333333] text-4xl sm:text-5xl font-serif mb-8">GANDHADAGUDI GARDEN GALLERY</h1>
+      <div className="text-green-600 font-medium tracking-wide">{t('gallery')}</div>
+      <h1 className="text-[#333333] text-4xl sm:text-5xl font-serif mb-8">{t('gandhadagudiGardenGallery')}</h1>
 
       <div className="relative">
         <div

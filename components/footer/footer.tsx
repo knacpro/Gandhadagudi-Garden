@@ -1,8 +1,45 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react"
+import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
 
 export default function FooterComponent() {
+  const pathname = usePathname()
+  const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/kn'
+  const t = useTranslations('HomePage')
+
+  const getText = (key: string) => {
+    if (isHomePage) {
+      return t(key)
+    }
+    // English text for non-home pages
+    const englishTexts: { [key: string]: string } = {
+      gandhadagudiGardenByahattiDescription: "Experience the beauty of nature at Gandhadagudi Garden, Byahatti. A perfect destination for adventure, relaxation, and creating unforgettable memories.",
+      aboutUs: "About Us",
+      activities: "Activities",
+      attractions: "Attractions",
+      packages: "Packages",
+      gallery: "Gallery",
+      contact: "Contact",
+      garadiMane: "Garadi Mane",
+      boatRiding: "Boat Riding",
+      kayaking: "Adventure Kayaking",
+      zipLine: "Zip Line",
+      swimming: "Swimming",
+      rainDance: "Rain Dance",
+      studentsPackages: "Students Packages",
+      corporatePackages: "Corporate Packages",
+      familyPackages: "Family Packages",
+      weekendPackages: "Weekend Packages",
+      reachOut: "Reach Out",
+      address: "Gandhadagudi Garden, Byahatti, Karnataka",
+      getDirections: "Get Directions",
+      allRightsReserved: "All rights reserved.",
+      designedAndDevelopedBy: "Designed and Developed by"
+    }
+    return englishTexts[key] || key
+  }
+
   return (
     <footer className="bg-green-950 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -20,7 +57,7 @@ export default function FooterComponent() {
             </div>
 
             <p className="text-white text-sm">
-              Gandhadagudi Garden Byahatti, your ultimate destination for a perfect getaway amidst nature.
+              {getText('gandhadagudiGardenByahattiDescription')}
             </p>
 
             <div className="flex space-x-6">
@@ -65,36 +102,36 @@ export default function FooterComponent() {
 
           {/* About Us Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">About Us</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('aboutUs')}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="text-white hover:text-green-400 transition-colors">
-                  About Us
+                  {getText('aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link href="/activities" className="text-white hover:text-green-400 transition-colors">
-                  Activities
+                  {getText('activities')}
                 </Link>
               </li>
               <li>
                 <Link href="/attractions" className="text-white hover:text-green-400 transition-colors">
-                  Attractions
+                  {getText('attractions')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
-                  Packages
+                  {getText('packages')}
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="text-white hover:text-green-400 transition-colors">
-                  Gallery
+                  {getText('gallery')}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-white hover:text-green-400 transition-colors">
-                  Contact Us
+                  {getText('contact')}
                 </Link>
               </li>
             </ul>
@@ -102,36 +139,36 @@ export default function FooterComponent() {
 
           {/* Activities Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">Activities</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('activities')}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/garadi-mane" className="text-white hover:text-green-400 transition-colors">
-                  Garadi Mane
+                  {getText('garadiMane')}
                 </Link>
               </li>
               <li>
                 <Link href="/boat-riding" className="text-white hover:text-green-400 transition-colors">
-                  Boat Riding
+                  {getText('boatRiding')}
                 </Link>
               </li>
               <li>
                 <Link href="/adventure-kayaking" className="text-white hover:text-green-400 transition-colors">
-                  Kayaking
+                  {getText('kayaking')}
                 </Link>
               </li>
               <li>
                 <Link href="/zip-line" className="text-white hover:text-green-400 transition-colors">
-                  Zip line
+                  {getText('zipLine')}
                 </Link>
               </li>
               <li>
                 <Link href="/swimming" className="text-white hover:text-green-400 transition-colors">
-                  Swimming
+                  {getText('swimming')}
                 </Link>
               </li>
               <li>
                 <Link href="/rain-dance" className="text-white hover:text-green-400 transition-colors">
-                  Rain Dance
+                  {getText('rainDance')}
                 </Link>
               </li>
             </ul>
@@ -139,26 +176,26 @@ export default function FooterComponent() {
 
           {/* Packages Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">Packages</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('packages')}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
-                  Student Packages
+                  {getText('studentsPackages')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
-                  Corporate Packages
+                  {getText('corporatePackages')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
-                  Family Packages
+                  {getText('familyPackages')}
                 </Link>
               </li>
               <li>
                 <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
-                  Weekend Packages
+                  {getText('weekendPackages')}
                 </Link>
               </li>
             </ul>
@@ -166,7 +203,7 @@ export default function FooterComponent() {
 
           {/* Reach Out Section */}
           <div className="space-y-4 md:col-span-4 lg:col-span-1">
-            <h3 className="text-xl font-medium mb-6">Reach Out</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('reachOut')}</h3>
             <ul className="space-y-4">
               <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
@@ -232,7 +269,7 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">Hebsur Road, Byahatti Karnataka 580023</span>
+                <span className="text-white">{getText('address')}</span>
               </Link>
             </ul>
             <Link
@@ -240,7 +277,7 @@ export default function FooterComponent() {
               target="_blank"
               className="inline-block mt-4 text-green-500 hover:border-b-2 hover:border-green-500 hover:text-green-400 transition-colors"
             >
-              Get Directions
+              {getText('getDirections')}
             </Link>
           </div>
         </div>
@@ -249,7 +286,7 @@ export default function FooterComponent() {
       {/* Bottom Copyright Section */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white">© 2025 Gandhadagudi Garden, Byahatti. All Rights Reserved.</p>
+          <p className="text-sm text-white">© 2025 Gandhadagudi Garden, Byahatti. {getText('allRightsReserved')}</p>
           <div className="flex space-x-1 mt-4 md:mt-0">
             <Image
               src="/images/knacpro-logo.png"
@@ -258,7 +295,7 @@ export default function FooterComponent() {
               height={28}
               className="object-contain"
             />
-            <p className="text-sm text-white">Designed and developed by <Link href={'https://www.knacprosolutions.in/'} target="_blank" className="hover:border-b-2 hover:border-yellow-400"> Knacpro Solutions</Link></p>
+            <p className="text-sm text-white">{getText('designedAndDevelopedBy')} <Link href={'https://www.knacprosolutions.in/'} target="_blank" className="hover:border-b-2 hover:border-yellow-400"> Knacpro Solutions</Link></p>
           </div>
         </div>
       </div>
