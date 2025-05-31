@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-green-100">
-      <HeaderComponent />
+      
 
       <section
         className="text-center bg-cover bg-center text-white py-30 px-5"
