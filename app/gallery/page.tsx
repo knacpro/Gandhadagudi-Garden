@@ -7,30 +7,30 @@ import FooterComponent from "@/components/footer/footer";
 
 export default function GalleryPage() {
   const adventures = [
-    { id: 1, src: "/images/bird.jpg", alt: "Garden View 1" },
-    { id: 2, src: "/images/garden2.jpeg", alt: "Garden View 2" },
-    { id: 3, src: "/images/bird1.jpg", alt: "Garden View 3" },
-    { id: 4, src: "/images/garden4.jpeg", alt: "Garden View 4" },
-    { id: 5, src: "/images/garden5.jpeg", alt: "Garden View 5" },
-    { id: 6, src: "/images/garden6.jpeg", alt: "Garden View 6" },
-    { id: 7, src: "/images/garden5.jpeg", alt: "Garden View 7" },
-    { id: 8, src: "/images/garden1.jpeg", alt: "Garden View 8" },
-    { id: 9, src: "/images/garden3.jpeg", alt: "Garden View 9" },
-    { id: 10, src: "/images/garden4.jpeg", alt: "Garden View 10" },
-    { id: 11, src: "/images/garden2.jpeg", alt: "Garden View 11" },
-    { id: 12, src: "/images/garden1.jpeg", alt: "Garden View 12" },
-    { id: 13, src: "/images/garden5.jpeg", alt: "Garden View 13" },
-    { id: 14, src: "/images/garden3.jpeg", alt: "Garden View 14" },
-    { id: 15, src: "/images/garden6.jpeg", alt: "Garden View 15" },
-    { id: 16, src: "/images/garden1.jpeg", alt: "Garden View 16" },
-    { id: 17, src: "/images/garden3.jpeg", alt: "Garden View 17" },
-    { id: 18, src: "/images/garden5.jpeg", alt: "Garden View 18" },
-    { id: 19, src: "/images/garden6.jpeg", alt: "Garden View 19" },
-    { id: 20, src: "/images/garden2.jpeg", alt: "Garden View 20" },
+    { id: 1, src: "/images/1.jpg", alt: "Garden View 1" },
+    { id: 2, src: "/images/2.jpg", alt: "Garden View 2" },
+    { id: 3, src: "/images/3.jpg", alt: "Garden View 3" },
+    { id: 4, src: "/images/4.jpg", alt: "Garden View 4" },
+    { id: 5, src: "/images/5.jpg", alt: "Garden View 5" },
+    { id: 6, src: "/images/6.jpg", alt: "Garden View 6" },
+    { id: 7, src: "/images/7.jpg", alt: "Garden View 7" },
+    { id: 8, src: "/images/8.jpg", alt: "Garden View 8" },
+    { id: 9, src: "/images/9.jpg", alt: "Garden View 9" },
+    { id: 10, src: "/images/10.jpg", alt: "Garden View 10" },
+    { id: 11, src: "/images/11.jpg", alt: "Garden View 11" },
+    { id: 12, src: "/images/12.jpg", alt: "Garden View 12" },
+    { id: 13, src: "/images/13.jpg", alt: "Garden View 13" },
+    { id: 14, src: "/images/14.jpg", alt: "Garden View 14" },
+    { id: 15, src: "/images/15.jpg", alt: "Garden View 15" },
+    { id: 16, src: "/images/16.jpg", alt: "Garden View 16" },
+    { id: 17, src: "/images/21.jpg", alt: "Garden View 17" },
+    { id: 18, src: "/images/18.jpg", alt: "Garden View 18" },
+    { id: 19, src: "/images/19.jpg", alt: "Garden View 19" },
+    { id: 20, src: "/images/20.jpg", alt: "Garden View 20" },
   ];
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col bg-green-100">
       <HeaderComponent />
 
       {/* Hero Section */}
