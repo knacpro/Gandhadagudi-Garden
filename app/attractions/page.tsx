@@ -198,7 +198,7 @@ export function AttractionsCarousel() {
 export default function Attractions() {
   return (
     <main className="bg-green-100">
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={false} setMobileMenuOpen={() => {}} />
       <section
         className="text-center bg-cover bg-center text-white py-40 px-5"
         style={{ backgroundImage: "url(/images/attractions-background.png)" }}
