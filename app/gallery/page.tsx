@@ -1,11 +1,15 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Phone } from "lucide-react";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
 import FooterComponent from "@/components/footer/footer";
+import { useState } from "react";
 
 export default function GalleryPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const adventures = [
     { id: 1, src: "/images/1.jpg", alt: "Garden View 1" },
     { id: 2, src: "/images/2.jpg", alt: "Garden View 2" },
@@ -31,7 +35,7 @@ export default function GalleryPage() {
 
   return (
     <main className="min-h-screen flex flex-col bg-green-100">
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       {/* Hero Section */}
       <section
