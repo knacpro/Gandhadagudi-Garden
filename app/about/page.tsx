@@ -98,7 +98,7 @@ export default function Home() {
 
         <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
           <iframe
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute top-0 left-0 w-full h-full transform rotate-270"
             src="https://www.youtube.com/embed/yZ5nDoVQgcs?autoplay=1&mute=1&controls=0&loop=1&playlist=yZ5nDoVQgcs"
             title="YouTube video player"
             frameBorder="0"
