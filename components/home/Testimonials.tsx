@@ -1,74 +1,107 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
-
+import { Star } from "lucide-react"
+import { useTranslations } from "next-intl"
 // Array of activities that can be expanded
-const reviews = [
+
+
+export default function TestimonialsComponent() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  // const [canScrollLeft, setCanScrollLeft] = useState(false)
+  // const [canScrollRight, setCanScrollRight] = useState(true)
+  const t = useTranslations('HomePage');
+  const checkScrollButtons = () => {
+    const container = scrollContainerRef.current
+    if (container) {
+      // setCanScrollLeft(container.scrollLeft > 0)
+      // setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
+    }
+  }
+  const reviews = [
     {
       id: 1,
       rating: 5,
-      text: '"The hotel is well located. Rooms are very clean. Great services. Very kind people from front desk and delicious breakfast. And I really love the spa!"',
-      author: "Abhishek Shiratti",
-      source: "TRIPADVISOR",
+      text: t('abhishekShiratti'),
+      author: t('abhishekShirattiName'),
+      source: "GOOGLE",
       image: "/images/abhishek-shiratti.png?height=80&width=80",
     },
     {
       id: 2,
       rating: 5,
-      text: '"The rooms are all renovated and modern. And the staff are very willing to help you plan your day. Thanks for all the staff and this pleased trip!"',
-      author: "Shivaraj Patil",
+      text: t('shivarajPatil'),
+      author: t('shivarajPatilName'),
       source: "TRIPADVISOR",
       image: "/images/shivaraj.png?height=80&width=80",
     },
     {
       id: 3,
       rating: 4,
-      text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-      author: "Malathi P",
-      source: "TRIPADVISOR",
+      text: t('malathiP'),
+      author: t('malathiPName'),
+      source: "MAKE MY TRIP",
       image: "/images/malathi.png?height=80&width=80",
     },
     {
-        id: 4,
-        rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Praveen Kumar",
-        source: "TRIPADVISOR",
-        image: "/images/praveen-kumar.png?height=80&width=80",
-      },
-      {
-        id: 5,
-        rating: 5,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Lalitha Pawar",
-        source: "TRIPADVISOR",
-        image: "/images/lalitha.png?height=80&width=80",
-      },
-      {
-        id: 6,
-        rating: 4,
-        text: '"Brilliant staff and exceptional customer service. The place is fantastic. Great facilities and atmosphere. Buffet breakfast daily is very generous."',
-        author: "Kaveri Hulkoti",
-        source: "TRIPADVISOR",
-        image: "/images/kaveri.png?height=80&width=80",
-      },
-    // You can add more reviews here following the same structure
-  ]
-
-export default function TestimonialsComponent() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-
-  const checkScrollButtons = () => {
-    const container = scrollContainerRef.current
-    if (container) {
-      setCanScrollLeft(container.scrollLeft > 0)
-      setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
-    }
-  }
+      id: 4,
+      rating: 4,
+      text: t('praveenKumar'),
+      author: t('praveenKumarName'),
+      source: "GOIBIBO",
+      image: "/images/praveen-kumar.png?height=80&width=80",
+    },
+    {
+      id: 5,
+      rating: 5,
+      text: t('lalithaPawar'),
+      author: t('lalithaPawarName'),
+      source: "FACEBOOK",
+      image: "/images/lalitha.png?height=80&width=80",
+    },
+    {
+      id: 6,
+      rating: 4,
+      text: t('kaveriHulkoti'),
+      author: t('kaveriHulkotiName'),
+      source: "YATRA",
+      image: "/images/kaveri.png?height=80&width=80",
+    },
+    {
+      id: 7,
+      rating: 4,
+      text: t('maheshKumbar'),
+      author: t('maheshKumbarName'),
+      source: "BOOKING.COM",
+      image: "/images/mahesh.png?height=80&width=80",
+    },
+    {
+      id: 8,
+      rating: 5,
+      text: t('sunilTalwar'),
+      author: t('sunilTalwarName'),
+      source: "GOOGLE",
+      image: "/images/sunil.png?height=80&width=80",
+    },
+    {
+      id: 9,
+      rating: 5,
+      text: t('udayKodabali'),
+      author: t('udayKodabaliName'),
+      source: "TRAVEL TRIANGLE",
+      image: "/images/uday.png?height=80&width=80",
+    },
+    {
+      id: 10,
+      rating: 5,
+      text: t('ranjitAlagawadi'),
+      author: t('ranjitAlagawadiName'),
+      source: "JUSTDIAL",
+      image: "/images/ranjit.png?height=80&width=80",
+    },
+  ];
+  
 
   useEffect(() => {
     const container = scrollContainerRef.current
@@ -122,35 +155,25 @@ export default function TestimonialsComponent() {
   }, [])
   
 
-  const scroll = (direction: "left" | "right") => {
-    const container = scrollContainerRef.current
-    if (container) {
-      const cardWidth = container.querySelector("div")?.offsetWidth || 0
-      const scrollAmount = direction === "left" ? -cardWidth : cardWidth
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" })
-    }
-  }
+  // const scroll = (direction: "left" | "right") => {
+  //   const container = scrollContainerRef.current
+  //   if (container) {
+  //     const cardWidth = container.querySelector("div")?.offsetWidth || 0
+  //     const scrollAmount = direction === "left" ? -cardWidth : cardWidth
+  //     container.scrollBy({ left: scrollAmount, behavior: "smooth" })
+  //   }
+  // }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Heading section with exact colors */}
       <div className="text-center mb-12">
-        <h3 className="text-[#a3b938] uppercase tracking-wide font-medium mb-2">FEEDBACK FROM OUR DEAR GUESTS</h3>
-        <h2 className="text-5xl font-serif text-[#333] mt-4">What They Say About Us</h2>
+        <h3 className="text-green-600 uppercase tracking-wide font-medium mb-2">{t('feedbackFromOurDearGuests')}</h3>
+        <h2 className="text-5xl font-serif text-[#333] mt-4">{t('whatTheySayAboutUs')}</h2>
       </div>
 
       {/* Activities carousel */}
       <div className="relative">
-        {/* Left scroll button */}
-        {/* <button
-          onClick={() => scroll("left")}
-          className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#8BAD2B] p-2 rounded-r-md ${!canScrollLeft ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-          disabled={!canScrollLeft}
-          aria-label="Scroll left"
-        >
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button> */}
-
         {/* Scrollable container */}
         <div
           ref={scrollContainerRef}
@@ -161,7 +184,7 @@ export default function TestimonialsComponent() {
             <div key={review.id} className="flex-none w-full sm:w-[calc(100%-2rem)] md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] snap-start items-center text-center">
               <div className="flex justify-center mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#ffc107] text-[#ffc107]" />
+                  <Star key={i} className="w-5 h-5 fill-green-500 text-green-500" />
                 ))}
               </div>
               <p className="text-[#333] mb-6 font-serif leading-relaxed">{review.text}</p>
@@ -181,16 +204,17 @@ export default function TestimonialsComponent() {
             </div>
           ))}
         </div>
-
-        {/* Right scroll button */}
-        {/* <button
-          onClick={() => scroll("right")}
-          className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#8BAD2B] p-2 rounded-l-md ${!canScrollRight ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-          disabled={!canScrollRight}
-          aria-label="Scroll right"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button> */}
+      </div>
+      <div className="w-full h-[60dvh]">
+      <iframe 
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/Xyrou0j1BJE?si=ttKyByZnwwmRR1MW&autoplay=1&mute=0" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen={true}
+                ></iframe>
       </div>
     </div>
   )

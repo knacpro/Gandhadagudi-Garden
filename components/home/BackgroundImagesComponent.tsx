@@ -1,14 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
-
-interface PropType {
-    isMenuOpen: boolean;
-}
 
 export function BackgroundImagesComponent() {
     const [loading, setLoading] = useState(true);
@@ -17,9 +10,14 @@ export function BackgroundImagesComponent() {
     const images = [
         "/images/group.png",
         "/images/children-package.png",
-        "/images/bird.png",
+        "/images/tree-home.png",
         "/images/carrom.png",
-        "/images/zip-line.png"
+        "/images/zip-line.png",
+        "/images/punyakoti.png",
+        "/images/bullocks.png",
+        "/images/group-1.png",
+        "/images/bird-santury.png",
+        "/images/restuarant-grp.png",
     ];
 
     useEffect(() => {
