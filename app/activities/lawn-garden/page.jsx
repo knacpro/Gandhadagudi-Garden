@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-import ResortActivitiesComponent from '@/components/home/ResortActivities';
+
 import FooterComponent from '../../../components/footer/footer';
+import ResortActivitiesComponent from '@/components/Resort';
 
 export default function LawnGardenPage() {
   return (
+    <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -116,12 +118,13 @@ export default function LawnGardenPage() {
           </div>
         </section> */}
 
-        <ResortActivitiesComponent />
+         <ResortActivitiesComponent />
 
         {/* Booking Section */}
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

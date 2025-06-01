@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import ResortActivitiesComponent from '@/components/Resort';
+
 import FooterComponent from '../../../components/footer/footer';
 
 export default function RabbitFarmPage() {
   return (
+    <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -18,7 +20,7 @@ export default function RabbitFarmPage() {
           <h1 className="text-5xl font-bold">Rabbit Farm</h1>
         </section>
 
-        {/* Intro Section */}
+       
         <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
@@ -100,7 +102,7 @@ export default function RabbitFarmPage() {
           
         </section>
 
-        {/* Video Section */}
+        
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <h2 className="text-3xl font-bold text-center mb-8">
     Watch Our Traditional Training in Action
@@ -109,7 +111,7 @@ export default function RabbitFarmPage() {
     <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
       <iframe
         className="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/9i-wNKvecus?si=n2mz8VyTj2eRnpAK"
+        src="https://www.youtube.com/embed/qnqnEIHg4j4?si=8B9k5K5JLXhrFj2v"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -125,6 +127,7 @@ export default function RabbitFarmPage() {
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

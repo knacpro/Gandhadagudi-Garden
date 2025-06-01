@@ -2,11 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
-import ResortActivitiesComponent from './../../../components/home/ResortActivities';
-import FooterComponent from '../../../components/footer/footer';
 
+import FooterComponent from '../../../components/footer/footer';
+import ResortActivitiesComponent from '@/components/Resort';
 export default function KidsZonePage() {
   return (
+     <div className="bg-green-100">
     <div>
       <HeaderComponent />
 
@@ -115,10 +116,12 @@ export default function KidsZonePage() {
           </div>
         </div>
       </section>
+       
+ <ResortActivitiesComponent />
 
-      <ResortActivitiesComponent />
       <BookResort />
       <FooterComponent />
+    </div>
     </div>
   );
 }

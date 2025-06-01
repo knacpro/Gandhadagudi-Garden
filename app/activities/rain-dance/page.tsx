@@ -3,9 +3,11 @@ import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
 import FooterComponent from '@/components/footer/footer';
+import ResortActivitiesComponent from '@/components/Resort';
 
 export default function page() {
   return (
+  <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -118,10 +120,13 @@ export default function page() {
     </div>
   </div>
 </section>
+
+ <ResortActivitiesComponent />
         {/* Booking Section */}
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

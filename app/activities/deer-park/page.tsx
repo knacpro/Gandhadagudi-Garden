@@ -2,12 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import ResortActivitiesComponent from '@/components/Resort';
+
 import FooterComponent from '@/components/footer/footer';
 
 export default function DeerFarmPage() {
   return (
     <div>
+       <div className="bg-green-100">
       <HeaderComponent />
       <div className="font-sans">
         {/* Hero Section */}
@@ -141,6 +143,7 @@ export default function DeerFarmPage() {
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

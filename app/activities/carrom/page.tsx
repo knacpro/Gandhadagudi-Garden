@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import ResortActivitiesComponent from '@/components/Resort';
+
 import FooterComponent from '@/components/footer/footer';
 
 export default function IndoorOutdoorGamesPage() {

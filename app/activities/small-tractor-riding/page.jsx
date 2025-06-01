@@ -3,9 +3,10 @@ import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
 import FooterComponent from '../../../components/footer/footer';
-
+import ResortActivitiesComponent from '@/components/Resort';
 export default function SmallTractorRidingPage() {
   return (
+    <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -66,11 +67,12 @@ export default function SmallTractorRidingPage() {
             </div>
           </div>
         </section>
-
+ <ResortActivitiesComponent />
         {/* Booking Section */}
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
-import ResortActivitiesComponent from '@/components/home/ResortActivities';
+import ResortActivitiesComponent from '@/components/Resort';
+
 import FooterComponent from '../../../components/footer/footer';
 
 export default function GoatFarmPage() {
   return (
+    <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -120,6 +122,7 @@ export default function GoatFarmPage() {
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header"
 import FooterComponent from '../../../components/footer/footer';
+import ResortActivitiesComponent from '@/components/Resort';
 
 export default function page() {
   return (
@@ -142,6 +143,7 @@ export default function page() {
   </div>
 </section>
       {/* Booking Section */}
+       <ResortActivitiesComponent />
       <BookResort />
       <FooterComponent/>
     </div>

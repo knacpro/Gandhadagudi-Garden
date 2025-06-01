@@ -3,11 +3,13 @@
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
-import ResortActivitiesComponent from '../../../components/home/ResortActivities';
+import ResortActivitiesComponent from '@/components/Resort';
+
 import FooterComponent from './../../../components/footer/footer';
 
 export default function page() {
   return (
+    <div className="bg-green-100">
     <div>
       <HeaderComponent />
       <div className="font-sans">
@@ -148,6 +150,7 @@ export default function page() {
         <BookResort />
         <FooterComponent/>
       </div>
+    </div>
     </div>
   );
 }

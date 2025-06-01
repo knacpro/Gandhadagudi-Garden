@@ -1,41 +1,84 @@
 'use client';
 
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import TopBarComponent from "./TopBar";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import TopBarComponent from './TopBar';
 
-export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: (mobileMenuOpen: boolean) => void }) {
-    const t = useTranslations('Navigation');
-    const pathname = usePathname();
+export default function HeaderComponent() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(false);
+  const [desktopActivitiesOpen, setDesktopActivitiesOpen] = useState(false);
+  const activitiesRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
     const navLinks = [
-        { href: "/", label: pathname === "/" ? t('home') : "Home" },
-        { href: "/about", label: pathname === "/" ? t('about') : "About" },
-        { href: "/activities", label: pathname === "/" ? t('activities') : "Activities" },
-        { href: "/restuarant", label: pathname === "/" ? t('restuarant') : "Restaurant" },
-        { href: "/attractions", label: pathname === "/" ? t('attractions') : "Attractions" },
-        { href: "/packages", label: pathname === "/" ? t('packages') : "Packages" },
-        { href: "/gallery", label: pathname === "/" ? t('gallery') : "Gallery" },
-        { href: "/blog", label: pathname === "/" ? t('blog') : "Blog" },
-        { href: "/contact", label: pathname === "/" ? t('contact') : "Contact" },
+        { href: "/", label: "HOME" },
+        { href: "/about", label: "ABOUT" },
+        
+        {href: "/restuarant", label: "RESTUARANT"},
+        { href: "/attractions", label: "ATTRACTIONS" },
+        { href: "/packages", label: "PACKAGES" },
+        { href: "/gallery", label: "GALLERY" },
+        { href: "/blog", label: "BLOG" },
+        { href: "/contact", label: "CONTACT" },
     ];
+  
+  const activities = {
+    indoor: [
+      { href: '/activities/gym', label: 'Gym' },
+      { href: '/activities/garadi-mane', label: 'Garadi Mane' },
+      { href: '/activities/carrom', label: 'Carrom, Chess, and Archery' },
+    ],
+    outdoor: [
+      { href: '/activities/boat-riding', label: 'Boat Riding' },
+      { href: '/activities/adventure-kayaking', label: 'Adventure Kayaking' },
+      { href: '/activities/bird-watching', label: 'Bird Watching' },
+      { href: '/activities/horse-riding', label: 'Horse Riding' },
+      { href: '/activities/cow-farming', label: 'Cow Farming' },
+      { href: '/activities/swimming', label: 'Swimming' },
+      { href: '/activities/rain-dance', label: 'Rain Dance' },
+      { href: '/activities/zip-line', label: 'Zip Line' },
+      { href: '/activities/goat-farm', label: 'Goat Farm' },
+      { href: '/activities/poultry', label: 'Poultry' },
+      { href: '/activities/rabbit', label: 'Rabbit' },
+      { href: '/activities/lawn-garden', label: 'Lawn Garden' },
+      { href: '/activities/small-tractor-riding', label: 'Small Tractor Riding' },
+      { href: '/activities/kids-zone', label: 'Kids Play Zone' },
+      { href: '/activities/deer-park', label: 'Deer Park' },
+    ],
+  };
 
-    const linkClass = (href: string) =>
-        pathname === href
-            ? "text-black font-bold border-b-2 border-yellow-400"
-            : "text-black font-bold hover:text-gray-900 hover:border-b-2 hover:border-yellow-400";
+  const linkClass = (href: string) =>
+    pathname === href
+      ? 'text-black font-bold border-b-2 border-yellow-400'
+      : 'text-black font-bold hover:text-gray-900 hover:border-b-2 hover:border-yellow-400';
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        activitiesRef.current &&
+        !activitiesRef.current.contains(event.target as Node)
+      ) {
+        setDesktopActivitiesOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
     return (
         <>
-            {/* Fixed TopBar */}
+            
             <div className="hidden md:block fixed top-0 left-0 right-0 z-30 bg-green-400">
                 <TopBarComponent />
             </div>
 
-            {/* Fixed NavBar - placed below TopBar */}
+           
             <header className="fixed top-0 md:top-[48px] z-20 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
                 <div className="flex items-center">
                     <button
