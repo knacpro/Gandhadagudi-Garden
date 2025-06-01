@@ -197,7 +197,7 @@ export function AttractionsCarousel() {
 
 export default function Attractions() {
   return (
-    <main>
+    <main className="bg-green-100">
       <HeaderComponent />
       <section
         className="text-center bg-cover bg-center text-white py-40 px-5"
@@ -206,11 +206,11 @@ export default function Attractions() {
         <h1 className="text-5xl font-bold">Attractions</h1>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-16 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <section className="max-w-7xl mx-auto px-4 py-16 md:px-6 lg:px-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ">
           <div className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-lime-600 font-medium uppercase tracking-wide">
+              <h2 className="text-lime-600 font-medium uppercase tracking-wide ">
                 ATTRACTIONS
               </h2>
               <h1 className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight">
@@ -240,7 +240,7 @@ export default function Attractions() {
                     CALL US FOR MORE INFORMATION
                   </p>
                   <p className="text-2xl font-medium text-gray-800">
-                    +91 96204 65007
+                    +91 9740806599
                   </p>
                 </div>
               </div>
@@ -271,7 +271,7 @@ export default function Attractions() {
       </section>
 
       {/* Second Section - Dudhsagar Falls */}
-      <section className="max-w-7xl mx-auto px-4 py-16 md:px-6 lg:px-8 bg-gray-50">
+      <section className="max-w-7xl mx-auto px-4 py-16 md:px-6 lg:px-8 bg-green-100">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative h-96 md:h-[350px] overflow-hidden rounded-lg group">
             <Image
