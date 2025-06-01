@@ -5,20 +5,22 @@ import Image from "next/image";
 import TopBarComponent from "./TopBar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
-export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: any) {
+export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: (mobileMenuOpen: boolean) => void }) {
+    const t = useTranslations('Navigation');
     const pathname = usePathname();
 
     const navLinks = [
-        { href: "/", label: "HOME" },
-        { href: "/about", label: "ABOUT" },
-        { href: "/activities", label: "ACTIVITIES" },
-        {href: "/restuarant", label: "RESTUARANT"},
-        { href: "/attractions", label: "ATTRACTIONS" },
-        { href: "/packages", label: "PACKAGES" },
-        { href: "/gallery", label: "GALLERY" },
-        { href: "/blog", label: "BLOG" },
-        { href: "/contact", label: "CONTACT" },
+        { href: "/", label: pathname === "/" ? t('home') : "Home" },
+        { href: "/about", label: pathname === "/" ? t('about') : "About" },
+        { href: "/activities", label: pathname === "/" ? t('activities') : "Activities" },
+        { href: "/restuarant", label: pathname === "/" ? t('restuarant') : "Restaurant" },
+        { href: "/attractions", label: pathname === "/" ? t('attractions') : "Attractions" },
+        { href: "/packages", label: pathname === "/" ? t('packages') : "Packages" },
+        { href: "/gallery", label: pathname === "/" ? t('gallery') : "Gallery" },
+        { href: "/blog", label: pathname === "/" ? t('blog') : "Blog" },
+        { href: "/contact", label: pathname === "/" ? t('contact') : "Contact" },
     ];
 
     const linkClass = (href: string) =>
