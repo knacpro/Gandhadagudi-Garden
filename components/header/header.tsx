@@ -11,7 +11,6 @@ import { useTranslations } from "next-intl";
 export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean, setMobileMenuOpen: (mobileMenuOpen: boolean) => void }) {
     const t = useTranslations('Navigation');
     const pathname = usePathname();
-    const pathname = usePathname();
 
     const navLinks = [
         { href: "/", label: pathname === "/" ? t('home') : "Home" },

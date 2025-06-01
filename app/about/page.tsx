@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
-import Footercomponentonent from "@/components/footer/footer";
 import {
   TreeDeciduous,
   Gamepad2,
@@ -20,6 +19,7 @@ import FooterComponent from "@/components/footer/footer";
 
 export default function Home() {
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleItem = (id: string) => {
     setOpenItem(openItem === id ? null : id);
@@ -60,6 +60,8 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
     <main className="min-h-screen bg-green-100">
       
 
@@ -88,7 +90,7 @@ export default function Home() {
           <p className="text-gray-600 mb-4">
             For those seeking tranquility, we offer the most enchanting garden
             experiences without compromising on serenity, ensuring you immerse
-            yourself in nature's beauty at its purest.
+            yourself in natures beauty at its purest.
           </p>
         </div>
 
@@ -304,5 +306,6 @@ export default function Home() {
       </div>
       <FooterComponent />
     </main>
+  </>
   );
 }
