@@ -1,59 +1,106 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Phone, MessageCircle } from "lucide-react";
+import BookResort from "@/components/BookResort";
+import HeaderComponent from "@/components/header/header";
+import {
+  TreeDeciduous,
+  Gamepad2,
+  Mountain,
+  Flame,
+  Utensils,
+  Waves,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
+
+import { useState } from "react";
 
 export default function Home() {
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
+  const toggleItem = (id: string) => {
+    setOpenItem(openItem === id ? null : id);
+  };
+
+  const faqItems = [
+    {
+      id: "item-0",
+      question: "How far is the garden from the city?",
+      answer:
+        "Gandhadagudi Garden is just a short drive of 16kms from Hubli, located in the peaceful village called Byahatti.",
+    },
+
+    {
+      id: "item-1",
+      question: "What can visitors do at Gandhadagudi Garden?",
+      answer:
+        "Visitors can enjoy nature walks, relax in cozy stays, play indoor and outdoor games, and even experience horse riding.",
+    },
+    {
+      id: "item-2",
+      question: "Is food available at the garden?",
+      answer:
+        "Yes! We offer homely, freshly cooked vegetarian and non-vegetarian meals on request.",
+    },
+    {
+      id: "item-3",
+      question: "Do we need to book in advance?",
+      answer:
+        "Advance booking is recommended, especially on weekends, to ensure availability of rooms and activities.",
+    },
+    {
+      id: "item-4",
+      question: "Is the garden suitable for kids and families?",
+      answer:
+        "Absolutely! Families love the peaceful atmosphere, open spaces, and safe play areas for childrens.",
+    },
+  ];
+
   return (
     <main className="min-h-screen">
-      {/* Top Info Bar */}
-      <div className="bg-black/80 text-white py-2 px-4 flex justify-between items-center">
-        <div className="flex items-center space-x-6 text-sm">
-          <div className="flex items-center">
-            <span>TEL: +91 96204 65007</span>
-          </div>
-          <div className="hidden sm:flex items-center">
-            <span>info@wildernessdandeli.com</span>
-          </div>
-        </div>
-        <Link href="#" aria-label="Instagram">
-          <Instagram className="h-5 w-5" />
-        </Link>
-      </div>
+      <HeaderComponent />
 
-      {/* Main Navigation */}
-      <header className="absolute w-full z-10 h-32">
-        <div className="container mx-auto px-4 py-4 h-full">
-          <div className="flex items-center h-full">
-            <Link
-              href="/"
-              className="relative flex items-center w-full h-full"
-            ></Link>
-          </div>
-        </div>
-      </header>
+      <section
+        className="text-center bg-cover bg-center text-white py-30 px-5"
+        style={{ backgroundImage: "url(/images/aboutus-background.png)" }}
+      >
+        <h1 className="text-5xl font-bold">About Us</h1>
+        <h6 className="text-2xl font-bold mt-4">
+          Welcome to Gandhadagudi Garden
+        </h6>
+      </section>
 
-      {/* Hero Section */}
-      <section className="relative h-screen w-full">
-        {/* Background Image */}
-        <Image
-          src="/images/aboutus-background.jpg" // Use your real image path here
-          alt="Dandeli Forest View"
-          fill
-          priority
-          className="object-cover z-0"
-        />
+      <section className="w-full max-w-7xl mx-auto px-4 py-12 text-center">
+        <h2 className="text-green-600 font-medium mb-2">
+          A Paradise Cultivated Just for You
+        </h2>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30 z-10"></div>
-
-        {/* Hero Content */}
-        <div className="relative z-20 h-full flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-light tracking-wider mt-16">
-            ABOUT US
+        <div className="max-w-4xl mx-auto mb-12">
+          <h1 className="text-3xl md:text-3xl font-medium text-gray-800 mb-6">
+            Gandhadagudi Garden is a peaceful family getaway in the heart of
+            nature, offering fun-filled one-day experiences, friendly
+            hospitality, and refreshing outdoor activities for all age groups.
           </h1>
-          <p className="text-xl md:text-2xl mt-4 font-bold">
-            Welcome to Gandhadagudi Garden
+
+          <p className="text-gray-600 mb-4">
+            For those seeking tranquility, we offer the most enchanting garden
+            experiences without compromising on serenity, ensuring you immerse
+            yourself in nature's beauty at its purest.
           </p>
+        </div>
+
+        {/* Video Section */}
+
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/MFLVmAE4cqg?autoplay=1&mute=1&controls=0&loop=1&playlist=MFLVmAE4cqg"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
 
@@ -64,17 +111,13 @@ export default function Home() {
             <div>
               <h2 className="text-green-600 font-medium mb-2">WELCOME TO</h2>
               <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-                ಗಂಧದಗುಡಿ ಗಾರ್ಡನ್
+                Gandhadagudi Garden
               </h3>
               <p className="text-gray-600 mb-4">
                 🌿 Nestled in the serene village of Byahatti, Gandhadagudi
                 Garden offers a peaceful escape from the hustle of city life.
                 Surrounded by lush greenery, our garden is a perfect blend of
-                natural beauty and modern amenities. Whether you're planning a
-                weekend getaway or a family outing, we’ve got everything to make
-                your stay memorable. Enjoy comfortable accommodations, a variety
-                of indoor and outdoor games, and exciting activities like horse
-                riding, all in the lap of nature.
+                natural beauty and modern amenities.
               </p>
               <p className="text-gray-600">
                 At Gandhadagudi Garden, we aim to provide an authentic
@@ -103,72 +146,142 @@ export default function Home() {
         </div>
       </section>
 
-      {/* services offered Section */}
-
-      <section className="px-4 py-12 md:px-16 bg-white">
-        <h4 className="text-sm font-semibold text-green-700 uppercase mb-2">
-          Discover the Services We Offered
-        </h4>
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
-          Resort Facilities
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Images */}
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative h-64 md:h-auto w-full md:w-1/2 rounded-xl overflow-hidden">
-              <Image
-                src="/images/room.jpg" // replace with your actual path or serve from public
-                alt="Resort Room"
-                fill
-                className="object-cover"
-              />
+      {/* Resort Facilities Section */}
+      <section className="w-full py-12 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Images */}
+            <div className="lg:col-span-5 space-y-4">
+              <div className="relative h-[300px] w-full overflow-hidden">
+                <Image
+                  src="/images/resort-facility.jpg"
+                  alt="Resort room interior"
+                  fill
+                  className="object-cover rounded-md"
+                  priority
+                />
+              </div>
+              <div className="relative h-[300px] w-full overflow-hidden">
+                <Image
+                  src="/images/resort-facility2.jpg"
+                  alt="Resort exterior with greenery"
+                  fill
+                  className="object-cover rounded-md"
+                />
+              </div>
             </div>
-            <div className="relative h-64 md:h-auto w-full md:w-1/2 rounded-xl overflow-hidden">
-              <Image
-                src="/images/exterior.jpg" // replace with your actual path or serve from public
-                alt="Resort Exterior"
-                fill
-                className="object-cover"
-              />
+
+            {/* Services */}
+            <div className="lg:col-span-7 space-y-8">
+              <div>
+                <h3 className="text-green-600 font-medium uppercase tracking-wider text-sm md:text-base">
+                  Discover the Services We Offer
+                </h3>
+                <h2 className="text-3xl md:text-5xl font-serif mt-2 text-gray-800">
+                  Our Garden Facilities
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {[
+                  {
+                    icon: <TreeDeciduous className="w-6 h-6 text-green-600" />,
+                    title: "Nature Walk & Relaxation",
+                    desc: "Enjoy peaceful strolls under shady trees, explore the greenery, and unwind in nature's lap.",
+                  },
+                  {
+                    icon: <Gamepad2 className="w-6 h-6" />,
+                    title: "Indoor & Outdoor Games",
+                    desc: "Volleyball, cricket, carrom, badminton, chess, or even traditional Indian games like lagori or gilli-danda.",
+                  },
+                  {
+                    icon: <Mountain className="w-6 h-6" />,
+                    title: "Outdoor Adventure Activities",
+                    desc: "Horse riding, bullock cart rides, zip-lining, archery, or nature trails through nearby farms or forest paths.",
+                  },
+                  {
+                    icon: <Flame className="w-6 h-6" />,
+                    title: "Bonfire & Cultural Evenings",
+                    desc: "Evening bonfires with light music, traditional games, and local folk dance performances.",
+                  },
+
+                  {
+                    icon: <Utensils className="w-6 h-6" />,
+                    title: "Home-style Organic Dining",
+                    desc: "Fresh, locally-sourced meals cooked in traditional village style—served in banana leaves or terracotta plates.",
+                  },
+                  {
+                    icon: <Waves className="w-6 h-6" />,
+                    title: "Natural Swimming Pond or Eco Pool",
+                    desc: "A nature-themed pool with safety arrangements, surrounded by greenery. Relaxing, eco-friendly, and refreshing.",
+                  },
+                ].map((service, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="text-green-600 bg-green-100 p-2 rounded-full">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium text-gray-800">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 mt-1">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
-          {/* Facilities */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
-            <FacilityItem
-              icon={<Car className="h-5 w-5 text-green-700" />}
-              title="Airport Pick-up Service"
-              description="Convenient airport transfers for stress-free arrivals."
-            />
-            <FacilityItem
-              icon={<Sparkles className="h-5 w-5 text-green-700" />}
-              title="Housekeeper Services"
-              description="Daily housekeeping ensures a clean, comfortable stay."
-            />
-            <FacilityItem
-              icon={<Wifi className="h-5 w-5 text-green-700" />}
-              title="Wifi & Internet"
-              description="Stay connected with complimentary high-speed internet."
-            />
-            <FacilityItem
-              icon={<WashingMachine className="h-5 w-5 text-green-700" />}
-              title="Laundry Services"
-              description="On-site laundry services for your convenience."
-            />
-            <FacilityItem
-              icon={<BedDouble className="h-5 w-5 text-green-700" />}
-              title="Breakfast in Bed"
-              description="Enjoy delicious breakfast served in your room."
-            />
-            <FacilityItem
-              icon={<SwimmingPool className="h-5 w-5 text-green-700" />}
-              title="Swimming Pool"
-              description="Refresh and unwind in our scenic swimming pool."
-            />
-          </div> */}
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="w-full max-w-7xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h3 className="text-green-600 font-medium mb-2">FAQ&apos;S</h3>
+          <h2 className="text-4xl md:text-5xl font-medium text-gray-800 leading-tight">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-4">
+            {faqItems.map((item) => (
+              <div key={item.id} className="border-none">
+                <button
+                  onClick={() => toggleItem(item.id)}
+                  className="w-full bg-gray-50 px-6 py-4 rounded-md text-left font-medium text-gray-800 flex justify-between items-center"
+                >
+                  <span className="text-lg">{item.question}</span>
+                  <span className="text-lime-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className={`h-6 w-6 transition-transform duration-200 ${
+                        openItem === item.id ? "rotate-45" : ""
+                      }`}
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </button>
+                {openItem === item.id && (
+                  <div className="px-6 pt-2 pb-4 text-gray-700">
+                    <p>{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <BookResort />
 
       {/* Floating Contact Buttons */}
       <div className="fixed right-4 bottom-4 flex flex-col gap-2 z-50">

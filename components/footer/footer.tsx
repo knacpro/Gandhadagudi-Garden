@@ -1,10 +1,47 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import Link from "next/link"
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
 
 export default function FooterComponent() {
+  const pathname = usePathname()
+  const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/kn'
+  const t = useTranslations('HomePage')
+
+  const getText = (key: string) => {
+    if (isHomePage) {
+      return t(key)
+    }
+    // English text for non-home pages
+    const englishTexts: { [key: string]: string } = {
+      gandhadagudiGardenByahattiDescription: "Experience the beauty of nature at Gandhadagudi Garden, Byahatti. A perfect destination for adventure, relaxation, and creating unforgettable memories.",
+      aboutUs: "About Us",
+      activities: "Activities",
+      attractions: "Attractions",
+      packages: "Packages",
+      gallery: "Gallery",
+      contact: "Contact",
+      garadiMane: "Garadi Mane",
+      boatRiding: "Boat Riding",
+      kayaking: "Adventure Kayaking",
+      zipLine: "Zip Line",
+      swimming: "Swimming",
+      rainDance: "Rain Dance",
+      studentsPackages: "Students Packages",
+      corporatePackages: "Corporate Packages",
+      familyPackages: "Family Packages",
+      weekendPackages: "Weekend Packages",
+      reachOut: "Reach Out",
+      address: "Gandhadagudi Garden, Byahatti, Karnataka",
+      getDirections: "Get Directions",
+      allRightsReserved: "All rights reserved.",
+      designedAndDevelopedBy: "Designed and Developed by"
+    }
+    return englishTexts[key] || key
+  }
+
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-green-950 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo and Description Section */}
@@ -20,92 +57,81 @@ export default function FooterComponent() {
             </div>
 
             <p className="text-white text-sm">
-              Gandhadagudi Garden Byahatti, your ultimate destination for a
-              perfect getaway amidst nature.
+              {getText('gandhadagudiGardenByahattiDescription')}
             </p>
 
-            <div className="flex space-x-2">
-              <Link
-                href="#"
-                className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity"
-              >
-                <Facebook className="h-5 w-5 text-black" />
-                <span className="sr-only">Facebook</span>
+            <div className="flex space-x-6">
+              <Link href="https://www.instagram.com/gandhadagudi_garden_byahatti?igsh=dGx1aXcyZHZpZTFl" target="_blank" aria-label="Instagram">
+                <Image
+                  src="/images/instagram.png"
+                  alt="Instagram logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link
-                href="#"
-                className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity"
-              >
-                <Instagram className="h-5 w-5 text-black" />
-                <span className="sr-only">Instagram</span>
+              <Link href="https://www.instagram.com/gandhadagudi_garden_byahatti?igsh=dGx1aXcyZHZpZTFl" target="_blank" aria-label="Instagram">
+                <Image
+                  src="/images/facebook.png"
+                  alt="Facebook logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link
-                href="#"
-                className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity"
-              >
-                <Youtube className="h-5 w-5 text-black" />
-                <span className="sr-only">YouTube</span>
+              <Link href="https://www.youtube.com/@gandhadagudi_garden_byahatti" target="_blank" aria-label="Whatsapp">
+                <Image
+                  src="/images/youtube.png"
+                  alt="Youtube logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
-              <Link
-                href="#"
-                className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity"
-              >
-                <Twitter className="h-5 w-5 text-black" />
-                <span className="sr-only">Twitter</span>
+              <Link href="https://wa.me/919740806599?text=Hi%2C%20I%20am%20interested%20in%20your%20services." target="_blank" aria-label="Whatsapp">
+                <Image
+                  src="/images/whatsapp.png"
+                  alt="Whatsapp logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
               </Link>
             </div>
           </div>
 
           {/* About Us Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">About Us</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('aboutUs')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/about"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  About Us
+                <Link href="/about" className="text-white hover:text-green-400 transition-colors">
+                  {getText('aboutUs')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/activities"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Activities
+                <Link href="/activities" className="text-white hover:text-green-400 transition-colors">
+                  {getText('activities')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/attractions"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Attractions
+                <Link href="/attractions" className="text-white hover:text-green-400 transition-colors">
+                  {getText('attractions')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/packages"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Packages
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
+                  {getText('packages')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/gallery"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Gallery
+                <Link href="/gallery" className="text-white hover:text-green-400 transition-colors">
+                  {getText('gallery')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Contact Us
+                <Link href="/contact" className="text-white hover:text-green-400 transition-colors">
+                  {getText('contact')}
                 </Link>
               </li>
             </ul>
@@ -113,54 +139,36 @@ export default function FooterComponent() {
 
           {/* Activities Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">Activities</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('activities')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Garadi Mane
+                <Link href="/garadi-mane" className="text-white hover:text-green-400 transition-colors">
+                  {getText('garadiMane')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Boat Riding
+                <Link href="/boat-riding" className="text-white hover:text-green-400 transition-colors">
+                  {getText('boatRiding')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Kayaking
+                <Link href="/adventure-kayaking" className="text-white hover:text-green-400 transition-colors">
+                  {getText('kayaking')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Zip line
+                <Link href="/zip-line" className="text-white hover:text-green-400 transition-colors">
+                  {getText('zipLine')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Swimming
+                <Link href="/swimming" className="text-white hover:text-green-400 transition-colors">
+                  {getText('swimming')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Rain Dance
+                <Link href="/rain-dance" className="text-white hover:text-green-400 transition-colors">
+                  {getText('rainDance')}
                 </Link>
               </li>
             </ul>
@@ -168,38 +176,26 @@ export default function FooterComponent() {
 
           {/* Packages Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-medium mb-6">Packages</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('packages')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Student Packages
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
+                  {getText('studentsPackages')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Corporate Packages
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
+                  {getText('corporatePackages')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Family Packages
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
+                  {getText('familyPackages')}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-white hover:text-green-400 transition-colors"
-                >
-                  Weekend Packages
+                <Link href="/packages" className="text-white hover:text-green-400 transition-colors">
+                  {getText('weekendPackages')}
                 </Link>
               </li>
             </ul>
@@ -207,9 +203,9 @@ export default function FooterComponent() {
 
           {/* Reach Out Section */}
           <div className="space-y-4 md:col-span-4 lg:col-span-1">
-            <h3 className="text-xl font-medium mb-6">Reach Out</h3>
+            <h3 className="text-xl font-medium mb-6">{getText('reachOut')}</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
+              <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -226,9 +222,9 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">+91 9620465007</span>
+                <Link href={'tel:+919740806599'} className="text-white hover:text-green-400">+91 9740806599</Link>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-start hover:text-green-400">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -245,9 +241,12 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">info@gandhadagudigarden.com</span>
+                <Link
+                  href="mailto:gandhadagudigardenbyahatti@gmail.com?subject=Subject"
+                  target="_blank"
+                  rel="noopener noreferrer" className="text-white hover:text-green-400">gandhadagudigardenbyahatti@gmail.com</Link>
               </li>
-              <li className="flex items-start">
+              <Link href={'https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw'} target="_blank" className="flex items-start">
                 <span className="text-green-500 mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -270,16 +269,15 @@ export default function FooterComponent() {
                     />
                   </svg>
                 </span>
-                <span className="text-white">
-                  Hebsur Road, Byahatti Hubballi, Karnataka
-                </span>
-              </li>
+                <span className="text-white">{getText('address')}</span>
+              </Link>
             </ul>
             <Link
-              href="#"
-              className="inline-block mt-4 text-green-500 border-b-2 border-green-500 hover:text-green-400 transition-colors"
+              href="https://maps.app.goo.gl/XAhF46L7Wy24JKfP8?g_st=aw"
+              target="_blank"
+              className="inline-block mt-4 text-green-500 hover:border-b-2 hover:border-green-500 hover:text-green-400 transition-colors"
             >
-              Get Directions
+              {getText('getDirections')}
             </Link>
           </div>
         </div>
@@ -288,31 +286,19 @@ export default function FooterComponent() {
       {/* Bottom Copyright Section */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white">
-            © 2025 Gandhadagudi Garden, Byahatti. All Rights Reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="#"
-              className="text-sm text-white hover:text-green-400 transition-colors"
-            >
-              BLOG
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-white hover:text-green-400 transition-colors"
-            >
-              PRIVACY POLICY
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-white hover:text-green-400 transition-colors"
-            >
-              TERMS & CONDITIONS
-            </Link>
+          <p className="text-sm text-white">© 2025 Gandhadagudi Garden, Byahatti. {getText('allRightsReserved')}</p>
+          <div className="flex space-x-1 mt-4 md:mt-0">
+            <Image
+              src="/images/knacpro-logo.png"
+              alt="Instagram logo"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
+            <p className="text-sm text-white">{getText('designedAndDevelopedBy')} <Link href={'https://www.knacprosolutions.in/'} target="_blank" className="hover:border-b-2 hover:border-yellow-400"> Knacpro Solutions</Link></p>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }

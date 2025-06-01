@@ -2,22 +2,29 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale} from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Wildernest - Best Dandeli Resort",
-  description: "Experience the best resort in Dandeli - Wildernest Dandeli Resorts",
+  title: "GandhadaGudi Garden - Best GandhadaGudi Garden Resort",
+  description: "Experience the best resort in GandhadaGudi Garden - GandhadaGudi Garden GandhadaGudi Garden Resorts",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale();
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   )
 }
