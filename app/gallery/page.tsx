@@ -12,8 +12,8 @@ export default function GalleryPage() {
     { id: 3, src: "/images/3.jpg", alt: "Garden View 3" },
     { id: 4, src: "/images/4.jpg", alt: "Garden View 4" },
     { id: 5, src: "/images/5.jpg", alt: "Garden View 5" },
-    { id: 6, src: "/images/6.jpg", alt: "Garden View 6" },
-    { id: 7, src: "/images/7.jpg", alt: "Garden View 7" },
+    { id: 6, src: "/images/25.jpg", alt: "Garden View 6" },
+    { id: 7, src: "/images/24.jpg", alt: "Garden View 7" },
     { id: 8, src: "/images/8.jpg", alt: "Garden View 8" },
     { id: 9, src: "/images/9.jpg", alt: "Garden View 9" },
     { id: 10, src: "/images/10.jpg", alt: "Garden View 10" },
@@ -65,6 +65,18 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {/* <div className="text-center mt-10">
+          <a
+            href="https://drive.google.com/drive/u/9/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            View More on Google Drive
+          </a>
+        </div> */}
       </section>
 
       <BookResort />
@@ -86,6 +98,7 @@ export default function GalleryPage() {
           <Phone className="h-6 w-6" />
         </Link>
       </div>
+
       <FooterComponent />
     </main>
   );
