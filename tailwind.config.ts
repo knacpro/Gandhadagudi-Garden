@@ -62,6 +62,10 @@ const config: Config = {
           ring: "hsl(var(--sidebar-ring))",
         },
         "wildernest-green": "#b3c423",
+        dandeli: {
+          green: "#8BAD2B",
+          dark: "#333333",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,6 +97,7 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        marquee: 'marquee 15s linear infinite',
       },
     },
   },
