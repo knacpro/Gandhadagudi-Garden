@@ -68,13 +68,13 @@ export default function ResortActivitiesComponent() {
       id: 10,
       title: t('fireCamp'),
       image: "/images/fire-camp.png?height=400&width=500",
-      link: "/activities/fire-camp"
+      link: "/activities"
     },
     {
       id: 11,
       title: t('treeHouseActivities'),
       image: "/images/tree-house.png?height=400&width=500",
-      link: "/activities/tree-house"
+      link: "/activities"
     },
     {
       id: 12,
@@ -116,7 +116,7 @@ export default function ResortActivitiesComponent() {
       id: 18,
       title: t('bullockKartRiding'),
       image: "/images/bullock-kart.png?height=400&width=500",
-      link: "/activities/bullock-kart"
+      link: "/activities"
     },
     {
       id: 19,
