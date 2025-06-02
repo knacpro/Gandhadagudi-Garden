@@ -14,6 +14,7 @@ import TestimonialsComponent from "@/components/home/Testimonials"
 import BookResort from "@/components/BookResort"
 import FooterComponent from "@/components/footer/footer"
 import { BackgroundImagesComponent } from "@/components/home/BackgroundImagesComponent"
+import DistancePlacesComponent from "@/components/home/DistancePlaces"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -32,6 +33,7 @@ export default function Home() {
           <GallerySectionComponent />
           <ResortPackagesComponent />
           <NearByAttractionsComponent />
+          <DistancePlacesComponent />
           <TestimonialsComponent />
           <BookResort />
           <FooterComponent />
