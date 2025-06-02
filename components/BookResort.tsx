@@ -21,7 +21,7 @@ export default function BookResort() {
       bookNow: "Book Now",
       bookResortNow: "Book Your Resort Now",
       bookResortDescription: "Experience the perfect blend of luxury and nature at Gandhadagudi Garden. Book your stay now and create unforgettable memories.",
-      getDirections: "Get Directions",
+      getDirections: "Scan me",
       openHours: "Opening Hours",
       monday: "Monday",
       tuesday: "Tuesday",
@@ -69,7 +69,7 @@ export default function BookResort() {
                 height={24}
                 className="object-cover w-40 h-40 mt-8 sm:ml-40 ml-24"
               />
-              <span className="font-semibold text-sm sm:ml-48 ml-32">{getText('getDirections')}</span>
+              <span className="font-semibold text-sm sm:ml-52 ml-36">{getText('getDirections')}</span>
             </div>
 
             <div className="md:w-[500px] bg-[#2A3A2A] sm:p-6 p-4 rounded-lg">
