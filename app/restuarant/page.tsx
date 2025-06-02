@@ -3,12 +3,14 @@
 import HeaderComponent from '@/components/header/header'
 import React from 'react'
 import Image from 'next/image'
-import ResortActivitiesComponent from '@/components/home/ResortActivities'
+import ResortActivitiesComponent from '@/components/Resort';
+
 import BookResort from '@/components/BookResort'
 import FooterComponent from '@/components/footer/footer'
 
 export default function page() {
   return (
+     <div className="bg-green-100">
     <div>
       <HeaderComponent />
 
@@ -37,7 +39,7 @@ export default function page() {
                 alt="Breakfast"
                 width={500}
                 height={500}
-                className="animate-spin"
+                className="animate-pulse"
               />
             </div>
 
@@ -71,7 +73,7 @@ export default function page() {
                 alt="Lunch"
                 width={500}
                 height={500}
-                className="animate-spin"
+                className="animate-pulse"
               />
             </div>
           </div>
@@ -86,7 +88,7 @@ export default function page() {
                 alt="Snacks"
                 width={500}
                 height={500}
-                className="animate-out"
+                className="animate-pulse"
               />
             </div>
 
@@ -115,7 +117,7 @@ export default function page() {
                 alt="Juice"
                 width={500}
                 height={500}
-                className="animate-ping"
+                className="animate-pulse"
               />
             </div>
           </div>
@@ -149,7 +151,7 @@ export default function page() {
             </div>
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/images/gallery3.png"
+                src="/images/restaurant6.png"
                 alt="Restaurant Photo 3"
                 width={400}
                 height={300}
@@ -158,7 +160,7 @@ export default function page() {
             </div>
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/images/gallery4.png"
+                src="/images/resturant7.png"
                 alt="Restaurant Photo 4"
                 width={400}
                 height={300}
@@ -172,6 +174,7 @@ export default function page() {
         <BookResort />
         <FooterComponent />
       </div>
+    </div>
     </div>
   )
 }
