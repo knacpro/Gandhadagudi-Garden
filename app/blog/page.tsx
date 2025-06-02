@@ -1,51 +1,56 @@
+"use client"
 import BookResort from "@/components/BookResort";
+import FooterComponent from "@/components/footer/footer";
 import HeaderComponent from "@/components/header/header";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function BlogPage() {
-  return (
-    <div className="w-full">
-      <div className="max-w-6xl mx-auto px-4 space-y-12 py-10">
-        <HeaderComponent />
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-        <h1 className="text-5xl font-bold text-center mb-15 text-[#2a2626]">
+  return (
+    <div className="w-full bg-green-100">
+        <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
+        <div className="max-w-6xl space-y-12 py-10 mx-auto px-4">
+
+        <h1 className="text-5xl font-bold text-center mt-32 text-[#2a2626]">
           🌿 Explore Our Latest Blog Posts 🌿
         </h1>
 
         <div className="space-y-16">
           <BlogCard
             title="Discover the Beauty of Gandhagudi Garden"
-            description="Step into Gandhagudi Garden—a serene paradise where the rustle of leaves, chirping birds, and the fragrance of blooming flora welcome you. Tucked away from the noise of urban life, this lush haven is a perfect blend of nature’s elegance and peaceful retreat.
+            description="Step into Gandhagudi Garden—a serene paradise where the rustle of leaves, chirping birds, and the fragrance of blooming flora welcome you. Tucked away from the noise of urban life, this lush haven is a perfect blend of nature's elegance and peaceful retreat.
 
 Wander through vibrant flower trails, relax under ancient banyan trees, or simply breathe in the fresh, unpolluted air. Whether you're looking for quiet introspection or soulful connection with nature, Gandhagudi offers an immersive experience.
 
-But it’s not just about the greenery—our garden is a celebration of life. From morning yoga sessions and birdwatching zones to cozy cottages nestled in nature’s lap, every element is crafted to help you slow down, reconnect, and recharge.
+But it's not just about the greenery—our garden is a celebration of life. From morning yoga sessions and birdwatching zones to cozy cottages nestled in nature's lap, every element is crafted to help you slow down, reconnect, and recharge.
 
 🌿 Come, experience Gandhagudi—where every path leads to peace."
-            image="/images/Blog1.png"
+            image="/images/bullock-kart.png"
             alt="Gandhagudi Garden"
           />
 
           <BlogCard
             title="Top 5 Outdoor Activities to Try at Gandhagudi"
-            description="At Gandhagudi Garden, adventure blends seamlessly with nature. Whether you’re a thrill-seeker or a calm explorer, we’ve got something for everyone. Here are the top 5 outdoor experiences you shouldn’t miss:
+            description="At Gandhagudi Garden, adventure blends seamlessly with nature. Whether you're a thrill-seeker or a calm explorer, we've got something for everyone. Here are the top 5 outdoor experiences you shouldn't miss:
 
-1 - Horse Riding – Saddle up for a scenic ride through the garden. Perfect for both beginners and seasoned riders, it’s a journey that feels straight out of a storybook. 
+1 - Horse Riding – Saddle up for a scenic ride through the garden. Perfect for both beginners and seasoned riders, it's a journey that feels straight out of a storybook. 
 
 2-Archery & Outdoor Games – Sharpen your aim and have some competitive fun with our outdoor activity zone designed for all ages.
 
 3-Riverside Picnic & Kayaking – Take a slow float along our calm river bend or enjoy a peaceful riverside picnic with birdsong as your soundtrack.
 
-4-Ready for adventure? Gandhagudi isn’t just a place—it’s an experience."
-            image="/images/Blog2.png"
+4-Ready for adventure? Gandhagudi isn't just a place—it's an experience."
+            image="/images/kayaking.png"
             alt="Outdoor Activities"
           />
 
           <BlogCard
             title="Sustainable Living at Gandhagudi Garden"
-            description="At Gandhagudi Garden, nature is not just admired — it’s respected and protected. Sustainability is the heart of everything we do. From eco-friendly architecture to mindful daily practices, we believe in giving back to the land that gives us so much.
+            description="At Gandhagudi Garden, nature is not just admired — it's respected and protected. Sustainability is the heart of everything we do. From eco-friendly architecture to mindful daily practices, we believe in giving back to the land that gives us so much.
 
-Here’s how we’re making a difference:
+Here's how we're making a difference:
 
 1- Eco-Conscious Stays – Our cottages and guest spaces are designed with locally sourced materials, natural ventilation, and minimal environmental impact.
 
@@ -57,8 +62,8 @@ Here’s how we’re making a difference:
 
 5- Wildlife-Friendly Zones – Our garden is a safe haven for birds, butterflies, and small wildlife, helping biodiversity thrive naturally.
 
-6- At Gandhagudi, sustainability isn’t a trend — it’s a way of life. Come live it with us."
-            image="/images/Blog3.png"
+6- At Gandhagudi, sustainability isn't a trend — it's a way of life. Come live it with us."
+            image="/images/lawn-garden.png"
             alt="Sustainable Practices"
           />
         </div>
@@ -67,6 +72,7 @@ Here’s how we’re making a difference:
       {/* Full-width footer */}
       <div className="w-full mt-20">
         <BookResort />
+        <FooterComponent />
       </div>
     </div>
   );
