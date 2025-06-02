@@ -144,32 +144,32 @@ export default function FooterComponent() {
             <h3 className="text-xl font-medium mb-6">{getText('activities')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/garadi-mane" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/garadi-mane" className="text-white hover:text-green-400 transition-colors">
                   {getText('garadiMane')}
                 </Link>
               </li>
               <li>
-                <Link href="/boat-riding" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/boat-riding" className="text-white hover:text-green-400 transition-colors">
                   {getText('boatRiding')}
                 </Link>
               </li>
               <li>
-                <Link href="/adventure-kayaking" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/adventure-kayaking" className="text-white hover:text-green-400 transition-colors">
                   {getText('kayaking')}
                 </Link>
               </li>
               <li>
-                <Link href="/zip-line" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/zip-line" className="text-white hover:text-green-400 transition-colors">
                   {getText('zipLine')}
                 </Link>
               </li>
               <li>
-                <Link href="/swimming" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/swimming" className="text-white hover:text-green-400 transition-colors">
                   {getText('swimming')}
                 </Link>
               </li>
               <li>
-                <Link href="/rain-dance" className="text-white hover:text-green-400 transition-colors">
+                <Link href="/activities/rain-dance" className="text-white hover:text-green-400 transition-colors">
                   {getText('rainDance')}
                 </Link>
               </li>
