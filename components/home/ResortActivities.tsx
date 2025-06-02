@@ -56,7 +56,7 @@ export default function ResortActivitiesComponent() {
       id: 8,
       title: t('chess'),
       image: "/images/chess.png?height=400&width=500",
-      link: "/activities/carrom-chess-archery"
+      link: "/activities/carrom"
     },
     {
       id: 9,
@@ -86,13 +86,13 @@ export default function ResortActivitiesComponent() {
       id: 13,
       title: t('archery'),
       image: "/images/archery.png?height=400&width=500",
-      link: "/activities/carrom-chess-archery"
+      link: "/activities/carrom"
     },
     {
       id: 14,
       title: t('carrom'),
       image: "/images/carrom.png?height=400&width=500",
-      link: "/activities/carrom-chess-archery"
+      link: "/activities/carrom"
     },
     {
       id: 15,

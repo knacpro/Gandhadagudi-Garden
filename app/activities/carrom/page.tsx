@@ -10,7 +10,7 @@ export default function IndoorOutdoorGamesPage() {
   return (
     <div>
       <HeaderComponent />
-      <div className="font-sans">
+      <div className="font-sans bg-green-100">
         {/* Hero Section */}
         <section
           className="text-center bg-cover bg-center text-white py-40 px-5"
