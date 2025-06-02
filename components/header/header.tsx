@@ -16,7 +16,9 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
 
     const navLinks = [
         { href: "/", label: "HOME" },
+        { href: "/intro", label: "INTRODUCTION" },
         { href: "/about", label: "ABOUT" },
+        
         { href: "/restuarant", label: "RESTUARANT" },
         { href: "/attractions", label: "ATTRACTIONS" },
         { href: "/packages", label: "PACKAGES" },

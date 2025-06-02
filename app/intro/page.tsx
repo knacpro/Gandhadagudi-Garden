@@ -1,3 +1,4 @@
+import BookResort from '@/components/BookResort';
 import FooterComponent from '@/components/footer/footer';
 import HeaderComponent from '@/components/header/header';
 import Image from 'next/image';
@@ -11,19 +12,19 @@ export default function page() {
       {/* Banner Section */}
       <section
         className="text-center bg-cover bg-center text-white py-40 px-5"
-        style={{ backgroundImage: "url(/images/boat2.png)" }}
+        style={{ backgroundImage: "url(/images/resort.png)" }}
       >
         <h1 className="text-5xl font-bold">Introduction</h1>
       </section>
 
       {/* Profile Section */}
       <div
-        className="bg-[#a0370b] text-white px-8 py-10 bg-cover bg-no-repeat"
+        className=" text-white px-8 py-10 bg-cover bg-no-repeat"
         style={{ backgroundImage: "url(/images/bg-pattern.png)" }}
       >
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-start">
           {/* Left: Main Content */}
-          <main className="flex-1 text-gray-800 bg-white p-6 rounded-lg shadow-md">
+          <main className="flex-1 text-gray-800  p-6 rounded-lg shadow-md">
             <section className="text-center mb-10">
               <h1 className="text-4xl font-bold mb-2">🌿 Gandhada Gudi Garden & Farmhouse</h1>
               <p className="text-lg">
@@ -103,14 +104,13 @@ export default function page() {
                   <strong>Title:</strong> Kannada Kesari, President – Zilla Panchayat <br />
                   <strong>Location:</strong> Near Hubli – Dharwad – Gadag – Navalgund – Bijapur <br />
                   <strong>Project Name:</strong> Gandhada Gudi Garden & Farmhouse <br />
-                  
                 </p>
               </div>
             </section>
           </main>
 
           {/* Right: Small Owner Photo */}
-          <div className="w-full md:w-72 flex justify-center">
+          <div className="w-full md:w-72 flex justify-center-safe md:justify-end">
             <Image
               src="/images/shivanad.png"
               alt="Owner Shivanand Karigar"
@@ -120,8 +120,8 @@ export default function page() {
             />
           </div>
         </div>
-
-        <FooterComponent/>
+<BookResort/>
+        <FooterComponent />
       </div>
     </div>
   );
