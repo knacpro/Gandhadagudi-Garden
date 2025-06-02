@@ -1,17 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
+import HeaderComponent from "@/components/header/header"
+import FooterComponent from '@/components/footer/footer';
+import ResortActivitiesComponent from '@/components/Resort';
 
 
 export default function Page() {
   return (
-
+<div className="bg-green-100">
     <div>
-
+ 
+             <HeaderComponent/>
     <div className="font-sans">
       {/* Hero Section */}
       <section
-        className="text-center bg-cover bg-center text-white py-24 px-5"
+        className="text-center bg-cover bg-center text-white py-40 px-5"
         style={{ backgroundImage: "url(/images/gym4.png)" }}
       >
         <h1 className="text-5xl font-bold">Gym</h1>
@@ -80,7 +84,7 @@ export default function Page() {
               Designed for high energy and motivation, this section helps you burn calories and improve endurance.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>
@@ -95,7 +99,7 @@ export default function Page() {
               and expert trainers, GandhadaGudi offers everything to sculpt your physique.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+            
             </a>
           </div>
           <Image
@@ -124,14 +128,16 @@ export default function Page() {
               and finding your inner peace amidst lush surroundings.
             </p>
             <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
-              Request Information
+             
             </a>
           </div>
         </div>
       </section>
-
-      {/* Booking Section */}
+ <ResortActivitiesComponent />
+      
       <BookResort />
+      <FooterComponent/>
+    </div>
     </div>
     </div>
   );
