@@ -165,17 +165,18 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Activity Cards (with consistent image size) */}
+        {/* Activity Cards */}
         {activities.map((activity, idx) => (
           <section key={idx} className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div className={`flex flex-col md:flex-row ${idx % 2 !== 0 ? "md:flex-row-reverse" : ""} gap-8 items-center`}>
               <div className="md:w-1/2">
-                {/* ✅ Consistent Image Size */}
-                <div className="w-full h-[300px] relative overflow-hidden rounded-lg">
+                <div className="w-full rounded-lg overflow-hidden">
                   <Image
                     src={activity.image}
                     alt={activity.title}
-                    fill
+                    width={800}
+                    height={500}
+                    layout="responsive"
                     className="object-cover"
                   />
                 </div>
