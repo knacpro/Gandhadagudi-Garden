@@ -8,8 +8,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import TopBarComponent from './TopBar';
 
-export default function HeaderComponent() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean; setMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
     const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(false);
     const [desktopActivitiesOpen, setDesktopActivitiesOpen] = useState(false);
     const activitiesRef = useRef<HTMLDivElement>(null);

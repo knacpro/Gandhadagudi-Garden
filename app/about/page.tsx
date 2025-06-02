@@ -96,13 +96,14 @@ export default function Home() {
 
         {/* Video Section */}
 
-        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full transform rotate-270"
-            src="https://www.youtube.com/embed/yZ5nDoVQgcs?autoplay=1&mute=1&controls=0&loop=1&playlist=yZ5nDoVQgcs"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
+        <div className="relative w-full h-[700px]">
+          <iframe 
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/soqbrb0qIHQ?si=93-KMoDzIH1xi9I3" 
+            title="YouTube video player" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
             allowFullScreen
           ></iframe>
         </div>
@@ -132,18 +133,18 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="/images/aboutus-welcomebk.jpg"
+                src="/images/children-package.png"
                 alt="Resort Activity"
                 width={300}
                 height={400}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-[450px] object-cover rounded-lg"
               />
               <Image
-                src="/images/aboutus-welcomebk1.jpg"
+                src="/images/deer-park.png"
                 alt="Adventure Activity"
                 width={300}
                 height={400}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-[450px] object-cover rounded-lg"
               />
             </div>
           </div>
@@ -158,7 +159,7 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-4">
               <div className="relative h-[300px] w-full overflow-hidden">
                 <Image
-                  src="/images/resort-facility.jpg"
+                  src="/images/restuarant-grp.png"
                   alt="Resort room interior"
                   fill
                   className="object-cover rounded-md"
@@ -167,7 +168,7 @@ export default function Home() {
               </div>
               <div className="relative h-[300px] w-full overflow-hidden">
                 <Image
-                  src="/images/resort-facility2.jpg"
+                  src="/images/group-1.png"
                   alt="Resort exterior with greenery"
                   fill
                   className="object-cover rounded-md"
