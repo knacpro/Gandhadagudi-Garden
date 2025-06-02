@@ -24,7 +24,7 @@ export default function page() {
       >
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-start">
           {/* Left: Main Content */}
-          <main className="flex-1 text-gray-800  p-6 rounded-lg shadow-md">
+          <main className="flex-1 text-gray-800    shadow-md">
             <section className="text-center mb-10">
               <h1 className="text-4xl font-bold mb-2">🌿 Gandhada Gudi Garden & Farmhouse</h1>
               <p className="text-lg">
