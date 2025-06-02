@@ -21,7 +21,7 @@ export default function AdventurePackages() {
         <div className="flex flex-col md:flex-row">
           <div className="relative h-[300px] md:h-auto md:w-1/2 group overflow-hidden">
             <Image
-              src="/images/background.png"
+              src="/images/children-package.png"
               alt="Students enjoying river rafting adventure"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -68,7 +68,7 @@ export default function AdventurePackages() {
           </div>
           <div className="relative h-[300px] md:h-auto md:w-1/2 order-1 md:order-2 group overflow-hidden">
             <Image
-              src="/images/background.png"
+              src="/images/swimming-pool.png"
               alt="Corporate team on a rafting adventure"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -80,7 +80,7 @@ export default function AdventurePackages() {
         <div className="flex flex-col md:flex-row">
           <div className="relative h-[300px] md:h-auto md:w-1/2 group overflow-hidden">
             <Image
-              src="/images/background.png"
+              src="/images/family-package.png"
               alt="Family enjoying water activities"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -129,7 +129,7 @@ export default function AdventurePackages() {
           </div>
           <div className="relative h-[300px] md:h-auto md:w-1/2 order-1 md:order-2 group overflow-hidden">
             <Image
-              src="/images/background.png"
+              src="/images/group.png"
               alt="Corporate team on a rafting adventure"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
