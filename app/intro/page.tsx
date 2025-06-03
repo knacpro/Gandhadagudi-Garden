@@ -1,17 +1,20 @@
+"use client"
 import BookResort from '@/components/BookResort';
 import FooterComponent from '@/components/footer/footer';
 import HeaderComponent from '@/components/header/header';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function page() {
+export default function IntroductionPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <div className="bg-green-100">
-      <HeaderComponent />
+    <div className="bg-green-100 w-full">
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       {/* Banner Section */}
       <section
-        className="text-center bg-cover bg-center text-white py-40 px-5"
+        className="text-center bg-cover bg-center text-white py-40"
         style={{ backgroundImage: "url(/images/resort.png)" }}
       >
         <h1 className="text-5xl font-bold">Introduction</h1>
@@ -19,10 +22,10 @@ export default function page() {
 
       {/* Profile Section */}
       <div
-        className=" text-white px-8 py-10 bg-cover bg-no-repeat"
+        className=" text-white py-10 bg-cover bg-no-repeat"
         style={{ backgroundImage: "url(/images/bg-pattern.png)" }}
       >
-        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-start">
+        <div className="mb-5 max-w-6xl mx-auto flex flex-col-reverse md:flex-row justify-between gap-10 items-start">
           {/* Left: Main Content */}
           <main className="flex-1 text-gray-800    shadow-md">
             <section className="text-center mb-10">
@@ -120,7 +123,7 @@ export default function page() {
             />
           </div>
         </div>
-<BookResort/>
+        <BookResort />
         <FooterComponent />
       </div>
     </div>

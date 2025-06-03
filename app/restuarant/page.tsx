@@ -1,18 +1,20 @@
 "use client"
 
 import HeaderComponent from '@/components/header/header'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import ResortActivitiesComponent from '@/components/Resort';
 
 import BookResort from '@/components/BookResort'
 import FooterComponent from '@/components/footer/footer'
 
-export default function page() {
+export default function RestaurantPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
      <div className="bg-green-100">
     <div>
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       <div className="font-sans">
         <section
@@ -60,7 +62,7 @@ export default function page() {
             <div className="w-full md:w-1/2 text-black">
               <h2 className="text-3xl font-extrabold mb-4">Lunch</h2>
               <p className="text-lg leading-relaxed">
-                Experience the flavors of North Karnataka with our special Joldha Roti Uta for lunch at Utsav Rock Garden.
+                Experience the flavors of North Karnataka with our special Joldha Roti Uta for lunch at GANDHADAGUDI GARDEN IN BYAHATTI.
                 This traditional feast brings together over 15 delicious items, including Roti and Chapati, two rich Curries, and a refreshing Salad.
                 Enjoy the tangy goodness of Pickle and Chutneys, paired with cooling Buttermilk. Relish Jhunka, Vegetables, crispy Bhajjis,
                 and comforting Rice with Sambar. For the perfect finish, choose between Curd Rice or Pulav.
@@ -95,7 +97,7 @@ export default function page() {
             <div className="w-full md:w-1/2 text-black">
               <h2 className="text-3xl font-extrabold mb-4">Snacks</h2>
               <p className="text-lg leading-relaxed">
-                As the evening sets in, we provide a flavorful snack to complete your day at Utsav Rock Garden. Enjoy the bold spice of Hot Mirchi and the crispy, tangy taste of Masala Churmuri, all paired with a refreshing cup of Tea.
+                As the evening sets in, we provide a flavorful snack to complete your day at GANDHADAGUDI GARDEN IN BYAHATTI. Enjoy the bold spice of Hot Mirchi and the crispy, tangy taste of Masala Churmuri, all paired with a refreshing cup of Tea.
               </p>
             </div>
           </div>
