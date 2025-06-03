@@ -97,7 +97,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
                             alt="GandhadaGudi Garden Logo"
                             width={240}
                             height={80}
-                            className="h-16 sm:h-20 w-auto rounded-xl"
+                            className="h-16 sm:h-14 w-auto rounded-xl"
                         />
                     </Link>
                 </div>
