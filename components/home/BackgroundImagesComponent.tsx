@@ -9,6 +9,7 @@ export function BackgroundImagesComponent() {
 
     const images = [
         "/images/group.png",
+        "/images/siddharodh-math.png",
         "/images/children-package.png",
         "/images/tree-home.png",
         "/images/carrom.png",

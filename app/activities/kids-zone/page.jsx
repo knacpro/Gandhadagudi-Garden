@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
@@ -6,10 +7,12 @@ import BookResort from '@/components/BookResort';
 import FooterComponent from '../../../components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
 export default function KidsZonePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
      <div className="bg-green-100">
     <div>
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       {/* Hero Section */}
       <section

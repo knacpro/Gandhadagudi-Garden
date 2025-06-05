@@ -1,14 +1,18 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import HeaderComponent from "@/components/header/header";
 import BookResort from '@/components/BookResort';
 import FooterComponent from '../../../components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
+import { useState } from 'react';
 export default function SmallTractorRidingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="bg-green-100">
     <div>
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <div className="font-sans">
         {/* Hero Section */}
         <section

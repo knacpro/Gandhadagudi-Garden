@@ -1,15 +1,18 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
 import ResortActivitiesComponent from '@/components/Resort';
-
+import { useState } from 'react';
 import FooterComponent from '@/components/footer/footer';
 
 export default function IndoorOutdoorGamesPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div>
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <div className="font-sans bg-green-100">
         {/* Hero Section */}
         <section
@@ -33,7 +36,7 @@ export default function IndoorOutdoorGamesPage() {
               </h2>
               <p className="mt-4 text-gray-700">
                 Engage your mind with indoor classics like Carrom and Chess, or test your aim and focus with Archery.
-                Whether you're a seasoned player or a curious beginner, these games bring people together in fun and challenge.
+                Whether you are a seasoned player or a curious beginner, these games bring people together in fun and challenge.
               </p>
               <div className="mt-6 flex items-center">
                 <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">
@@ -94,7 +97,7 @@ export default function IndoorOutdoorGamesPage() {
               <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">Indoor Game</h5>
               <h3 className="text-2xl font-semibold mb-4">Chess</h3>
               <p className="text-gray-700">
-                Sharpen your strategy and decision-making skills. Whether you're learning or mastering the game, chess offers timeless intellectual excitement.
+                Sharpen your strategy and decision-making skills. Whether you are learning or mastering the game, chess offers timeless intellectual excitement.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
                 Learn More

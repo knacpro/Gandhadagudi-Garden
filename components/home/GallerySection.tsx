@@ -260,6 +260,13 @@ export default function GallerySectionComponent() {
           </svg>
         </button>
       </div>
+      <h1 className="text-green-700 text-2xl sm:text-2xl font-serif mb-8 mt-10 font-bold">GANDHADAGUDI GARDEN DRONE VIEW</h1>
+      <div className="relative w-full h-[700px]">
+      <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/HTUeGUZbhM0?si=uNF7DRCqrcz4uCwa" title="YouTube video player" frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen></iframe>
+        </div>
     </div>
   )
 }

@@ -1,11 +1,10 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
-import { MessageCircle, Phone } from "lucide-react";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
 import FooterComponent from "@/components/footer/footer";
 import { useState } from "react";
+import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
 
 export default function GalleryPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -69,41 +68,14 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
-
-        {/* View More Button */}
-        {/* <div className="text-center mt-10">
-          <a
-            href="https://drive.google.com/drive/u/9/home"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
-          >
-            View More on Google Drive
-          </a>
-        </div> */}
       </section>
 
       <BookResort />
 
-      {/* Floating Contact Buttons */}
-      <div className="fixed right-4 bottom-4 flex flex-col gap-2 z-50">
-        <Link
-          href="#"
-          className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors"
-          aria-label="WhatsApp"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Link>
-        <Link
-          href="#"
-          className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
-          aria-label="Call"
-        >
-          <Phone className="h-6 w-6" />
-        </Link>
-      </div>
+    
 
       <FooterComponent />
+      <SocialMediaFloatingIcons />
     </main>
   );
 }

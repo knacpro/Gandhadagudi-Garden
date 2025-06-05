@@ -1,16 +1,19 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header"
 import FooterComponent from '@/components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
 
-export default function page() {
+export default function HorseRidingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="bg-green-100">
       <div>
      
-                 <HeaderComponent/>
+                 <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
     <div className="font-sans">
       {/* Hero Section */}
       <section
@@ -29,7 +32,7 @@ export default function page() {
               Saddle Up for<br /> a Memorable Ride
             </h2>
             <p className="mt-4 text-gray-700">
-              Discover the joy of horse riding amidst nature. Whether you're a beginner or a pro, our horseback adventures promise an unforgettable outdoor experience filled with fun and bonding.
+              Discover the joy of horse riding amidst nature. Whether you are a beginner or a pro, our horseback adventures promise an unforgettable outdoor experience filled with fun and bonding.
             </p>
             <div className="mt-6 flex items-center">
               <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">

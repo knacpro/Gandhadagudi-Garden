@@ -6,6 +6,7 @@ import HeaderComponent from "@/components/header/header";
 import Image from "next/image";
 import FooterComponent from '@/components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
+import SocialMediaFloatingIcons from '@/components/home/SocialMediaFloatingIcons';
 
 export default function Page() {
   const activities = [
@@ -200,6 +201,7 @@ export default function Page() {
 
       <BookResort />
       <FooterComponent />
+      <SocialMediaFloatingIcons />
     </div>
   );
 }

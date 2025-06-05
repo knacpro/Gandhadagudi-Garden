@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import BookResort from "@/components/BookResort";
 import HeaderComponent from "@/components/header/header";
 import {
@@ -10,12 +9,11 @@ import {
   Flame,
   Utensils,
   Waves,
-  MessageCircle,
-  Phone,
 } from "lucide-react";
 
 import { useState } from "react";
 import FooterComponent from "@/components/footer/footer";
+import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
 
 export default function Home() {
   const [openItem, setOpenItem] = useState<string | null>(null);
@@ -288,25 +286,9 @@ export default function Home() {
 
       <BookResort />
 
-      {/* Floating Contact Buttons */}
-      <div className="fixed right-4 bottom-4 flex flex-col gap-2 z-50">
-        <Link
-          href="#"
-          className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors"
-          aria-label="WhatsApp"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Link>
-        <Link
-          href="#"
-          className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
-          aria-label="Call"
-        >
-          <Phone className="h-6 w-6" />
-        </Link>
-      </div>
       <FooterComponent />
     </main>
+    <SocialMediaFloatingIcons />
   </>
   );
 }

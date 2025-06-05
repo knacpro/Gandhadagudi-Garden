@@ -7,6 +7,7 @@ import ResortActivitiesComponent from '@/components/Resort';
 
 import BookResort from '@/components/BookResort'
 import FooterComponent from '@/components/footer/footer'
+import SocialMediaFloatingIcons from '@/components/home/SocialMediaFloatingIcons';
 
 export default function RestaurantPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -175,6 +176,7 @@ export default function RestaurantPage() {
         <ResortActivitiesComponent />
         <BookResort />
         <FooterComponent />
+        <SocialMediaFloatingIcons />
       </div>
     </div>
     </div>

@@ -1,14 +1,18 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header"
 import FooterComponent from '../../../components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
+import { useState } from 'react';
 
-export default function page() {
+export default function CowFarmingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div>
-         <HeaderComponent/>
+         <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
     <div className="font-sans">
       {/* Hero Section */}
       <section

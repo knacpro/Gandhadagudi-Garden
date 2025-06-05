@@ -2,6 +2,7 @@
 import BookResort from '@/components/BookResort';
 import FooterComponent from '@/components/footer/footer';
 import HeaderComponent from '@/components/header/header';
+import SocialMediaFloatingIcons from '@/components/home/SocialMediaFloatingIcons';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -119,13 +120,14 @@ export default function IntroductionPage() {
               alt="Owner Shivanand Karigar"
               width={250}
               height={300}
-              className="rounded-lg shadow-lg"
+              className="rounded-sm shadow-lg w-80 h-72"
             />
           </div>
         </div>
         <BookResort />
         <FooterComponent />
       </div>
+      <SocialMediaFloatingIcons />
     </div>
   );
 }

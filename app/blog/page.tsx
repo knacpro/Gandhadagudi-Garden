@@ -2,6 +2,7 @@
 import BookResort from "@/components/BookResort";
 import FooterComponent from "@/components/footer/footer";
 import HeaderComponent from "@/components/header/header";
+import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -74,6 +75,7 @@ Here's how we're making a difference:
         <BookResort />
         <FooterComponent />
       </div>
+      <SocialMediaFloatingIcons />
     </div>
   );
 }

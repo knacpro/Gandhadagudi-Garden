@@ -1,12 +1,17 @@
+"use client"
 import HeaderComponent from "@/components/header/header";
 import Image from "next/image";
 import BookResort from "@/components/BookResort";
 import FooterComponent from "@/components/footer/footer";
+import { useState } from "react";
+import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
 
-export default function AdventurePackages() {
+export default function PackagesPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <main className="w-full bg-green-100">
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <section
         className="text-center bg-cover bg-center text-white py-30 px-5"
         style={{ backgroundImage: "url(/images/Packagesbackground.jpg)" }}
@@ -30,7 +35,7 @@ export default function AdventurePackages() {
           <div className="bg-gray-50 p-8 flex flex-col justify-center md:w-1/2">
             <h2 className="text-3xl font-serif mb-4">Students Packages</h2>
             <p className="text-gray-700 mb-6">
-              Gandhagudi Garden's Student Package offers thrilling outdoor
+              Gandhagudi Gardens Student Package offers thrilling outdoor
               adventures like trekking, river rafting, and eco-learning
               experiences.
             </p>
@@ -50,7 +55,7 @@ export default function AdventurePackages() {
           <div className="bg-gray-50 p-8 flex flex-col justify-center md:w-1/2 order-2 md:order-1">
             <h2 className="text-3xl font-serif mb-4">Corporate Packages</h2>
             <p className="text-gray-700 mb-6">
-              Gandhagudi Garden's Corporate Packages offer team-building
+              Gandhagudi Gardens Corporate Packages offer team-building
               activities, outdoor adventures, and peaceful retreats, ideal for
               fostering teamwork, relaxation, and productivity in a refreshing
               natural environment.
@@ -90,7 +95,7 @@ export default function AdventurePackages() {
           <div className="bg-gray-50 p-8 flex flex-col justify-center md:w-1/2">
             <h2 className="text-3xl font-serif mb-4">Family Packages</h2>
             <p className="text-gray-700 mb-6">
-              Gandhagudi Garden's Family Packages offer an ideal mix of
+              Gandhagudi Gardens Family Packages offer an ideal mix of
               adventure and relaxation, allowing families to enjoy exciting
               outdoor activities while connecting with nature.
             </p>
@@ -112,7 +117,7 @@ export default function AdventurePackages() {
           <div className="bg-gray-50 p-8 flex flex-col justify-center md:w-1/2 order-2 md:order-1">
             <h2 className="text-3xl font-serif mb-4">Weekend Packages</h2>
             <p className="text-gray-700 mb-6">
-              Gandhagudi Garden's Weekend Packages offer a peaceful retreat
+              Gandhagudi Gardens Weekend Packages offer a peaceful retreat
               amidst nature, with various outdoor activities, relaxation spots,
               and beautiful surroundings to recharge your mind and body.
             </p>
@@ -142,6 +147,7 @@ export default function AdventurePackages() {
 
       <BookResort />
       <FooterComponent />
+      <SocialMediaFloatingIcons />
     </main>
   );
 }

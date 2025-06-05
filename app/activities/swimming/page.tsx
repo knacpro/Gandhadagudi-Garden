@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image';
 import BookResort from '@/components/BookResort';
 import HeaderComponent from "@/components/header/header";
@@ -6,10 +7,12 @@ import ResortActivitiesComponent from '@/components/Resort';
 import FooterComponent from '@/components/footer/footer';
 
 export default function SwimmingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
      <div className="bg-green-100">
     <div>
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <div className="font-sans">
         {/* Hero Section */}
         <section
@@ -29,7 +32,7 @@ export default function SwimmingPage() {
                 Refreshing Fun
               </h2>
               <p className="mt-4 text-gray-700">
-                Our swimming facility offers a clean and safe environment for all ages to enjoy. Whether you're a beginner or a seasoned swimmer, our pool is the perfect place to unwind, exercise, and have fun.
+                Our swimming facility offers a clean and safe environment for all ages to enjoy. Whether you are a beginner or a seasoned swimmer, our pool is the perfect place to unwind, exercise, and have fun.
               </p>
               <div className="mt-6 flex items-center">
                 <div className="bg-[#8CBF1E] rounded-full p-2 mr-3">
@@ -76,7 +79,7 @@ export default function SwimmingPage() {
               <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">Activities</h5>
               <h3 className="text-2xl font-semibold mb-4">Recreational Swimming</h3>
               <p className="text-gray-700">
-                Enjoy a stress-free swimming session in our spacious pool. Ideal for leisure and fun, it's the perfect spot to cool off during a hot day.
+                Enjoy a stress-free swimming session in our spacious pool. Ideal for leisure and fun, it is the perfect spot to cool off during a hot day.
               </p>
               <a href="#" className="text-[#8CBF1E] mt-3 inline-block underline">
            

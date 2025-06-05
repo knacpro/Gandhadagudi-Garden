@@ -10,6 +10,7 @@ import {
 import HeaderComponent from "@/components/header/header";
 import BookResort from "@/components/BookResort";
 import FooterComponent from "@/components/footer/footer";
+import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
 
 interface Attraction {
   id: number;
@@ -193,10 +194,12 @@ export function AttractionsCarousel() {
   );
 }
 
-export default function Attractions() {
+export default function AttractionsPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <main className="bg-green-100">
-      <HeaderComponent mobileMenuOpen={false} setMobileMenuOpen={() => {}} />
+        <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <section
         className="text-center bg-cover bg-center text-white py-40 px-5"
         style={{ backgroundImage: "url(/images/attractions-background.png)" }}
@@ -222,7 +225,7 @@ export default function Attractions() {
                 enjoying a peaceful day at Gandhadagudi Garden, explore nearby
                 attractions like serene countryside roads, local temples,
                 traditional farming scenes, and seasonal flower fields. Whether
-                you're into nature photography, village exploration, or simply
+                you are into nature photography, village exploration, or simply
                 unwinding in green open spaces — there’s always something
                 beautiful just around the corner.
               </p>
@@ -337,7 +340,7 @@ export default function Attractions() {
             <p className="text-gray-700 leading-relaxed">
               Nrupatunga Betta, located in Hubballi, is a popular hilltop garden
               offering panoramic views of the city. With well-maintained paths,
-              fresh air, and a peaceful atmosphere, it's a favorite spot for
+              fresh air, and a peaceful atmosphere, it is a favorite spot for
               morning walks, light trekking, and sunset watching.
             </p>
           </div>
@@ -422,6 +425,7 @@ export default function Attractions() {
       <AttractionsCarousel />
       <BookResort />
       <FooterComponent />
+      <SocialMediaFloatingIcons />
     </main>
   );
 }

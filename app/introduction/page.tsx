@@ -1,3 +1,5 @@
+"use client"
+import SocialMediaFloatingIcons from '@/components/home/SocialMediaFloatingIcons';
 import React from 'react';
 
 export default function IntroductionPage() {
@@ -10,7 +12,7 @@ export default function IntroductionPage() {
       </p>
 
       <p>
-        It is well-known in Karnataka as an Educational and Cultural Tourist hub, an Indoor and Outdoor Sculptural Museum for a layman and an expert to take pleasure in art. It is a place of synchronization where people from diverse communities can get pleasure from it. It is one of the world's finest museums in India which spotlights more on Art.
+        It is well-known in Karnataka as an Educational and Cultural Tourist hub, an Indoor and Outdoor Sculptural Museum for a layman and an expert to take pleasure in art. It is a place of synchronization where people from diverse communities can get pleasure from it. It is one of the world&apos;s finest museums in India which spotlights more on Art.
       </p>
 
       <p>
@@ -40,6 +42,7 @@ export default function IntroductionPage() {
         <li><strong>Email:</strong> info@ByahattiByahatti.com</li>
         <li><strong>Address:</strong> Hebsur Road, Byahatti, Hubballi</li>
       </ul>
+      <SocialMediaFloatingIcons />
     </div>
   );
 }
