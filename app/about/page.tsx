@@ -99,9 +99,9 @@ export default function Home() {
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/soqbrb0qIHQ?si=93-KMoDzIH1xi9I3" 
             title="YouTube video player" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" 
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
         </div>

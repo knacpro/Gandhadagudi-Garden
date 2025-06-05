@@ -64,7 +64,7 @@ export default function BookResort() {
               </div>
               <Image
                 src="/images/location-scanner.png"
-                alt="Phone"
+                alt="Location Scanner"
                 width={24}
                 height={24}
                 className="object-cover w-40 h-40 mt-8 sm:ml-40 ml-24"

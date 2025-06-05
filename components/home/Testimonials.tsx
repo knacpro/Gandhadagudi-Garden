@@ -9,14 +9,10 @@ import { useTranslations } from "next-intl"
 
 export default function TestimonialsComponent() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  // const [canScrollLeft, setCanScrollLeft] = useState(false)
-  // const [canScrollRight, setCanScrollRight] = useState(true)
   const t = useTranslations('HomePage');
   const checkScrollButtons = () => {
     const container = scrollContainerRef.current
     if (container) {
-      // setCanScrollLeft(container.scrollLeft > 0)
-      // setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
     }
   }
   const reviews = [
@@ -101,13 +97,13 @@ export default function TestimonialsComponent() {
       image: "/images/ranjit.png?height=80&width=80",
     },
   ];
-  
+
 
   useEffect(() => {
     const container = scrollContainerRef.current
     let autoScrollInterval: NodeJS.Timeout
     let pauseTimeout: NodeJS.Timeout
-  
+
     const startAutoScroll = () => {
       autoScrollInterval = setInterval(() => {
         if (container) {
@@ -119,7 +115,7 @@ export default function TestimonialsComponent() {
         }
       }, 20)
     }
-  
+
     const pauseAutoScroll = () => {
       clearInterval(autoScrollInterval)
       clearTimeout(pauseTimeout)
@@ -127,7 +123,7 @@ export default function TestimonialsComponent() {
         startAutoScroll()
       }, 5000) // resume auto-scroll after 5s of no interaction
     }
-  
+
     if (container) {
       container.addEventListener("scroll", () => {
         checkScrollButtons()
@@ -135,13 +131,13 @@ export default function TestimonialsComponent() {
       })
       container.addEventListener("mouseenter", pauseAutoScroll)
       container.addEventListener("mouseleave", startAutoScroll)
-  
+
       window.addEventListener("resize", checkScrollButtons)
-  
+
       checkScrollButtons()
       startAutoScroll()
     }
-  
+
     return () => {
       clearInterval(autoScrollInterval)
       clearTimeout(pauseTimeout)
@@ -153,16 +149,7 @@ export default function TestimonialsComponent() {
       window.removeEventListener("resize", checkScrollButtons)
     }
   }, [])
-  
 
-  // const scroll = (direction: "left" | "right") => {
-  //   const container = scrollContainerRef.current
-  //   if (container) {
-  //     const cardWidth = container.querySelector("div")?.offsetWidth || 0
-  //     const scrollAmount = direction === "left" ? -cardWidth : cardWidth
-  //     container.scrollBy({ left: scrollAmount, behavior: "smooth" })
-  //   }
-  // }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -205,16 +192,16 @@ export default function TestimonialsComponent() {
           ))}
         </div>
       </div>
-      <div className="w-full h-[60dvh]">
-      <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/Xyrou0j1BJE?si=ttKyByZnwwmRR1MW&autoplay=1&mute=0" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen={true}
-                ></iframe>
+      <div className="w-full h-[700px]">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/Xyrou0j1BJE?si=ttKyByZnwwmRR1MW&autoplay=1&mute=0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   )
