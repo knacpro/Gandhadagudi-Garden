@@ -11,7 +11,53 @@ export default function BookResort() {
   const pathname = usePathname();
   const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/kn';
 
-  const whatsappMessage = `ಗಂಧದಗುಡಿ ತೋಟ ಬ್ಯಾಹಟ್ಟಿಗೆ ಸುಸ್ವಾಗತ!
+  const whatsappMessage = `Welcome to Gandhadagudi Garden Byahatti!
+
+Thank you for inquiring about our services. We are happy to help you:
+
+Location: Hebsur Road, Byahatti, Karnataka 580023
+Timings: 10:30 AM - 6:00 PM (All Days)
+Contact: +91 9740806599
+Email: gandhadagudigardenbyahatti@gmail.com
+
+Our Activities:
+• Tree House Stay
+• Traditional Gym
+• Boat Ride
+• Adventure Kayaking
+• Zip Line
+• Swimming Pool
+• Rain Dance
+• Bird Watching
+• Horse Riding
+• Cow Farming
+• Chess and Carrom
+• Campfire
+• Archery
+• Goat Farming
+• Poultry Farming
+• Tractor Ride
+• Buffalo Ride
+• Deer Park
+• Rabbit House
+
+Our Packages:
+• Student Package
+• Corporate Package
+• Family Package
+• Weekend Package
+
+Additional Facilities:
+• Party Hall
+• Restaurant
+• Lawn Garden
+• Free WiFi
+
+How can we help you?
+
+----------------------------------------
+
+ಗಂಧದಗುಡಿ ತೋಟ ಬ್ಯಾಹಟ್ಟಿಗೆ ಸುಸ್ವಾಗತ!
 
 ನಮ್ಮ ಸೇವೆಗಳ ಬಗ್ಗೆ ವಿಚಾರಿಸಿದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಾವು ಸಂತುಷ್ಟರಾಗಿದ್ದೇವೆ:
 
