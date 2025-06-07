@@ -50,7 +50,7 @@ const attractions: Attraction[] = [
   },
 ];
 
-export function AttractionsCarousel() {
+function AttractionsCarousel() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -226,7 +226,7 @@ export default function AttractionsPage() {
                 attractions like serene countryside roads, local temples,
                 traditional farming scenes, and seasonal flower fields. Whether
                 you are into nature photography, village exploration, or simply
-                unwinding in green open spaces — there’s always something
+                unwinding in green open spaces — there&apos;s always something
                 beautiful just around the corner.
               </p>
             </div>
@@ -306,7 +306,7 @@ export default function AttractionsPage() {
             <p className="text-gray-700 leading-relaxed">
               Unkal Lake, located in Hubballi, is a calm and scenic spot perfect
               for family outings and peaceful evening walks. Surrounded by
-              greenery and known for its beautiful sunset views, it’s an ideal
+              greenery and known for its beautiful sunset views, it&apos;s an ideal
               place to relax, unwind, and connect with nature.
             </p>
           </div>
@@ -389,9 +389,9 @@ export default function AttractionsPage() {
             <p className="text-gray-700 leading-relaxed">
               Tolankere Lake, nestled in the heart of Hubballi, is a peaceful
               retreat surrounded by lush greenery. Ideal for early morning
-              walks, bird watching, and quiet moments by the water, it’s a
+              walks, bird watching, and quiet moments by the water, it&apos;s a
               hidden gem for those looking to connect with nature away from the
-              city’s rush.
+              city&apos;s rush.
             </p>
           </div>
         </div>
