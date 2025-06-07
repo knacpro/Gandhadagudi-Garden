@@ -110,7 +110,7 @@ export default function Page() {
 
   return (
     <div className="bg-green-100">
-      <HeaderComponent />
+      <HeaderComponent mobileMenuOpen={false} setMobileMenuOpen={() => {}} />
 
       <div className="font-sans">
         {/* Hero Section */}
@@ -127,7 +127,7 @@ export default function Page() {
             <div className="md:w-1/2">
               <h5 className="text-[#8CBF1E] uppercase text-sm font-medium">Activities</h5>
               <h2 className="text-2xl md:text-3xl font-bold uppercase mt-2">
-                EXPERIENCE NATURE'S FINEST
+                EXPERIENCE NATURES FINEST
                 <br />
                 WITH GandhadaGudi Garden ACTIVITIES
               </h2>

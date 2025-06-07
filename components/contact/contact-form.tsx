@@ -112,7 +112,7 @@ export default function ContactForm() {
                     <div className="text-center">
                         <p className="text-green-700 text-sm font-bold mb-2">CONTACT US TO GET MORE DETAILS</p>
                         <h2 className="text-4xl font-semibold text-green-800">
-                            LET'S START A<br />
+                            LET&apos;S START A<br />
                             CONVERSATION
                         </h2>
                     </div>
