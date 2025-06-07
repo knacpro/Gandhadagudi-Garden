@@ -166,7 +166,7 @@ How can we help you?
                 height={24}
                 className="object-cover w-5 h-5"
               />
-              <span className="font-semibold text-sm">{getText('getDirections')}</span>
+              <span className="font-semibold text-sm">Scan me</span>
               </div>
             </div>
 

@@ -48,7 +48,7 @@ export default function Page() {
           <div className="md:w-1/2 flex gap-4">
             <div className="w-1/2">
               <Image
-                src="/images/gym1.png"
+                src="/images/gym-1.png"
                 alt="Gym Equipment"
                 width={300}
                 height={400}
