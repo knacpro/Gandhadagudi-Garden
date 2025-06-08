@@ -158,7 +158,7 @@ How can we help you?
                 height={24}
                 className="object-cover w-40 h-40 mt-8 sm:ml-40 ml-24"
               />
-              <div className="flex items-center gap-1 sm:ml-[176px] ml-28 mt-2">
+              <div className="flex items-center gap-1 sm:ml-[190px] ml-32 mt-2">
               <Image
                 src="/images/google-map.png"
                 alt="Location Scanner"
