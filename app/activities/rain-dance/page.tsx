@@ -113,7 +113,7 @@ export default function RainDancePage() {
     <div className="rounded-lg overflow-hidden shadow-md w-full max-w-2xl relative aspect-video">
       <iframe
         className="absolute top-0 left-0 w-full h-full"
-        src="https://www.youtube.com/embed/9i-wNKvecus?si=n2mz8VyTj2eRnpAK"
+        src="https://www.youtube.com/embed/rrwVB_MkxuI?si=m-d8u5tgKmjtqDx1"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

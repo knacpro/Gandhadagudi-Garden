@@ -187,17 +187,21 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
                             </Link>
                         ))}
 
-                        <button
-                            onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
-                            className="text-white font-semibold flex items-center gap-1 py-2"
-                            aria-label="Toggle activities submenu"
-                        >
-                            ACTIVITIES{' '}
-                            <ChevronDown
-                                size={16}
-                                className={`${mobileActivitiesOpen ? 'rotate-180' : ''} transition-transform`}
-                            />
-                        </button>
+                        <div className="text-white font-semibold flex items-center gap-1 py-2">
+                            <Link href="/activities" className="hover:text-gray-200">
+                                ACTIVITIES
+                            </Link>
+                            <button
+                                onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
+                                className="flex items-center"
+                                aria-label="Toggle activities submenu"
+                            >   
+                                <ChevronDown
+                                    size={16}
+                                    className={`${mobileActivitiesOpen ? 'rotate-180' : ''} transition-transform`}
+                                />
+                            </button>
+                        </div>
 
                         {mobileActivitiesOpen && (
                             <div className="ml-4 space-y-2 max-h-[300px] overflow-y-auto pr-2">

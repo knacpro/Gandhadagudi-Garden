@@ -7,8 +7,11 @@ import Image from "next/image";
 import FooterComponent from '@/components/footer/footer';
 import ResortActivitiesComponent from '@/components/Resort';
 import SocialMediaFloatingIcons from '@/components/home/SocialMediaFloatingIcons';
+import { useState } from 'react';
 
 export default function Page() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const activities = [
     {
       title: "Gym",
@@ -110,7 +113,7 @@ export default function Page() {
 
   return (
     <div className="bg-green-100">
-      <HeaderComponent mobileMenuOpen={false} setMobileMenuOpen={() => {}} />
+      <HeaderComponent mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       <div className="font-sans">
         {/* Hero Section */}
