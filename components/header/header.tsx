@@ -18,7 +18,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
         { href: "/", label: "HOME" },
         { href: "/intro", label: "INTRODUCTION" },
         { href: "/about", label: "ABOUT" },
-        
+
         { href: "/restuarant", label: "RESTUARANT" },
         { href: "/attractions", label: "ATTRACTIONS" },
         { href: "/packages", label: "PACKAGES" },
@@ -80,15 +80,23 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
             </div>
 
 
-            <header className="fixed top-0 md:top-[48px] z-20 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
+            <header className="fixed top-0 md:top-[48px] z-50 w-full px-4 py-1 bg-green-200 p-8 shadow-lg flex justify-between items-center h-16">
                 <div className="flex items-center">
                     <button
                         className="md:hidden z-20 mr-10"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        onClick={() => {
+                            setMobileMenuOpen(!mobileMenuOpen);
+                            setMobileActivitiesOpen(false);
+                        }}
                         aria-label="Toggle menu"
                     >
-                        {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                        {mobileMenuOpen ? (
+                            <X className="h-6 w-6" />
+                        ) : (
+                            <Menu className="h-6 w-6" />
+                        )}
                     </button>
+
 
 
                     <Link href="/">
@@ -97,7 +105,7 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
                             alt="GandhadaGudi Garden Logo"
                             width={240}
                             height={80}
-                            className="h-16 sm:h-14 w-auto rounded-xl"
+                            className="h-14 ml-6 sm:ml-0 sm:h-14 w-auto rounded-xl"
                         />
                     </Link>
                 </div>
@@ -163,68 +171,72 @@ export default function HeaderComponent({ mobileMenuOpen, setMobileMenuOpen }: {
 
 
             {mobileMenuOpen && (
-                <div className="fixed inset-0 bg-black/90 z-40 flex flex-col items-start justify-start pt-24 pl-6 pr-4 space-y-4 md:hidden overflow-y-auto max-h-screen">
-                    {navLinks.slice(0, 2).map(({ href, label }) => (
-                        <Link
-                            key={href}
-                            href={href}
-                            className="text-white hover:text-gray-200"
-                            onClick={() => setMobileMenuOpen(false)}
+                <div
+                    className="fixed inset-0 bg-black/90 z-40 flex flex-col items-start justify-start pt-24 pl-6 pr-4 space-y-4 md:hidden overflow-y-auto max-h-screen"
+                    onClick={() => setMobileMenuOpen(false)}
+                >
+                    <div className="w-full" onClick={(e) => e.stopPropagation()}>
+                        {navLinks.slice(0, 2).map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className="text-white hover:text-gray-200 block py-2"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        ))}
+
+                        <button
+                            onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
+                            className="text-white font-semibold flex items-center gap-1 py-2"
+                            aria-label="Toggle activities submenu"
                         >
-                            {label}
-                        </Link>
-                    ))}
+                            ACTIVITIES{' '}
+                            <ChevronDown
+                                size={16}
+                                className={`${mobileActivitiesOpen ? 'rotate-180' : ''} transition-transform`}
+                            />
+                        </button>
 
+                        {mobileActivitiesOpen && (
+                            <div className="ml-4 space-y-2 max-h-[300px] overflow-y-auto pr-2">
+                                <p className="text-yellow-300 font-bold">Indoor Activities</p>
+                                {activities.indoor.map(({ href, label }) => (
+                                    <Link
+                                        key={href}
+                                        href={href}
+                                        className="block text-white hover:text-yellow-300 py-2"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {label}
+                                    </Link>
+                                ))}
+                                <p className="text-yellow-300 font-bold mt-2">Outdoor Activities</p>
+                                {activities.outdoor.map(({ href, label }) => (
+                                    <Link
+                                        key={href}
+                                        href={href}
+                                        className="block text-white hover:text-yellow-300 py-2"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {label}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
 
-                    <button
-                        onClick={() => setMobileActivitiesOpen(!mobileActivitiesOpen)}
-                        className="text-white font-semibold flex items-center gap-1"
-                        aria-label="Toggle activities submenu"
-                    >
-                        ACTIVITIES{' '}
-                        <ChevronDown
-                            size={16}
-                            className={`${mobileActivitiesOpen ? 'rotate-180' : ''} transition-transform`}
-                        />
-                    </button>
-
-                    {mobileActivitiesOpen && (
-                        <div className="ml-4 space-y-2 max-h-[300px] overflow-y-auto pr-2">
-                            <p className="text-yellow-300 font-bold">Indoor Activities</p>
-                            {activities.indoor.map(({ href, label }) => (
-                                <Link
-                                    key={href}
-                                    href={href}
-                                    className="block text-white hover:text-yellow-300"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {label}
-                                </Link>
-                            ))}
-                            <p className="text-yellow-300 font-bold mt-2">Outdoor Activities</p>
-                            {activities.outdoor.map(({ href, label }) => (
-                                <Link
-                                    key={href}
-                                    href={href}
-                                    className="block text-white hover:text-yellow-300"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {label}
-                                </Link>
-                            ))}
-                        </div>
-                    )}
-
-                    {navLinks.slice(2).map(({ href, label }) => (
-                        <Link
-                            key={href}
-                            href={href}
-                            className="text-white hover:text-gray-200"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            {label}
-                        </Link>
-                    ))}
+                        {navLinks.slice(2).map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className="text-white hover:text-gray-200 block py-2"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             )}
         </>
