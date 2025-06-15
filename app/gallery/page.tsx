@@ -69,7 +69,7 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
-        <Link href="https://drive.google.com/drive/folders/1Gi_oYwRv4g9vLFA8WZ4RkFX3y5JtHpCp?usp=sharing" target="_blank" className="font-semibold inline-block text-green-600 text-md hover:border-b hover:border-green-500 ml-[530px] pt-4">
+        <Link href="https://drive.google.com/drive/folders/1Gi_oYwRv4g9vLFA8WZ4RkFX3y5JtHpCp?usp=sharing" target="_blank" className="font-semibold inline-block text-green-600 text-md hover:border-b hover:border-green-500 sm:ml-[530px] ml-32 pt-4">
                     View more
                 </Link>
       </section>
