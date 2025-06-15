@@ -5,6 +5,7 @@ import HeaderComponent from "@/components/header/header";
 import FooterComponent from "@/components/footer/footer";
 import { useState } from "react";
 import SocialMediaFloatingIcons from "@/components/home/SocialMediaFloatingIcons";
+import Link from "next/link";
 
 export default function GalleryPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -68,6 +69,9 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
+        <Link href="https://drive.google.com/drive/folders/1Gi_oYwRv4g9vLFA8WZ4RkFX3y5JtHpCp?usp=sharing" target="_blank" className="font-semibold inline-block text-green-600 text-md hover:border-b hover:border-green-500 ml-[530px] pt-4">
+                    View more
+                </Link>
       </section>
 
       <BookResort />
